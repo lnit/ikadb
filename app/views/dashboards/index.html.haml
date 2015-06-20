@@ -12,5 +12,12 @@
   .panel-heading
     %h3.panel-title= t(".menu.title")
   .panel-body
-    = link_to t("common.weapon"), "#"
-    = link_to t("common.gear"), "#"
+    %ul
+      %li= link_to t("common.weapon"), "#"
+      %li= link_to t("common.gear"), "#"
+
+- content_for(:sidebar) do
+  %h4= t("common.menu")
+  %ul.nav.nav-list
+    %li= link_to t("common.weapon"), "#"
+    %li= link_to t("common.gear"), "#"
