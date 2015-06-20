@@ -2,13 +2,13 @@
   %h1= t(".title")
   %h2= t(".subtitle")
 
-.panel.panel-primary
+.panel{class: random_color_class("panel")}
   .panel-heading
     %h3.panel-title= t(".description.title")
   .panel-body
     = t(".description.body_html")
 
-.panel.panel-primary
+.panel{class: random_color_class("panel")}
   .panel-heading
     %h3.panel-title= t(".menu.title")
   .panel-body
