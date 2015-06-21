@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621083450) do
+ActiveRecord::Schema.define(version: 20150621084857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,5 +40,21 @@ ActiveRecord::Schema.define(version: 20150621083450) do
   add_index "main_weapons", ["speed"], name: "index_main_weapons_on_speed", using: :btree
   add_index "main_weapons", ["weapon_type"], name: "index_main_weapons_on_weapon_type", using: :btree
   add_index "main_weapons", ["weight"], name: "index_main_weapons_on_weight", using: :btree
+
+  create_table "special_weapons", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "special_weapons", ["id"], name: "index_special_weapons_on_id", using: :btree
+
+  create_table "sub_weapons", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sub_weapons", ["id"], name: "index_sub_weapons_on_id", using: :btree
 
 end

@@ -5,5 +5,6 @@ class CreateSubWeapons < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :sub_weapons, :id
   end
 end
