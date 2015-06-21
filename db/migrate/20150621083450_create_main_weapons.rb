@@ -13,6 +13,7 @@ class CreateMainWeapons < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :main_weapons, :id
     add_index :main_weapons, :weapon_type
     add_index :main_weapons, :range
     add_index :main_weapons, :attack

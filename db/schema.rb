@@ -11,9 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150621083450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "main_weapons", force: :cascade do |t|
+    t.integer  "weapon_type"
+    t.integer  "range"
+    t.integer  "attack"
+    t.integer  "damage"
+    t.integer  "charge"
+    t.integer  "speed"
+    t.integer  "rapid"
+    t.integer  "mobility"
+    t.integer  "weight"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "main_weapons", ["attack"], name: "index_main_weapons_on_attack", using: :btree
+  add_index "main_weapons", ["charge"], name: "index_main_weapons_on_charge", using: :btree
+  add_index "main_weapons", ["damage"], name: "index_main_weapons_on_damage", using: :btree
+  add_index "main_weapons", ["id"], name: "index_main_weapons_on_id", using: :btree
+  add_index "main_weapons", ["mobility"], name: "index_main_weapons_on_mobility", using: :btree
+  add_index "main_weapons", ["range"], name: "index_main_weapons_on_range", using: :btree
+  add_index "main_weapons", ["rapid"], name: "index_main_weapons_on_rapid", using: :btree
+  add_index "main_weapons", ["speed"], name: "index_main_weapons_on_speed", using: :btree
+  add_index "main_weapons", ["weapon_type"], name: "index_main_weapons_on_weapon_type", using: :btree
+  add_index "main_weapons", ["weight"], name: "index_main_weapons_on_weight", using: :btree
 
 end
