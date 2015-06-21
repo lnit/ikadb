@@ -1,6 +1,7 @@
 class CreateMainWeapons < ActiveRecord::Migration
   def change
     create_table :main_weapons do |t|
+      t.string  :name
       t.integer :weapon_type
       t.integer :range
       t.integer :attack

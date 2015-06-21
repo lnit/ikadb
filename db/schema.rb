@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150621085626) do
   enable_extension "plpgsql"
 
   create_table "main_weapons", force: :cascade do |t|
+    t.string   "name"
     t.integer  "weapon_type"
     t.integer  "range"
     t.integer  "attack"
