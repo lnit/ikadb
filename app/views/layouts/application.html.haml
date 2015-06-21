@@ -25,18 +25,26 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand(href="#") Ikadb
+        %a.navbar-brand(href="/") Ikadb
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
-            %li= link_to "Link 1", "/path1"
-            %li= link_to "Link 2", "/path2"
-            %li= link_to "Link 3", "/path3"
+            %li= link_to t("common.weapon"), "#"
+            %li= link_to t("common.gear"), "#"
 
     .container
       .row
-        .col-lg-12
-          = bootstrap_flash
-          = yield
+        - if content_for?(:sidebar)
+          .col-lg-9
+            = bootstrap_flash
+            = yield
+          .col-lg-3
+            .well.sidebar-nav
+              = yield :sidebar
+        - else
+          .col-lg-12
+            = bootstrap_flash
+            = yield
+
     %footer.footer
       .container
         %p.navbar-text &copy; Company 2015
