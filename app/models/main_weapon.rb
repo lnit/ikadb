@@ -26,4 +26,8 @@ class MainWeapon < ActiveRecord::Base
     return unless self.weapon_type
     self.__send__(SPEC_KEY[self.weapon_type][ordinal-1])
   end
+
+  def spec1 ; spec(1) ; end
+  def spec2 ; spec(2) ; end
+  def spec3 ; spec(3) ; end
 end
