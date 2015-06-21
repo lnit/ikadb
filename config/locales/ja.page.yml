@@ -13,3 +13,21 @@ ja:
         body_html: このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。<br/>ブキの性能・サブウェポン・スペシャルウェポンの検索にご利用ください。
       menu:
         title: "メニュー"
+
+  weapons:
+    index:
+      search:
+        title: "検索"
+      list:
+        title: "一覧"
+        name: "名前"
+        type: "種別"
+        shooter: "シューター"
+        blaster: "ブラスター"
+        charger: "チャージャー"
+        roller:  "ローラー"
+        first_spec: "射程"
+        second_spec: "攻/爆/溜速/塗速"
+        third_spec: "連射/機動/軽さ"
+        sub_weapon: "サブウェポン"
+        special_weapon: "スペシャルウェポン"

@@ -1,0 +1,30 @@
+.panel{class: random_color_class("panel")}
+  .panel-heading
+    %h3.panel-title= t(".search.title")
+  .panel-body
+
+.panel{class: random_color_class("panel")}
+  .panel-heading
+    %h3.panel-title= t(".list.title")
+  .panel-body
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th= t(".list.name")
+          %th= t(".list.type")
+          %th= t(".list.first_spec")
+          %th= t(".list.second_spec")
+          %th= t(".list.third_spec")
+          %th= t(".list.sub_weapon")
+          %th= t(".list.special_weapon")
+      %tbody
+        - @weapons.each do |weapon|
+          %tr
+            %td= weapon.name
+            %td= t(".list.#{weapon.main_weapon.type_to_key}")
+            %td= weapon.main_weapon.spec(1)
+            %td= weapon.main_weapon.spec(2)
+            %td= weapon.main_weapon.spec(3)
+            %td= weapon.sub_weapon.name
+            %td= weapon.special_weapon.name
+
