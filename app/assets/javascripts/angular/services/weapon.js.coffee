@@ -1,2 +1,2 @@
 App.factory "Weapon", ($resource) ->
-  $resource "/weapons"
+  $resource "/weapons.json"

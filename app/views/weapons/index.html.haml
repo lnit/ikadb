@@ -1,29 +1,29 @@
-.panel{class: random_color_class("panel")}
-  .panel-heading
-    %h3.panel-title= t(".search.title")
-  .panel-body
+%div{"ng-controller" => "WeaponsController"}
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".search.title")
+    .panel-body
 
-.panel{class: random_color_class("panel")}
-  .panel-heading
-    %h3.panel-title= t(".list.title")
-  .panel-body
-    %table.table.table-striped.table-hover
-      %thead
-        %tr
-          %th= t(".list.name")
-          %th= t(".list.type")
-          %th= t(".list.first_spec_html")
-          %th= t(".list.second_spec_html")
-          %th= t(".list.third_spec_html")
-          %th= t(".list.sub_weapon")
-          %th= t(".list.special_weapon")
-      %tbody
-        - @weapons.each do |weapon|
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".list.title")
+    .panel-body
+      %table.table.table-striped.table-hover
+        %thead
           %tr
-            %td= weapon.name
-            %td= weapon.main_weapon.type_name
-            %td= weapon.main_weapon.spec(1)
-            %td= weapon.main_weapon.spec(2)
-            %td= weapon.main_weapon.spec(3)
-            %td= weapon.sub_weapon.name
-            %td= weapon.special_weapon.name
+            %th= t(".list.name")
+            %th= t(".list.type")
+            %th= t(".list.first_spec_html")
+            %th= t(".list.second_spec_html")
+            %th= t(".list.third_spec_html")
+            %th= t(".list.sub_weapon")
+            %th= t(".list.special_weapon")
+        %tbody
+          %tr.weapon{"ng-repeat" => "weapon in weapons"}
+            %td {{weapon.name}}
+            %td {{weapon.main_weapon.type_name}}
+            %td {{weapon.main_weapon.spec1}}
+            %td {{weapon.main_weapon.spec2}}
+            %td {{weapon.main_weapon.spec3}}
+            %td {{weapon.sub_weapon.name}}
+            %td {{weapon.special_weapon.name}}
