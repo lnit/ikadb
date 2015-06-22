@@ -27,6 +27,7 @@ gem 'twitter-bootstrap-rails'
 
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
+gem 'rails-assets-angular-ui-bootstrap-bower'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

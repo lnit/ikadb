@@ -116,6 +116,8 @@ GEM
     rails-assets-angular (1.4.1)
     rails-assets-angular-resource (1.4.1)
       rails-assets-angular (= 1.4.1)
+    rails-assets-angular-ui-bootstrap-bower (0.13.0)
+      rails-assets-angular (>= 1.3.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.6)
@@ -205,6 +207,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails-assets-angular
   rails-assets-angular-resource
+  rails-assets-angular-ui-bootstrap-bower
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

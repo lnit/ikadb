@@ -15,5 +15,6 @@
 //= require twitter/bootstrap
 //= require angular
 //= require angular-resource
+//= require angular-ui-bootstrap-bower
 //= require ikadb_angular
 //= require_tree .
