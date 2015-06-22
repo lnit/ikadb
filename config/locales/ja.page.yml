@@ -3,6 +3,11 @@ ja:
     menu: "メニュー"
     weapon: "ブキ"
     gear: "ギア(準備中)"
+    weapon_type:
+      shooter: "シューター"
+      blaster: "ブラスター"
+      charger: "チャージャー"
+      roller:  "ローラー"
 
   dashboards:
     index:
@@ -22,10 +27,6 @@ ja:
         title: "一覧"
         name: "名前"
         type: "種別"
-        shooter: "シューター"
-        blaster: "ブラスター"
-        charger: "チャージャー"
-        roller:  "ローラー"
         first_spec_html: "射程"
         second_spec_html: "攻撃<br/>溜速<br/>塗速"
         third_spec_html: "連射<br/>機動<br/>軽さ"

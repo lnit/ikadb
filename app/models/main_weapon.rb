@@ -17,9 +17,14 @@ class MainWeapon < ActiveRecord::Base
     [:range, :speed,  :weight] #ROLLER
   ]
 
-  def type_to_key
+  def type_key
     return unless self.weapon_type
     TYPE_KEY[self.weapon_type]
+  end
+
+  def type_name
+    return unless self.weapon_type
+    I18n.t(type_key, scope: "common.weapon_type")
   end
 
   def spec(ordinal)

@@ -21,7 +21,7 @@
         - @weapons.each do |weapon|
           %tr
             %td= weapon.name
-            %td= t(".list.#{weapon.main_weapon.type_to_key}")
+            %td= weapon.main_weapon.type_name
             %td= weapon.main_weapon.spec(1)
             %td= weapon.main_weapon.spec(2)
             %td= weapon.main_weapon.spec(3)
