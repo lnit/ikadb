@@ -8,6 +8,7 @@ ja:
       blaster: "ブラスター"
       charger: "チャージャー"
       roller:  "ローラー"
+    search: "検索"
 
   dashboards:
     index:

@@ -11,6 +11,8 @@
               = text_field_tag "params[name]", "", "ng-model" => "params.name", :class => "form-control"
         .col-lg-4
         .col-lg-4
+        .col-lg-12
+          = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
   .panel{class: random_color_class("panel")}
     .panel-heading
