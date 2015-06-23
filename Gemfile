@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'ransack'
 
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
