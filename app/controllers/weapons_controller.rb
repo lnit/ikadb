@@ -8,6 +8,6 @@ class WeaponsController < ApplicationController
 
   private
   def get_weapons
-    @weapons = Weapon.all
+    @weapons = Weapon.ransack(params[:q]).result
   end
 end

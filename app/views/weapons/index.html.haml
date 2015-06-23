@@ -3,6 +3,14 @@
     .panel-heading
       %h3.panel-title= t(".search.title")
     .panel-body
+      %form.form-horizontal{"ng-submit" => "search()"}
+        .col-lg-4
+          .form-group
+            %label.control-label.col-lg-2= t(".search.name")
+            .col-lg-10
+              = text_field_tag "params[name]", "", "ng-model" => "params.name", :class => "form-control"
+        .col-lg-4
+        .col-lg-4
 
   .panel{class: random_color_class("panel")}
     .panel-heading
