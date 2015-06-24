@@ -25,6 +25,7 @@ gem 'haml-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'ransack'
+gem 'select2-rails'
 
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
