@@ -25,6 +25,8 @@ ja:
       common: &common
         name: "名前"
         type: "種別"
+        sub_weapon: "サブウェポン"
+        special_weapon: "スペシャルウェポン"
       search:
         <<: *common
         title: "検索"
@@ -35,5 +37,3 @@ ja:
         first_spec_html: "射程"
         second_spec_html: "攻撃<br/>溜速<br/>塗速"
         third_spec_html: "連射<br/>機動<br/>軽さ"
-        sub_weapon: "サブウェポン"
-        special_weapon: "スペシャルウェポン"

@@ -4,13 +4,17 @@
       %h3.panel-title= t(".search.title")
     .panel-body
       %form.form-horizontal{"ng-submit" => "search()"}
-        .col-lg-4
+        .col-lg-6
           .form-group
             %label.control-label.col-lg-2= t(".search.name")
             .col-lg-10
               = text_field_tag "params[name]", "", "ng-model" => "params.name", :class => "form-control"
-        .col-lg-4
-        .col-lg-4
+          .form-group
+            %label.control-label.col-lg-2= t(".search.type")
+            .col-lg-10
+              = select_tag "params[type]", type_columns_for_select, "ng-model" => "params.type", :include_blank => true, :multiple => true, :class => "form-control searchable"
+
+        .col-lg-6
         .col-lg-12
           = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
