@@ -4,7 +4,7 @@
       %h3.panel-title= t(".search.title")
     .panel-body
       %form.form-horizontal{"ng-submit" => "search()"}
-        .col-lg-6
+        .col-lg-5
           .form-group
             %label.control-label.col-lg-2= t(".search.name")
             .col-lg-10
@@ -13,8 +13,15 @@
             %label.control-label.col-lg-2= t(".search.type")
             .col-lg-10
               = select_tag "params[type]", type_columns_for_select, "ng-model" => "params.type", :include_blank => true, :multiple => true, :class => "form-control searchable"
-
-        .col-lg-6
+        .col-lg-7
+          .form-group
+            %label.control-label.col-lg-3= t(".search.sub_weapon")
+            .col-lg-9
+              = select_tag "params[sub_weapon]", sub_weapon_columns_for_select, "ng-model" => "params.sub_weapon", :include_blank => true, :multiple => true, :class => "form-control searchable"
+          .form-group
+            %label.control-label.col-lg-3= t(".search.special_weapon")
+            .col-lg-9
+              = select_tag "params[special_weapon]", special_weapon_columns_for_select, "ng-model" => "params.special_weapon", :include_blank => true, :multiple => true, :class => "form-control searchable"
         .col-lg-12
           = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
