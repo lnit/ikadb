@@ -30,7 +30,14 @@ ja:
       search:
         <<: *common
         title: "検索"
-        first_spec: "射程"
+        range: "射程"
+        spec_column: "%{name}系(%{n})"
+        compare_columns:
+          gt: "より大きい"
+          gteq: "以上"
+          eq: "と同じ"
+          lteq: "以下"
+          le: "より小さい"
       list:
         <<: *common
         title: "一覧"

@@ -1,4 +1,5 @@
 App.controller "WeaponsController", ($scope, Weapon) ->
+  $scope.params = {"range_compare" : "gt"}
   $scope.weapons = Weapon.query()
 
   $scope.search = ->
@@ -8,4 +9,9 @@ App.controller "WeaponsController", ($scope, Weapon) ->
     params["q[main_weapon_weapon_type_eq_any][]"] = $scope.params.type if $scope.params.type
     params["q[sub_weapon_id_eq_any][]"] = $scope.params.sub_weapon if $scope.params.sub_weapon
     params["q[special_weapon_id_eq_any][]"] = $scope.params.special_weapon if $scope.params.special_weapon
+
+    if $scope.params.range
+      key = "q[main_weapon_range_" + $scope.params.range_compare + "]"
+      params[key] = $scope.params.range
+
     $scope.weapons = Weapon.query(params)
