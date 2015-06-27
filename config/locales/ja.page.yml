@@ -10,7 +10,8 @@ ja:
       charger: "チャージャー"
       roller:  "ローラー"
     search: "検索"
-
+  footer:
+    text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
   dashboards:
     index:
       title: " - トップページ"
@@ -18,7 +19,7 @@ ja:
       subhead: スプラトゥーン装備品データベース
       description:
         title: "IkaDB! について"
-        body_html: このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。<br/>ブキの性能・サブウェポン・スペシャルウェポンの検索にご利用ください。
+        body_html: このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。<br/>ブキの性能検索(「.52ガロンより射程の長い武器は？」「バリアかダイオウイカを使える武器は？」など)にご利用ください。<br /><br />※スプラトゥーン(splatoon)は任天堂株式会社の登録商標です。また、このサイトは任天堂株式会社とは無関係のサイトです。
       menu:
         title: "メニュー"
 
