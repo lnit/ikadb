@@ -1,4 +1,4 @@
-App.controller "WeaponsController", ($scope, Weapon) ->
+App.controller "WeaponsController", ["$scope", "Weapon", ($scope, Weapon) ->
   $scope.params = {"range_compare" : "gt"}
   $scope.weapons = Weapon.query()
 
@@ -15,3 +15,4 @@ App.controller "WeaponsController", ($scope, Weapon) ->
       params[key] = $scope.params.range
 
     $scope.weapons = Weapon.query(params)
+]
