@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require select2
+//= require angular
+//= require angular-resource
+//= require angular-ui-bootstrap-bower
+//= require ikadb_angular
 //= require_tree .

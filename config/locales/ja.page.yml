@@ -1,8 +1,14 @@
 ja:
   common:
     menu: "メニュー"
-    weapon: "ブキ(準備中)"
+    weapon: "ブキ"
     gear: "ギア(準備中)"
+    weapon_type:
+      shooter: "シューター"
+      blaster: "ブラスター"
+      charger: "チャージャー"
+      roller:  "ローラー"
+    search: "検索"
 
   dashboards:
     index:
@@ -13,3 +19,28 @@ ja:
         body_html: このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。<br/>ブキの性能・サブウェポン・スペシャルウェポンの検索にご利用ください。
       menu:
         title: "メニュー"
+
+  weapons:
+    index:
+      common: &common
+        name: "名前"
+        type: "種別"
+        sub_weapon: "サブウェポン"
+        special_weapon: "スペシャルウェポン"
+      search:
+        <<: *common
+        title: "検索"
+        range: "射程"
+        spec_column: "%{name}系(%{n})"
+        compare_columns:
+          gt: "より大きい"
+          gteq: "以上"
+          eq: "と同じ"
+          lteq: "以下"
+          le: "より小さい"
+      list:
+        <<: *common
+        title: "一覧"
+        first_spec_html: "射程"
+        second_spec_html: "攻撃<br/>溜速<br/>塗速"
+        third_spec_html: "連射<br/>機動<br/>軽さ"

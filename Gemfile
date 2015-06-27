@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -24,6 +24,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'ransack'
+gem 'select2-rails'
+
+gem 'rails-assets-angular'
+gem 'rails-assets-angular-resource'
+gem 'rails-assets-angular-ui-bootstrap-bower'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -43,9 +49,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
 
-group :test do
- gem 'rspec-rails'
+  #
+  gem 'rspec-rails'
 end
-
