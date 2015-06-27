@@ -1,6 +1,6 @@
 .page-header
-  %h1= t(".title")
-  %h2= t(".subtitle")
+  %h1= t(".head")
+  %h2= t(".subhead")
 
 .panel{class: random_color_class("panel")}
   .panel-heading
@@ -21,3 +21,6 @@
   %ul.nav.nav-list
     %li= link_to t("common.weapon"), weapons_path
     %li= link_to t("common.gear"), "#"
+
+- content_for(:title) do
+  = t(".title")

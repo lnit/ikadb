@@ -1,5 +1,6 @@
 ja:
   common:
+    application_name: "IkaDB!"
     menu: "メニュー"
     weapon: "ブキ"
     gear: "ギア(準備中)"
@@ -12,8 +13,9 @@ ja:
 
   dashboards:
     index:
-      title: IkaDB!
-      subtitle: スプラトゥーン装備品データベース
+      title: " - トップページ"
+      head: IkaDB!
+      subhead: スプラトゥーン装備品データベース
       description:
         title: "IkaDB! について"
         body_html: このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。<br/>ブキの性能・サブウェポン・スペシャルウェポンの検索にご利用ください。
@@ -22,6 +24,7 @@ ja:
 
   weapons:
     index:
+      title: " - ブキ(武器)"
       common: &common
         name: "名前"
         type: "種別"
