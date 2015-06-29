@@ -1,6 +1,7 @@
 ja:
   common:
     application_name: "IkaDB!"
+    ogdesc: "このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。ブキ/ギアの性能検索にご利用ください。"
     menu: "メニュー"
     weapon: "ブキ"
     gear: "ギア(準備中)"
