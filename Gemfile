@@ -31,6 +31,8 @@ gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
 gem 'rails-assets-angular-ui-bootstrap-bower'
 
+gem 'google-analytics-rails'
+
 gem 'puma'
 
 # Use ActiveModel has_secure_password
