@@ -1,0 +1,2 @@
+class GearsController < ApplicationController
+end
