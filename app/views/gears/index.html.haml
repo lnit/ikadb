@@ -14,15 +14,15 @@
             %th= t(".list.name")
             %th= t(".list.type")
             %th= t(".list.slot")
-            %th= t(".list.brand")
             %th= t(".list.power")
+            %th= t(".list.brand")
         %tbody
           %tr.gear{"ng-repeat" => "gear in gears"}
             %td {{gear.name}}
             %td {{gear.type_name}}
             %td {{gear.slot}}
-            %td {{gear.brand.description}}
             %td {{gear.power.name}}
+            %td {{gear.brand.description}}
 
 - content_for(:title) do
   = t(".title")

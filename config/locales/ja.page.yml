@@ -57,13 +57,13 @@ ja:
 
   gears:
     common:
-      description: "%{name} (◎:%{strong} ✕:%{weak})"
+      description: "%{name} 【◎:%{strong}】【✕:%{weak}】"
     index:
       title: " - ギア"
       common: &common
         name: "名前"
         type: "部位"
-        slot: "スロット"
+        slot: "★"
         brand: "ブランド"
         power: "ギアパワー(メイン)"
       search:
