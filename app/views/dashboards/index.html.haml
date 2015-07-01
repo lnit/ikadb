@@ -14,13 +14,13 @@
   .panel-body
     %ul
       %li= link_to t("common.weapon"), weapons_path
-      %li= link_to t("common.gear"), "#"
+      %li= link_to t("common.gear"), gears_path
 
 - content_for(:sidebar) do
   %h4= t("common.menu")
   %ul.nav.nav-list
     %li= link_to t("common.weapon"), weapons_path
-    %li= link_to t("common.gear"), "#"
+    %li= link_to t("common.gear"), gears_path
 
 - content_for(:title) do
   = t(".title")
