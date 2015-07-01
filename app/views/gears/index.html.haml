@@ -19,9 +19,9 @@
         %tbody
           %tr.gear{"ng-repeat" => "gear in gears"}
             %td {{gear.name}}
-            %td 
+            %td {{gear.type_name}}
             %td {{gear.slot}}
-            %td {{gear.brand.name}}
+            %td {{gear.brand.description}}
             %td {{gear.power.name}}
 
 - content_for(:title) do

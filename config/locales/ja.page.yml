@@ -10,9 +10,14 @@ ja:
       blaster: "ブラスター"
       charger: "チャージャー"
       roller:  "ローラー"
+    gear_type:
+      head: "アタマ"
+      body: "フク"
+      shoes: "クツ"
     search: "検索"
   footer:
     text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
+
   dashboards:
     index:
       title: " - トップページ"
@@ -51,6 +56,8 @@ ja:
         third_spec_html: "連射<br/>機動<br/>軽さ"
 
   gears:
+    common:
+      description: "%{name} (◎:%{strong} ✕:%{weak})"
     index:
       title: " - ギア"
       common: &common
