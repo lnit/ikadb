@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150701144350) do
     t.integer  "gear_type"
     t.integer  "slot"
     t.integer  "brand_id"
+    t.integer  "power_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150701144350) do
   add_index "gears", ["brand_id"], name: "index_gears_on_brand_id", using: :btree
   add_index "gears", ["gear_type"], name: "index_gears_on_gear_type", using: :btree
   add_index "gears", ["name"], name: "index_gears_on_name", using: :btree
+  add_index "gears", ["power_id"], name: "index_gears_on_power_id", using: :btree
   add_index "gears", ["slot"], name: "index_gears_on_slot", using: :btree
 
   create_table "main_weapons", force: :cascade do |t|
@@ -102,6 +104,7 @@ ActiveRecord::Schema.define(version: 20150701144350) do
   add_index "weapons", ["sub_weapon_id"], name: "index_weapons_on_sub_weapon_id", using: :btree
 
   add_foreign_key "gears", "brands"
+  add_foreign_key "gears", "powers"
   add_foreign_key "weapons", "main_weapons"
   add_foreign_key "weapons", "special_weapons"
   add_foreign_key "weapons", "sub_weapons"

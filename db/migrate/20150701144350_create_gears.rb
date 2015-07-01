@@ -5,6 +5,7 @@ class CreateGears < ActiveRecord::Migration
       t.integer :gear_type
       t.integer :slot
       t.belongs_to :brand, index: true
+      t.belongs_to :power, index: true
 
       t.timestamps null: false
     end
@@ -12,5 +13,6 @@ class CreateGears < ActiveRecord::Migration
     add_index :gears, :gear_type
     add_index :gears, :slot
     add_foreign_key :gears, :brands
+    add_foreign_key :gears, :powers
   end
 end
