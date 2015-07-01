@@ -1,0 +1,28 @@
+%div{"ng-controller" => "GearsController"}
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".search.title")
+    .panel-body
+
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".list.title")
+    .panel-body
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th= t(".list.name")
+            %th= t(".list.type")
+            %th= t(".list.slot")
+            %th= t(".list.brand")
+            %th= t(".list.power")
+        %tbody
+          %tr.gear{"ng-repeat" => "gear in gears"}
+            %td {{gear.name}}
+            %td 
+            %td {{gear.slot}}
+            %td {{gear.brand.name}}
+            %td {{gear.power.name}}
+
+- content_for(:title) do
+  = t(".title")
