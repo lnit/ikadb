@@ -5,6 +5,8 @@ class Brand < ActiveRecord::Base
   default_scope { includes(:strong_power, :weak_power) }
 
   def description
-    I18n.t("gears.common.description", name: self.name, strong: strong_power.name, weak: weak_power.name)
+    strong_power_name = strong_power ? strong_power.name : I18n.t("common.none")
+    weak_power_name = weak_power ? weak_power.name : I18n.t("common.none")
+    I18n.t("gears.common.description", name: self.name, strong: strong_power_name, weak: weak_power_name)
   end
 end

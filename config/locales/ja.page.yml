@@ -14,6 +14,7 @@ ja:
       head: "アタマ"
       body: "フク"
       shoes: "クツ"
+    none: "なし"
     search: "検索"
   footer:
     text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
