@@ -8,6 +8,6 @@ class GearsController < ApplicationController
 
   private
   def get_gears
-    @gears = Gear.all
+    @gears = Gear.ransack(params[:q]).result
   end
 end
