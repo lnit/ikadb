@@ -12,7 +12,7 @@ class Gear < ActiveRecord::Base
   belongs_to :brand
   belongs_to :power
 
-  default_scope { includes(:brand, :power) }
+  default_scope { includes(:brand, :power).order(:gear_type).order(:slot).order(:brand_id) }
 
   def type_key
     return unless self.gear_type
