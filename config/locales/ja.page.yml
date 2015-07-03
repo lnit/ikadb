@@ -4,15 +4,21 @@ ja:
     ogdesc: "このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。ブキ/ギアの性能検索にご利用ください。"
     menu: "メニュー"
     weapon: "ブキ"
-    gear: "ギア(準備中)"
+    gear: "ギア"
     weapon_type:
       shooter: "シューター"
       blaster: "ブラスター"
       charger: "チャージャー"
       roller:  "ローラー"
+    gear_type:
+      head: "アタマ"
+      body: "フク"
+      shoes: "クツ"
+    none: "なし"
     search: "検索"
   footer:
     text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
+
   dashboards:
     index:
       title: " - トップページ"
@@ -49,3 +55,21 @@ ja:
         first_spec_html: "射程"
         second_spec_html: "攻撃<br/>溜速<br/>塗速"
         third_spec_html: "連射<br/>機動<br/>軽さ"
+
+  gears:
+    common:
+      description: "%{name} 【◎:%{strong}】【✕:%{weak}】"
+    index:
+      title: " - ギア"
+      common: &common
+        name: "名前"
+        type: "部位"
+        slot: "★"
+        brand: "ブランド"
+        power: "ギアパワー"
+      search:
+        <<: *common
+        title: "検索"
+      list:
+        <<: *common
+        title: "一覧"

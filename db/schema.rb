@@ -11,10 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621085626) do
+ActiveRecord::Schema.define(version: 20150701144350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "brands", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "strong_power_id"
+    t.integer  "weak_power_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "gears", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "gear_type"
+    t.integer  "slot"
+    t.integer  "brand_id"
+    t.integer  "power_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "gears", ["brand_id"], name: "index_gears_on_brand_id", using: :btree
+  add_index "gears", ["gear_type"], name: "index_gears_on_gear_type", using: :btree
+  add_index "gears", ["name"], name: "index_gears_on_name", using: :btree
+  add_index "gears", ["power_id"], name: "index_gears_on_power_id", using: :btree
+  add_index "gears", ["slot"], name: "index_gears_on_slot", using: :btree
 
   create_table "main_weapons", force: :cascade do |t|
     t.string   "name"
@@ -41,6 +65,12 @@ ActiveRecord::Schema.define(version: 20150621085626) do
   add_index "main_weapons", ["speed"], name: "index_main_weapons_on_speed", using: :btree
   add_index "main_weapons", ["weapon_type"], name: "index_main_weapons_on_weapon_type", using: :btree
   add_index "main_weapons", ["weight"], name: "index_main_weapons_on_weight", using: :btree
+
+  create_table "powers", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "special_weapons", force: :cascade do |t|
     t.string   "name"
@@ -73,6 +103,8 @@ ActiveRecord::Schema.define(version: 20150621085626) do
   add_index "weapons", ["special_weapon_id"], name: "index_weapons_on_special_weapon_id", using: :btree
   add_index "weapons", ["sub_weapon_id"], name: "index_weapons_on_sub_weapon_id", using: :btree
 
+  add_foreign_key "gears", "brands"
+  add_foreign_key "gears", "powers"
   add_foreign_key "weapons", "main_weapons"
   add_foreign_key "weapons", "special_weapons"
   add_foreign_key "weapons", "sub_weapons"
