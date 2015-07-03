@@ -78,6 +78,12 @@ create_main_weapon([19, "カーボンローラー",
 create_main_weapon([20, "パブロ",
                               MainWeapon::ROLLER_ID,  2,      nil, nil, nil, 20,                 nil, nil, 18])
 
+create_main_weapon([20, "ノヴァブラスター",
+                              MainWeapon::BLASTER_ID,  2,      nil, 16, nil, nil,                 6, nil, nil])
+
+create_main_weapon([21, "カーボンローラー",
+                              MainWeapon::ROLLER_ID,  4,      nil, nil, nil, 14,                 nil, nil, 12])
+
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
 create_sub_weapon([3, "クイックボム"])
@@ -127,6 +133,8 @@ Weapon.create(name: "ジェットスイーパーカスタム",
                     main_weapon_id: 7, sub_weapon_id: 3, special_weapon_id: 6)
 Weapon.create(name: "デュアルスイーパー",
                     main_weapon_id: 8, sub_weapon_id: 1, special_weapon_id: 7)
+Weapon.create(name: "デュアルスイーパーカスタム",
+                    main_weapon_id: 8, sub_weapon_id: 8, special_weapon_id: 2)
 Weapon.create(name: "N-ZAP89",
                     main_weapon_id: 9, sub_weapon_id: 1, special_weapon_id: 7)
 Weapon.create(name: "シャープマーカー",
@@ -141,6 +149,8 @@ Weapon.create(name: "ラピッドブラスター",
                     main_weapon_id: 13, sub_weapon_id: 6, special_weapon_id: 4)
 Weapon.create(name: "ラピッドブラスターデコ",
                     main_weapon_id: 13, sub_weapon_id: 2, special_weapon_id: 5)
+Weapon.create(name: "ノヴァブラスター",
+                    main_weapon_id: 20, sub_weapon_id: 6, special_weapon_id: 1)
 
 Weapon.create(name: "スプラチャージャー",
                     main_weapon_id: 14, sub_weapon_id: 1, special_weapon_id: 5)
@@ -171,6 +181,8 @@ Weapon.create(name: "ダイナモローラー",
                     main_weapon_id: 19, sub_weapon_id: 7, special_weapon_id: 7)
 Weapon.create(name: "ダイナモローラーテスラ",
                     main_weapon_id: 19, sub_weapon_id: 1, special_weapon_id: 3)
+Weapon.create(name: "カーボンローラー",
+                    main_weapon_id: 21, sub_weapon_id: 3, special_weapon_id: 1)
 Weapon.create(name: "パブロ",
                     main_weapon_id: 20, sub_weapon_id: 7, special_weapon_id: 3)
 
