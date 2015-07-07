@@ -18,7 +18,7 @@ ja:
     search: "検索"
     placeholder:
       example: "例: %{example}"
-      searchable: " ※文字入力で絞込"
+      searchable: " ※文字入力で絞込可能"
   footer:
     text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
 
@@ -82,6 +82,10 @@ ja:
       search:
         <<: *common
         title: "検索"
+        example:
+          type: "アタマ"
+          power: "攻撃力アップ"
+          brand: "アイロニック"
       list:
         <<: *common
         title: "一覧"
