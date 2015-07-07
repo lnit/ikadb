@@ -16,6 +16,9 @@ ja:
       shoes: "クツ"
     none: "なし"
     search: "検索"
+    placeholder:
+      example: "例: %{example}"
+      searchable: " ※文字入力で絞込"
   footer:
     text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
 
@@ -53,6 +56,11 @@ ja:
           eq: "と同じ"
           lteq: "以下"
           le: "より小さい"
+        example:
+          type: "ローラー"
+          sub_weapon: "スプラッシュボム"
+          special_weapon: "バリア・ダイオウイカ"
+          range: "スプラローラー"
       list:
         <<: *common
         title: "一覧"
