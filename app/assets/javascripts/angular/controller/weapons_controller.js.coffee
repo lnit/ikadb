@@ -18,7 +18,7 @@ App.controller "WeaponsController", ["$scope", "Weapon", ($scope, Weapon) ->
     _gaq.push([
       "_trackEvent",
       "weapon",
-      params,
+      JSON.stringify(params),
       "",
       1,
       false

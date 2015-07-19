@@ -20,7 +20,7 @@ App.controller "GearsController", ["$scope", "Gear", ($scope, Gear) ->
     _gaq.push([
       "_trackEvent",
       "gear",
-      params,
+      JSON.stringify(params),
       "",
       1,
       false
