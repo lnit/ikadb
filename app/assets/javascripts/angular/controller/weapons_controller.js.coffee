@@ -15,4 +15,12 @@ App.controller "WeaponsController", ["$scope", "Weapon", ($scope, Weapon) ->
       params[key] = $scope.params.range
 
     $scope.weapons = Weapon.query(params)
+    _gaq.push([
+      "_trackEvent",
+      "weapon",
+      params,
+      "",
+      1,
+      false
+    ])
 ]
