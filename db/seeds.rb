@@ -78,11 +78,18 @@ create_main_weapon([19, "ダイナモローラー",
 create_main_weapon([20, "パブロ",
                               MainWeapon::ROLLER_ID,  10,      nil, nil, nil, 100,                 nil, nil, 100])
 
-create_main_weapon([20, "ノヴァブラスター",
+create_main_weapon([21, "ノヴァブラスター",
                               MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
 
-create_main_weapon([21, "カーボンローラー",
+create_main_weapon([22, "カーボンローラー",
                               MainWeapon::ROLLER_ID,  20,      nil, nil, nil, 65,                 nil, nil, 70])
+
+create_main_weapon([23, "ホクサイ",
+                              MainWeapon::ROLLER_ID,  25,      nil, nil, nil, 80,                 nil, nil, 80])
+
+create_main_weapon([24, "ボールドマーカー",
+                              MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
+
 
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
@@ -123,6 +130,8 @@ Weapon.create(name: ".52ガロンデコ",
                     main_weapon_id: 4, sub_weapon_id: 4, special_weapon_id: 3)
 Weapon.create(name: ".96ガロン",
                     main_weapon_id: 5, sub_weapon_id: 7, special_weapon_id: 7)
+Weapon.create(name: ".96ガロンデコ",
+                    main_weapon_id: 5, sub_weapon_id: 9, special_weapon_id: 6)
 Weapon.create(name: "プロモデラーMG",
                     main_weapon_id: 6, sub_weapon_id: 4, special_weapon_id: 1)
 Weapon.create(name: "プロモデラーRG",
@@ -135,12 +144,16 @@ Weapon.create(name: "デュアルスイーパー",
                     main_weapon_id: 8, sub_weapon_id: 1, special_weapon_id: 7)
 Weapon.create(name: "デュアルスイーパーカスタム",
                     main_weapon_id: 8, sub_weapon_id: 8, special_weapon_id: 2)
-Weapon.create(name: "N-ZAP89",
+Weapon.create(name: "N-ZAP85",
                     main_weapon_id: 9, sub_weapon_id: 1, special_weapon_id: 7)
+Weapon.create(name: "N-ZAP89",
+                    main_weapon_id: 9, sub_weapon_id: 7, special_weapon_id: 3)
 Weapon.create(name: "シャープマーカー",
                     main_weapon_id: 10, sub_weapon_id: 2, special_weapon_id: 5)
 Weapon.create(name: "L3リールガン",
                     main_weapon_id: 11, sub_weapon_id: 10, special_weapon_id: 2)
+Weapon.create(name: "ボールドマーカー",
+                    main_weapon_id: 24, sub_weapon_id: 8, special_weapon_id: 2)
 Weapon.create(name: "ホットブラスター",
                     main_weapon_id: 12, sub_weapon_id: 10, special_weapon_id: 2)
 Weapon.create(name: "ホットブラスターカスタム",
@@ -150,7 +163,7 @@ Weapon.create(name: "ラピッドブラスター",
 Weapon.create(name: "ラピッドブラスターデコ",
                     main_weapon_id: 13, sub_weapon_id: 2, special_weapon_id: 5)
 Weapon.create(name: "ノヴァブラスター",
-                    main_weapon_id: 20, sub_weapon_id: 6, special_weapon_id: 1)
+                    main_weapon_id: 21, sub_weapon_id: 6, special_weapon_id: 1)
 
 Weapon.create(name: "スプラチャージャー",
                     main_weapon_id: 14, sub_weapon_id: 1, special_weapon_id: 5)
@@ -182,9 +195,11 @@ Weapon.create(name: "ダイナモローラー",
 Weapon.create(name: "ダイナモローラーテスラ",
                     main_weapon_id: 19, sub_weapon_id: 1, special_weapon_id: 3)
 Weapon.create(name: "カーボンローラー",
-                    main_weapon_id: 21, sub_weapon_id: 3, special_weapon_id: 1)
+                    main_weapon_id: 22, sub_weapon_id: 3, special_weapon_id: 1)
 Weapon.create(name: "パブロ",
                     main_weapon_id: 20, sub_weapon_id: 7, special_weapon_id: 3)
+Weapon.create(name: "ホクサイ",
+                    main_weapon_id: 23, sub_weapon_id: 8, special_weapon_id: 6)
 
 #Weapon.create(name: "",
 #                    main_weapon_id: , sub_weapon_id: , special_weapon_id: )
