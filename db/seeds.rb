@@ -32,57 +32,57 @@ end
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([1, "わかばシューター",
-                              MainWeapon::SHOOTER_ID, 6,      6, nil, nil, nil,                  15, nil, nil])
+                              MainWeapon::SHOOTER_ID, 32,      32, nil, nil, nil,                  75, nil, nil])
 create_main_weapon([2, "スプラシューター",
-                              MainWeapon::SHOOTER_ID, 10,     9, nil, nil, nil,                  11, nil, nil])
+                              MainWeapon::SHOOTER_ID, 50,     45, nil, nil, nil,                  55, nil, nil])
 create_main_weapon([3, "プライムシューター",
-                              MainWeapon::SHOOTER_ID, 14,     11, nil, nil, nil,                 8, nil, nil])
+                              MainWeapon::SHOOTER_ID, 68,     55, nil, nil, nil,                 40, nil, nil])
 create_main_weapon([4, ".52ガロン",
-                              MainWeapon::SHOOTER_ID, 10,     14, nil, nil, nil,                 6, nil, nil])
+                              MainWeapon::SHOOTER_ID, 50,     70, nil, nil, nil,                 30, nil, nil])
 create_main_weapon([5, ".96ガロン",
-                              MainWeapon::SHOOTER_ID, 14,     16, nil, nil, nil,                 3, nil, nil])
+                              MainWeapon::SHOOTER_ID, 68,     80, nil, nil, nil,                 15, nil, nil])
 create_main_weapon([6, "プロモデラー",
-                              MainWeapon::SHOOTER_ID, 6,      4, nil, nil, nil,                  20, nil, nil])
+                              MainWeapon::SHOOTER_ID, 32,      20, nil, nil, nil,                  100, nil, nil])
 create_main_weapon([7, "ジェットスイーパー",
-                              MainWeapon::SHOOTER_ID, 16,     6, nil, nil, nil,                  8, nil, nil])
+                              MainWeapon::SHOOTER_ID, 80,     32, nil, nil, nil,                  40, nil, nil])
 create_main_weapon([8, "デュアルスイーパー",
-                              MainWeapon::SHOOTER_ID, 14,     5, nil, nil, nil,                  11, nil, nil])
-create_main_weapon([9, "N-ZAP89",
-                              MainWeapon::SHOOTER_ID, 10,     6, nil, nil, nil,                  15, nil, nil])
+                              MainWeapon::SHOOTER_ID, 68,     27, nil, nil, nil,                  55, nil, nil])
+create_main_weapon([9, "N-ZAP",
+                              MainWeapon::SHOOTER_ID, 50,     32, nil, nil, nil,                  75, nil, nil])
 create_main_weapon([10, "シャープマーカー",
-                              MainWeapon::SHOOTER_ID, 8,      6, nil, nil, nil,                  17, nil, nil])
+                              MainWeapon::SHOOTER_ID, 32,      26, nil, nil, nil,                  75, nil, nil])
 create_main_weapon([11, "L3リールガン",
-                              MainWeapon::SHOOTER_ID, 11,     8, nil, nil, nil,                  13, nil, nil])
+                              MainWeapon::SHOOTER_ID, 60,     40, nil, nil, nil,                  75, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([12, "ホットブラスター",
-                              MainWeapon::BLASTER_ID, 5,      nil, 14, nil, nil,                  4, nil, nil])
+                              MainWeapon::BLASTER_ID, 25,      nil, 70, nil, nil,                  20, nil, nil])
 create_main_weapon([13, "ラピッドブラスター",
-                              MainWeapon::BLASTER_ID, 9,      nil, 7, nil, nil,                  8, nil, nil])
+                              MainWeapon::BLASTER_ID, 45,      nil, 35, nil, nil,                  40, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([14, "スプラチャージャー",
-                              MainWeapon::CHARGER_ID, 17,     nil, nil, 10, nil,                 nil, 9, nil])
+                              MainWeapon::CHARGER_ID, 85,     nil, nil, 50, nil,                 nil, 40, nil])
 create_main_weapon([15, "スプラスコープ",
-                              MainWeapon::CHARGER_ID, 17,     nil, nil, 10, nil,                 nil, 7, nil])
+                              MainWeapon::CHARGER_ID, 88,     nil, nil, 50, nil,                 nil, 35, nil])
 create_main_weapon([16, "スクイックリン",
-                              MainWeapon::CHARGER_ID, 13,     nil, nil, 14, nil,                 nil, 12, nil])
+                              MainWeapon::CHARGER_ID, 65,     nil, nil, 70, nil,                 nil, 60, nil])
 create_main_weapon([17, "リッター3K",
-                              MainWeapon::CHARGER_ID, 20,     nil, nil, 4, nil,                  nil, 3, nil])
+                              MainWeapon::CHARGER_ID, 97,     nil, nil, 20, nil,                  nil, 15, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([18, "スプラローラー",
-                              MainWeapon::ROLLER_ID,  11,     nil, nil, nil, 10,                 nil, nil, 9])
-create_main_weapon([19, "カーボンローラー",
-                              MainWeapon::ROLLER_ID,  14,     nil, nil, nil, 6,                  nil, nil, 4])
+                              MainWeapon::ROLLER_ID,  55,     nil, nil, nil, 50,                 nil, nil, 40])
+create_main_weapon([19, "ダイナモローラー",
+                              MainWeapon::ROLLER_ID,  72,     nil, nil, nil, 30,                  nil, nil, 20])
 create_main_weapon([20, "パブロ",
-                              MainWeapon::ROLLER_ID,  2,      nil, nil, nil, 20,                 nil, nil, 18])
+                              MainWeapon::ROLLER_ID,  10,      nil, nil, nil, 100,                 nil, nil, 100])
 
 create_main_weapon([20, "ノヴァブラスター",
-                              MainWeapon::BLASTER_ID,  2,      nil, 16, nil, nil,                 6, nil, nil])
+                              MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
 
 create_main_weapon([21, "カーボンローラー",
-                              MainWeapon::ROLLER_ID,  4,      nil, nil, nil, 14,                 nil, nil, 12])
+                              MainWeapon::ROLLER_ID,  20,      nil, nil, nil, 65,                 nil, nil, 70])
 
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
