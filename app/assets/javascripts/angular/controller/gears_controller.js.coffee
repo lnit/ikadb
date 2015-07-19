@@ -17,4 +17,12 @@ App.controller "GearsController", ["$scope", "Gear", ($scope, Gear) ->
     params["q[brand_id_eq_any][]"] = $scope.params.brand if $scope.params.brand
 
     $scope.gears = Gear.query(params)
+    _gaq.push([
+      "_trackEvent",
+      "gear",
+      JSON.stringify(params),
+      "",
+      1,
+      false
+    ])
 ]
