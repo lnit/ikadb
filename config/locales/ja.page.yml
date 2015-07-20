@@ -20,7 +20,7 @@ ja:
       example: "例: %{example}"
       searchable: " ※文字入力で絞込可能"
   footer:
-    text_html: "&copy; <a href='https://twitter.com/lni_T', target='blank'>@lni_T</a> 2015"
+    text_html: "&copy; <a href='https://github.com/lnit', target='blank'>@lni_T</a> 2015"
 
   dashboards:
     index:
