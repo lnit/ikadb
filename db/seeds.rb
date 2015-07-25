@@ -90,6 +90,8 @@ create_main_weapon([23, "ホクサイ",
 create_main_weapon([24, "ボールドマーカー",
                               MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
 
+create_main_weapon([25, "3Kスコープ",
+                              MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
 
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
@@ -150,6 +152,8 @@ Weapon.create(name: "N-ZAP89",
                     main_weapon_id: 9, sub_weapon_id: 7, special_weapon_id: 3)
 Weapon.create(name: "シャープマーカー",
                     main_weapon_id: 10, sub_weapon_id: 2, special_weapon_id: 5)
+Weapon.create(name: "シャープマーカーネオ",
+                    main_weapon_id: 10, sub_weapon_id: 3, special_weapon_id: 1)
 Weapon.create(name: "L3リールガン",
                     main_weapon_id: 11, sub_weapon_id: 10, special_weapon_id: 2)
 Weapon.create(name: "ボールドマーカー",
@@ -183,6 +187,8 @@ Weapon.create(name: "リッター3K",
                     main_weapon_id: 17, sub_weapon_id: 3, special_weapon_id: 7)
 Weapon.create(name: "リッター3Kカスタム",
                     main_weapon_id: 17, sub_weapon_id: 8, special_weapon_id: 6)
+Weapon.create(name: "3Kスコープ",
+                    main_weapon_id: 25, sub_weapon_id: 3, special_weapon_id: 7)
 
 Weapon.create(name: "スプラローラー",
                     main_weapon_id: 18, sub_weapon_id: 2, special_weapon_id: 2)
