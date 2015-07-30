@@ -18,7 +18,8 @@ ja:
     search: "検索"
     placeholder:
       example: "例: %{example}"
-      searchable: " ※文字入力で絞込可能"
+      searchable: " ※文字入力で絞込可"
+      multiple: " ※複数選択可"
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='blank'>@lni_T</a> 2015"
 

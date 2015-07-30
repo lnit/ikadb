@@ -12,16 +12,16 @@
           .form-group
             %label.control-label.col-lg-2= t(".search.type")
             .col-lg-10
-              = select_tag "params[type]", type_columns_for_select, "ng-model" => "params.type", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.type"))
+              = select_tag "params[type]", type_columns_for_select, "ng-model" => "params.type", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.type"), multiple: true)
         .col-lg-7
           .form-group
             %label.control-label.col-lg-3= t(".search.sub_weapon")
             .col-lg-9
-              = select_tag "params[sub_weapon]", sub_weapon_columns_for_select, "ng-model" => "params.sub_weapon", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.sub_weapon"))
+              = select_tag "params[sub_weapon]", sub_weapon_columns_for_select, "ng-model" => "params.sub_weapon", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.sub_weapon"), multiple: true)
           .form-group
             %label.control-label.col-lg-3= t(".search.special_weapon")
             .col-lg-9
-              = select_tag "params[special_weapon]", special_weapon_columns_for_select, "ng-model" => "params.special_weapon", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.special_weapon"))
+              = select_tag "params[special_weapon]", special_weapon_columns_for_select, "ng-model" => "params.special_weapon", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.special_weapon"), multiple: true)
           .form-group
             %label.control-label.col-lg-3= t(".search.range")
             .col-lg-6

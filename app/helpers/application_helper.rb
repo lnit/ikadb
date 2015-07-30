@@ -7,6 +7,7 @@ module ApplicationHelper
 
   def search_placeholder_text(example, opt = {searchable: false})
     str = I18n.t("common.placeholder.example", example: example)
+    str += I18n.t("common.placeholder.multiple") if opt[:multiple]
     str += I18n.t("common.placeholder.searchable") if opt[:searchable]
     str
   end
