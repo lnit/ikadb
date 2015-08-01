@@ -15,6 +15,16 @@ class Gear < ActiveRecord::Base
   default_scope { includes(:brand, :power).order(:gear_type).order(:slot).order(:brand_id) }
 
   validates :name, uniqueness: true
+  validates :brand, presence: true
+  validates :power, presence: true
+
+  def brand_name=(name)
+    self.brand = Brand.find_by(name: name)
+  end
+
+  def power_name=(name)
+    self.power = Power.find_by(name: name)
+  end
 
   def type_key
     return unless self.gear_type
