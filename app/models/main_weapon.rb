@@ -17,6 +17,8 @@ class MainWeapon < ActiveRecord::Base
     [:range, :speed,  :weight] #ROLLER
   ]
 
+  validates :name, uniqueness: true
+
   def type_key
     return unless self.weapon_type
     TYPE_KEY[self.weapon_type]
