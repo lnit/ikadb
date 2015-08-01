@@ -53,12 +53,18 @@ create_main_weapon([10, "シャープマーカー",
                               MainWeapon::SHOOTER_ID, 32,      26, nil, nil, nil,                  75, nil, nil])
 create_main_weapon([11, "L3リールガン",
                               MainWeapon::SHOOTER_ID, 60,     40, nil, nil, nil,                  75, nil, nil])
+create_main_weapon([24, "ボールドマーカー",
+                              MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([12, "ホットブラスター",
                               MainWeapon::BLASTER_ID, 25,      nil, 70, nil, nil,                  20, nil, nil])
 create_main_weapon([13, "ラピッドブラスター",
                               MainWeapon::BLASTER_ID, 45,      nil, 35, nil, nil,                  40, nil, nil])
+create_main_weapon([21, "ノヴァブラスター",
+                              MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
+create_main_weapon([26, "ロングブラスター",
+                              MainWeapon::BLASTER_ID,  35,      nil, 60, nil, nil,                 10, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([14, "スプラチャージャー",
@@ -69,32 +75,20 @@ create_main_weapon([16, "スクイックリン",
                               MainWeapon::CHARGER_ID, 65,     nil, nil, 70, nil,                 nil, 60, nil])
 create_main_weapon([17, "リッター3K",
                               MainWeapon::CHARGER_ID, 97,     nil, nil, 20, nil,                  nil, 15, nil])
+create_main_weapon([25, "3Kスコープ",
+                              MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([18, "スプラローラー",
                               MainWeapon::ROLLER_ID,  55,     nil, nil, nil, 50,                 nil, nil, 40])
 create_main_weapon([19, "ダイナモローラー",
                               MainWeapon::ROLLER_ID,  72,     nil, nil, nil, 30,                  nil, nil, 20])
-create_main_weapon([20, "パブロ",
-                              MainWeapon::ROLLER_ID,  10,      nil, nil, nil, 100,                 nil, nil, 100])
-
-create_main_weapon([21, "ノヴァブラスター",
-                              MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
-
 create_main_weapon([22, "カーボンローラー",
                               MainWeapon::ROLLER_ID,  20,      nil, nil, nil, 65,                 nil, nil, 70])
-
+create_main_weapon([20, "パブロ",
+                              MainWeapon::ROLLER_ID,  10,      nil, nil, nil, 100,                 nil, nil, 100])
 create_main_weapon([23, "ホクサイ",
                               MainWeapon::ROLLER_ID,  25,      nil, nil, nil, 80,                 nil, nil, 80])
-
-create_main_weapon([24, "ボールドマーカー",
-                              MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
-
-create_main_weapon([25, "3Kスコープ",
-                              MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
-
-create_main_weapon([26, "ロングブラスター",
-                              MainWeapon::BLASTER_ID,  35,      nil, 60, nil, nil,                 10, nil, nil])
 
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
@@ -116,106 +110,106 @@ create_special_weapon([6, "ダイオウイカ"])
 create_special_weapon([7, "スーパーセンサー"])
 
 Weapon.create(name: "わかばシューター",
-                    main_weapon_id: 1, sub_weapon_id: 1, special_weapon_id: 4)
+                    main_weapon_name: "わかばシューター", sub_weapon_name: "スプラッシュボム", special_weapon_name: "バリア")
 Weapon.create(name: "もみじシューター",
-                    main_weapon_id: 1, sub_weapon_id: 10,special_weapon_id: 7)
+                    main_weapon_name: "わかばシューター", sub_weapon_name: "ポイズンボール",special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "スプラシューター",
-                    main_weapon_id: 2, sub_weapon_id: 3, special_weapon_id: 3)
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "トルネード")
 Weapon.create(name: "スプラシューターコラボ",
-                    main_weapon_id: 2, sub_weapon_id: 2, special_weapon_id: 1)
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ヒーローシューター レプリカ",
-                    main_weapon_id: 2, sub_weapon_id: 3, special_weapon_id: 5)
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "プライムシューター",
-                    main_weapon_id: 3, sub_weapon_id: 1, special_weapon_id: 3)
+                    main_weapon_name: "プライムシューター", sub_weapon_name: "スプラッシュボム", special_weapon_name: "トルネード")
 Weapon.create(name: "プライムシューターコラボ",
-                    main_weapon_id: 3, sub_weapon_id: 5, special_weapon_id: 1)
+                    main_weapon_name: "プライムシューター", sub_weapon_name: "ポイントセンサー", special_weapon_name: "スーパーショット")
 Weapon.create(name: ".52ガロン",
-                    main_weapon_id: 4, sub_weapon_id: 9, special_weapon_id: 2)
+                    main_weapon_name: ".52ガロン", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: ".52ガロンデコ",
-                    main_weapon_id: 4, sub_weapon_id: 4, special_weapon_id: 3)
+                    main_weapon_name: ".52ガロン", sub_weapon_name: "チェイスボム", special_weapon_name: "トルネード")
 Weapon.create(name: ".96ガロン",
-                    main_weapon_id: 5, sub_weapon_id: 7, special_weapon_id: 7)
+                    main_weapon_name: ".96ガロン", sub_weapon_name: "スプリンクラー", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: ".96ガロンデコ",
-                    main_weapon_id: 5, sub_weapon_id: 9, special_weapon_id: 6)
+                    main_weapon_name: ".96ガロン", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "プロモデラーMG",
-                    main_weapon_id: 6, sub_weapon_id: 4, special_weapon_id: 1)
+                    main_weapon_name: "プロモデラー", sub_weapon_name: "チェイスボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "プロモデラーRG",
-                    main_weapon_id: 6, sub_weapon_id: 6, special_weapon_id: 3)
+                    main_weapon_name: "プロモデラー", sub_weapon_name: "トラップ", special_weapon_name: "トルネード")
 Weapon.create(name: "ジェットスイーパー",
-                    main_weapon_id: 7, sub_weapon_id: 9, special_weapon_id: 3)
+                    main_weapon_name: "ジェットスイーパー", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
 Weapon.create(name: "ジェットスイーパーカスタム",
-                    main_weapon_id: 7, sub_weapon_id: 3, special_weapon_id: 6)
+                    main_weapon_name: "ジェットスイーパー", sub_weapon_name: "クイックボム", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "デュアルスイーパー",
-                    main_weapon_id: 8, sub_weapon_id: 1, special_weapon_id: 7)
+                    main_weapon_name: "デュアルスイーパー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "デュアルスイーパーカスタム",
-                    main_weapon_id: 8, sub_weapon_id: 8, special_weapon_id: 2)
+                    main_weapon_name: "デュアルスイーパー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "N-ZAP85",
-                    main_weapon_id: 9, sub_weapon_id: 1, special_weapon_id: 7)
+                    main_weapon_name: "N-ZAP", sub_weapon_name: "スプラッシュボム", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "N-ZAP89",
-                    main_weapon_id: 9, sub_weapon_id: 7, special_weapon_id: 3)
+                    main_weapon_name: "N-ZAP", sub_weapon_name: "スプリンクラー", special_weapon_name: "トルネード")
 Weapon.create(name: "シャープマーカー",
-                    main_weapon_id: 10, sub_weapon_id: 2, special_weapon_id: 5)
+                    main_weapon_name: "シャープマーカー", sub_weapon_name: "キューバンボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "シャープマーカーネオ",
-                    main_weapon_id: 10, sub_weapon_id: 3, special_weapon_id: 1)
+                    main_weapon_name: "シャープマーカー", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "L3リールガン",
-                    main_weapon_id: 11, sub_weapon_id: 10, special_weapon_id: 2)
+                    main_weapon_name: "L3リールガン", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ボールドマーカー",
-                    main_weapon_id: 24, sub_weapon_id: 8, special_weapon_id: 2)
+                    main_weapon_name: "ボールドマーカー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ホットブラスター",
-                    main_weapon_id: 12, sub_weapon_id: 10, special_weapon_id: 2)
+                    main_weapon_name: "ホットブラスター", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ホットブラスターカスタム",
-                    main_weapon_id: 12, sub_weapon_id: 5, special_weapon_id: 4)
+                    main_weapon_name: "ホットブラスター", sub_weapon_name: "ポイントセンサー", special_weapon_name: "バリア")
 Weapon.create(name: "ラピッドブラスター",
-                    main_weapon_id: 13, sub_weapon_id: 6, special_weapon_id: 4)
+                    main_weapon_name: "ラピッドブラスター", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ラピッドブラスターデコ",
-                    main_weapon_id: 13, sub_weapon_id: 2, special_weapon_id: 5)
+                    main_weapon_name: "ラピッドブラスター", sub_weapon_name: "キューバンボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "ノヴァブラスター",
-                    main_weapon_id: 21, sub_weapon_id: 6, special_weapon_id: 1)
+                    main_weapon_name: "ノヴァブラスター", sub_weapon_name: "トラップ", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ロングブラスター",
-                    main_weapon_id: 26, sub_weapon_id: 9, special_weapon_id: 3)
+                    main_weapon_name: "ロングブラスター", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
 
 Weapon.create(name: "スプラチャージャー",
-                    main_weapon_id: 14, sub_weapon_id: 1, special_weapon_id: 5)
+                    main_weapon_name: "スプラチャージャー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スプラチャージャーワカメ",
-                    main_weapon_id: 14, sub_weapon_id: 7, special_weapon_id: 2)
+                    main_weapon_name: "スプラチャージャー", sub_weapon_name: "スプリンクラー", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "スプラスコープ",
-                    main_weapon_id: 15, sub_weapon_id: 1, special_weapon_id: 5)
+                    main_weapon_name: "スプラスコープ", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スプラスコープワカメ",
-                    main_weapon_id: 15, sub_weapon_id: 7, special_weapon_id: 2)
+                    main_weapon_name: "スプラスコープ", sub_weapon_name: "スプリンクラー", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ヒーローチャージャー レプリカ",
-                    main_weapon_id: 15, sub_weapon_id: 1, special_weapon_id: 5)
+                    main_weapon_name: "スプラスコープ", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スクイックリンα",
-                    main_weapon_id: 16, sub_weapon_id: 5, special_weapon_id: 4)
+                    main_weapon_name: "スクイックリン", sub_weapon_name: "ポイントセンサー", special_weapon_name: "バリア")
 Weapon.create(name: "スクイックリンβ",
-                    main_weapon_id: 16, sub_weapon_id: 6, special_weapon_id: 1)
+                    main_weapon_name: "スクイックリン", sub_weapon_name: "トラップ", special_weapon_name: "スーパーショット")
 Weapon.create(name: "リッター3K",
-                    main_weapon_id: 17, sub_weapon_id: 3, special_weapon_id: 7)
+                    main_weapon_name: "リッター3K", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "リッター3Kカスタム",
-                    main_weapon_id: 17, sub_weapon_id: 8, special_weapon_id: 6)
+                    main_weapon_name: "リッター3K", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "3Kスコープ",
-                    main_weapon_id: 25, sub_weapon_id: 3, special_weapon_id: 7)
+                    main_weapon_name: "3Kスコープ", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーセンサー")
 
 Weapon.create(name: "スプラローラー",
-                    main_weapon_id: 18, sub_weapon_id: 2, special_weapon_id: 2)
+                    main_weapon_name: "スプラローラー", sub_weapon_name: "キューバンボム", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "スプラローラーコラボ",
-                    main_weapon_id: 18, sub_weapon_id: 8, special_weapon_id: 6)
+                    main_weapon_name: "スプラローラー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "ヒーローローラー レプリカ",
-                    main_weapon_id: 18, sub_weapon_id: 2, special_weapon_id: 2)
+                    main_weapon_name: "スプラローラー", sub_weapon_name: "キューバンボム", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ダイナモローラー",
-                    main_weapon_id: 19, sub_weapon_id: 7, special_weapon_id: 7)
+                    main_weapon_name: "ダイナモローラー", sub_weapon_name: "スプリンクラー", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "ダイナモローラーテスラ",
-                    main_weapon_id: 19, sub_weapon_id: 1, special_weapon_id: 3)
+                    main_weapon_name: "ダイナモローラー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "トルネード")
 Weapon.create(name: "カーボンローラー",
-                    main_weapon_id: 22, sub_weapon_id: 3, special_weapon_id: 1)
+                    main_weapon_name: "カーボンローラー", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "パブロ",
-                    main_weapon_id: 20, sub_weapon_id: 7, special_weapon_id: 3)
+                    main_weapon_name: "パブロ", sub_weapon_name: "スプリンクラー", special_weapon_name: "トルネード")
 Weapon.create(name: "パブロ・ヒュー",
-                    main_weapon_id: 20, sub_weapon_id: 6, special_weapon_id: 4)
+                    main_weapon_name: "パブロ", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ホクサイ",
-                    main_weapon_id: 23, sub_weapon_id: 8, special_weapon_id: 6)
+                    main_weapon_name: "ホクサイ", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 
 #Weapon.create(name: "",
-#                    main_weapon_id: , sub_weapon_id: , special_weapon_id: )
+#                    main_weapon_name: , sub_weapon_name: , special_weapon_name: )
 
 
 def create_power(ary)
