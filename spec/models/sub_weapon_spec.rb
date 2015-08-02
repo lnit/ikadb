@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe SubWeapon, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "初期値" do
+    subject { described_class.count }
+    it { should == 10 }
+  end
 end
