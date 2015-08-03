@@ -4,6 +4,8 @@ class Brand < ActiveRecord::Base
 
   default_scope { includes(:strong_power, :weak_power) }
 
+  validates :name, uniqueness: true
+
   def description
     strong_power_name = strong_power ? strong_power.name : I18n.t("common.none")
     weak_power_name = weak_power ? weak_power.name : I18n.t("common.none")

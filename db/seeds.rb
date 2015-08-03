@@ -1,3 +1,5 @@
+require "csv"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -53,12 +55,18 @@ create_main_weapon([10, "シャープマーカー",
                               MainWeapon::SHOOTER_ID, 32,      26, nil, nil, nil,                  75, nil, nil])
 create_main_weapon([11, "L3リールガン",
                               MainWeapon::SHOOTER_ID, 60,     40, nil, nil, nil,                  75, nil, nil])
+create_main_weapon([24, "ボールドマーカー",
+                              MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([12, "ホットブラスター",
                               MainWeapon::BLASTER_ID, 25,      nil, 70, nil, nil,                  20, nil, nil])
 create_main_weapon([13, "ラピッドブラスター",
                               MainWeapon::BLASTER_ID, 45,      nil, 35, nil, nil,                  40, nil, nil])
+create_main_weapon([21, "ノヴァブラスター",
+                              MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
+create_main_weapon([26, "ロングブラスター",
+                              MainWeapon::BLASTER_ID,  35,      nil, 60, nil, nil,                 10, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([14, "スプラチャージャー",
@@ -69,32 +77,20 @@ create_main_weapon([16, "スクイックリン",
                               MainWeapon::CHARGER_ID, 65,     nil, nil, 70, nil,                 nil, 60, nil])
 create_main_weapon([17, "リッター3K",
                               MainWeapon::CHARGER_ID, 97,     nil, nil, 20, nil,                  nil, 15, nil])
+create_main_weapon([25, "3Kスコープ",
+                              MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([18, "スプラローラー",
                               MainWeapon::ROLLER_ID,  55,     nil, nil, nil, 50,                 nil, nil, 40])
 create_main_weapon([19, "ダイナモローラー",
                               MainWeapon::ROLLER_ID,  72,     nil, nil, nil, 30,                  nil, nil, 20])
-create_main_weapon([20, "パブロ",
-                              MainWeapon::ROLLER_ID,  10,      nil, nil, nil, 100,                 nil, nil, 100])
-
-create_main_weapon([21, "ノヴァブラスター",
-                              MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
-
 create_main_weapon([22, "カーボンローラー",
                               MainWeapon::ROLLER_ID,  20,      nil, nil, nil, 65,                 nil, nil, 70])
-
+create_main_weapon([20, "パブロ",
+                              MainWeapon::ROLLER_ID,  10,      nil, nil, nil, 100,                 nil, nil, 100])
 create_main_weapon([23, "ホクサイ",
                               MainWeapon::ROLLER_ID,  25,      nil, nil, nil, 80,                 nil, nil, 80])
-
-create_main_weapon([24, "ボールドマーカー",
-                              MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
-
-create_main_weapon([25, "3Kスコープ",
-                              MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
-
-create_main_weapon([26, "ロングブラスター",
-                              MainWeapon::BLASTER_ID,  35,      nil, 60, nil, nil,                 10, nil, nil])
 
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
@@ -116,106 +112,106 @@ create_special_weapon([6, "ダイオウイカ"])
 create_special_weapon([7, "スーパーセンサー"])
 
 Weapon.create(name: "わかばシューター",
-                    main_weapon_id: 1, sub_weapon_id: 1, special_weapon_id: 4)
+                    main_weapon_name: "わかばシューター", sub_weapon_name: "スプラッシュボム", special_weapon_name: "バリア")
 Weapon.create(name: "もみじシューター",
-                    main_weapon_id: 1, sub_weapon_id: 10,special_weapon_id: 7)
+                    main_weapon_name: "わかばシューター", sub_weapon_name: "ポイズンボール",special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "スプラシューター",
-                    main_weapon_id: 2, sub_weapon_id: 3, special_weapon_id: 3)
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "トルネード")
 Weapon.create(name: "スプラシューターコラボ",
-                    main_weapon_id: 2, sub_weapon_id: 2, special_weapon_id: 1)
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ヒーローシューター レプリカ",
-                    main_weapon_id: 2, sub_weapon_id: 3, special_weapon_id: 5)
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "プライムシューター",
-                    main_weapon_id: 3, sub_weapon_id: 1, special_weapon_id: 3)
+                    main_weapon_name: "プライムシューター", sub_weapon_name: "スプラッシュボム", special_weapon_name: "トルネード")
 Weapon.create(name: "プライムシューターコラボ",
-                    main_weapon_id: 3, sub_weapon_id: 5, special_weapon_id: 1)
+                    main_weapon_name: "プライムシューター", sub_weapon_name: "ポイントセンサー", special_weapon_name: "スーパーショット")
 Weapon.create(name: ".52ガロン",
-                    main_weapon_id: 4, sub_weapon_id: 9, special_weapon_id: 2)
+                    main_weapon_name: ".52ガロン", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: ".52ガロンデコ",
-                    main_weapon_id: 4, sub_weapon_id: 4, special_weapon_id: 3)
+                    main_weapon_name: ".52ガロン", sub_weapon_name: "チェイスボム", special_weapon_name: "トルネード")
 Weapon.create(name: ".96ガロン",
-                    main_weapon_id: 5, sub_weapon_id: 7, special_weapon_id: 7)
+                    main_weapon_name: ".96ガロン", sub_weapon_name: "スプリンクラー", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: ".96ガロンデコ",
-                    main_weapon_id: 5, sub_weapon_id: 9, special_weapon_id: 6)
+                    main_weapon_name: ".96ガロン", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "プロモデラーMG",
-                    main_weapon_id: 6, sub_weapon_id: 4, special_weapon_id: 1)
+                    main_weapon_name: "プロモデラー", sub_weapon_name: "チェイスボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "プロモデラーRG",
-                    main_weapon_id: 6, sub_weapon_id: 6, special_weapon_id: 3)
+                    main_weapon_name: "プロモデラー", sub_weapon_name: "トラップ", special_weapon_name: "トルネード")
 Weapon.create(name: "ジェットスイーパー",
-                    main_weapon_id: 7, sub_weapon_id: 9, special_weapon_id: 3)
+                    main_weapon_name: "ジェットスイーパー", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
 Weapon.create(name: "ジェットスイーパーカスタム",
-                    main_weapon_id: 7, sub_weapon_id: 3, special_weapon_id: 6)
+                    main_weapon_name: "ジェットスイーパー", sub_weapon_name: "クイックボム", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "デュアルスイーパー",
-                    main_weapon_id: 8, sub_weapon_id: 1, special_weapon_id: 7)
+                    main_weapon_name: "デュアルスイーパー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "デュアルスイーパーカスタム",
-                    main_weapon_id: 8, sub_weapon_id: 8, special_weapon_id: 2)
+                    main_weapon_name: "デュアルスイーパー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "N-ZAP85",
-                    main_weapon_id: 9, sub_weapon_id: 1, special_weapon_id: 7)
+                    main_weapon_name: "N-ZAP", sub_weapon_name: "スプラッシュボム", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "N-ZAP89",
-                    main_weapon_id: 9, sub_weapon_id: 7, special_weapon_id: 3)
+                    main_weapon_name: "N-ZAP", sub_weapon_name: "スプリンクラー", special_weapon_name: "トルネード")
 Weapon.create(name: "シャープマーカー",
-                    main_weapon_id: 10, sub_weapon_id: 2, special_weapon_id: 5)
+                    main_weapon_name: "シャープマーカー", sub_weapon_name: "キューバンボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "シャープマーカーネオ",
-                    main_weapon_id: 10, sub_weapon_id: 3, special_weapon_id: 1)
+                    main_weapon_name: "シャープマーカー", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "L3リールガン",
-                    main_weapon_id: 11, sub_weapon_id: 10, special_weapon_id: 2)
+                    main_weapon_name: "L3リールガン", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ボールドマーカー",
-                    main_weapon_id: 24, sub_weapon_id: 8, special_weapon_id: 2)
+                    main_weapon_name: "ボールドマーカー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ホットブラスター",
-                    main_weapon_id: 12, sub_weapon_id: 10, special_weapon_id: 2)
+                    main_weapon_name: "ホットブラスター", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ホットブラスターカスタム",
-                    main_weapon_id: 12, sub_weapon_id: 5, special_weapon_id: 4)
+                    main_weapon_name: "ホットブラスター", sub_weapon_name: "ポイントセンサー", special_weapon_name: "バリア")
 Weapon.create(name: "ラピッドブラスター",
-                    main_weapon_id: 13, sub_weapon_id: 6, special_weapon_id: 4)
+                    main_weapon_name: "ラピッドブラスター", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ラピッドブラスターデコ",
-                    main_weapon_id: 13, sub_weapon_id: 2, special_weapon_id: 5)
+                    main_weapon_name: "ラピッドブラスター", sub_weapon_name: "キューバンボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "ノヴァブラスター",
-                    main_weapon_id: 21, sub_weapon_id: 6, special_weapon_id: 1)
+                    main_weapon_name: "ノヴァブラスター", sub_weapon_name: "トラップ", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ロングブラスター",
-                    main_weapon_id: 26, sub_weapon_id: 9, special_weapon_id: 3)
+                    main_weapon_name: "ロングブラスター", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
 
 Weapon.create(name: "スプラチャージャー",
-                    main_weapon_id: 14, sub_weapon_id: 1, special_weapon_id: 5)
+                    main_weapon_name: "スプラチャージャー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スプラチャージャーワカメ",
-                    main_weapon_id: 14, sub_weapon_id: 7, special_weapon_id: 2)
+                    main_weapon_name: "スプラチャージャー", sub_weapon_name: "スプリンクラー", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "スプラスコープ",
-                    main_weapon_id: 15, sub_weapon_id: 1, special_weapon_id: 5)
+                    main_weapon_name: "スプラスコープ", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スプラスコープワカメ",
-                    main_weapon_id: 15, sub_weapon_id: 7, special_weapon_id: 2)
+                    main_weapon_name: "スプラスコープ", sub_weapon_name: "スプリンクラー", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ヒーローチャージャー レプリカ",
-                    main_weapon_id: 15, sub_weapon_id: 1, special_weapon_id: 5)
+                    main_weapon_name: "スプラスコープ", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スクイックリンα",
-                    main_weapon_id: 16, sub_weapon_id: 5, special_weapon_id: 4)
+                    main_weapon_name: "スクイックリン", sub_weapon_name: "ポイントセンサー", special_weapon_name: "バリア")
 Weapon.create(name: "スクイックリンβ",
-                    main_weapon_id: 16, sub_weapon_id: 6, special_weapon_id: 1)
+                    main_weapon_name: "スクイックリン", sub_weapon_name: "トラップ", special_weapon_name: "スーパーショット")
 Weapon.create(name: "リッター3K",
-                    main_weapon_id: 17, sub_weapon_id: 3, special_weapon_id: 7)
+                    main_weapon_name: "リッター3K", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "リッター3Kカスタム",
-                    main_weapon_id: 17, sub_weapon_id: 8, special_weapon_id: 6)
+                    main_weapon_name: "リッター3K", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "3Kスコープ",
-                    main_weapon_id: 25, sub_weapon_id: 3, special_weapon_id: 7)
+                    main_weapon_name: "3Kスコープ", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーセンサー")
 
 Weapon.create(name: "スプラローラー",
-                    main_weapon_id: 18, sub_weapon_id: 2, special_weapon_id: 2)
+                    main_weapon_name: "スプラローラー", sub_weapon_name: "キューバンボム", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "スプラローラーコラボ",
-                    main_weapon_id: 18, sub_weapon_id: 8, special_weapon_id: 6)
+                    main_weapon_name: "スプラローラー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "ヒーローローラー レプリカ",
-                    main_weapon_id: 18, sub_weapon_id: 2, special_weapon_id: 2)
+                    main_weapon_name: "スプラローラー", sub_weapon_name: "キューバンボム", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ダイナモローラー",
-                    main_weapon_id: 19, sub_weapon_id: 7, special_weapon_id: 7)
+                    main_weapon_name: "ダイナモローラー", sub_weapon_name: "スプリンクラー", special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "ダイナモローラーテスラ",
-                    main_weapon_id: 19, sub_weapon_id: 1, special_weapon_id: 3)
+                    main_weapon_name: "ダイナモローラー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "トルネード")
 Weapon.create(name: "カーボンローラー",
-                    main_weapon_id: 22, sub_weapon_id: 3, special_weapon_id: 1)
+                    main_weapon_name: "カーボンローラー", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "パブロ",
-                    main_weapon_id: 20, sub_weapon_id: 7, special_weapon_id: 3)
+                    main_weapon_name: "パブロ", sub_weapon_name: "スプリンクラー", special_weapon_name: "トルネード")
 Weapon.create(name: "パブロ・ヒュー",
-                    main_weapon_id: 20, sub_weapon_id: 6, special_weapon_id: 4)
+                    main_weapon_name: "パブロ", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ホクサイ",
-                    main_weapon_id: 23, sub_weapon_id: 8, special_weapon_id: 6)
+                    main_weapon_name: "ホクサイ", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 
 #Weapon.create(name: "",
-#                    main_weapon_id: , sub_weapon_id: , special_weapon_id: )
+#                    main_weapon_name: , sub_weapon_name: , special_weapon_name: )
 
 
 def create_power(ary)
@@ -270,184 +266,7 @@ create_brand([13, nil, nil, "アタリメイド"])
 create_brand([14, nil, nil, "KOG"])
 create_brand([15, nil, nil, "amiibo"])
 
-Gear.create(brand_id: 1, power_id: 6, gear_type: Gear::HEAD_ID, slot: 1, name: "キャディ サンバイザー")
-Gear.create(brand_id: 1, power_id: 14, gear_type: Gear::HEAD_ID, slot: 1, name: "バスケバンド")
-Gear.create(brand_id: 1, power_id: 1, gear_type: Gear::HEAD_ID, slot: 1, name: "スカッシュバンド")
-Gear.create(brand_id: 2, power_id: 17, gear_type: Gear::HEAD_ID, slot: 1, name: "テニスバンド")
-Gear.create(brand_id: 3, power_id: 15, gear_type: Gear::HEAD_ID, slot: 1, name: "イロメガネ")
-Gear.create(brand_id: 3, power_id: 12, gear_type: Gear::HEAD_ID, slot: 1, name: "エゾッコメッシュ")
-Gear.create(brand_id: 3, power_id: 10, gear_type: Gear::HEAD_ID, slot: 1, name: "バックワードキャップ")
-Gear.create(brand_id: 3, power_id: 4, gear_type: Gear::HEAD_ID, slot: 1, name: "ランニングバンド")
-Gear.create(brand_id: 9, power_id: 13, gear_type: Gear::HEAD_ID, slot: 1, name: "ウーニーズBBキャップ")
-Gear.create(brand_id: 9, power_id: 4, gear_type: Gear::HEAD_ID, slot: 1, name: "ビバレッジキャップ")
-Gear.create(brand_id: 9, power_id: 16, gear_type: Gear::HEAD_ID, slot: 1, name: "ウインターボンボン")
-Gear.create(brand_id: 5, power_id: 3, gear_type: Gear::HEAD_ID, slot: 1, name: "ショートビーニー")
-Gear.create(brand_id: 5, power_id: 9, gear_type: Gear::HEAD_ID, slot: 1, name: "キャンプハット")
-Gear.create(brand_id: 4, power_id: 11, gear_type: Gear::HEAD_ID, slot: 1, name: "2ラインメッシュ")
-Gear.create(brand_id: 11, power_id: 2, gear_type: Gear::HEAD_ID, slot: 1, name: "ヤコメッシュ")
-Gear.create(brand_id: 5, power_id: 7, gear_type: Gear::HEAD_ID, slot: 1, name: "キャンプキャップ")
-Gear.create(brand_id: 7, power_id: 5, gear_type: Gear::HEAD_ID, slot: 1, name: "ヘッドバンド ホワイト")
-Gear.create(brand_id: 6, power_id: 10, gear_type: Gear::HEAD_ID, slot: 1, name: "クロブチ レトロ")
-Gear.create(brand_id: 10, power_id: 11, gear_type: Gear::HEAD_ID, slot: 1, name: "ジェットキャップ")
-Gear.create(brand_id: 10, power_id: 8, gear_type: Gear::HEAD_ID, slot: 1, name: "ヤキフグ サンバイザー")
-
-Gear.create(brand_id: 8, power_id: 1, gear_type: Gear::HEAD_ID, slot: 2, name: "ダイバーゴーグル")
-Gear.create(brand_id: 8, power_id: 15, gear_type: Gear::HEAD_ID, slot: 2, name: "ロブスターブーニー")
-Gear.create(brand_id: 3, power_id: 17, gear_type: Gear::HEAD_ID, slot: 2, name: "5パネルキャップ")
-Gear.create(brand_id: 9, power_id: 8, gear_type: Gear::HEAD_ID, slot: 2, name: "イカベーダーキャップ")
-Gear.create(brand_id: 2, power_id: 8, gear_type: Gear::HEAD_ID, slot: 2, name: "ダテコンタクト")
-Gear.create(brand_id: 3, power_id: 16, gear_type: Gear::HEAD_ID, slot: 2, name: "アローバンド ブラック")
-Gear.create(brand_id: 8, power_id: 2, gear_type: Gear::HEAD_ID, slot: 2, name: "スプラッシュゴーグル")
-Gear.create(brand_id: 8, power_id: 3, gear_type: Gear::HEAD_ID, slot: 2, name: "スタジオヘッドホン")
-Gear.create(brand_id: 8, power_id: 4, gear_type: Gear::HEAD_ID, slot: 2, name: "オーロラヘッドホン")
-Gear.create(brand_id: 6, power_id: 12, gear_type: Gear::HEAD_ID, slot: 2, name: "ボンボンニット")
-Gear.create(brand_id: 6, power_id: 14, gear_type: Gear::HEAD_ID, slot: 2, name: "ボーダービーニー")
-Gear.create(brand_id: 9, power_id: 11, gear_type: Gear::HEAD_ID, slot: 2, name: "スケボーメット")
-Gear.create(brand_id: 10, power_id: 7, gear_type: Gear::HEAD_ID, slot: 2, name: "カモメッシュ")
-Gear.create(brand_id: 13, power_id: 6, gear_type: Gear::HEAD_ID, slot: 2, name: "ヒーローヘッズ レプリカ")
-Gear.create(brand_id: 13, power_id: 13, gear_type: Gear::HEAD_ID, slot: 2, name: "タコゾネススコープ")
-Gear.create(brand_id: 15, power_id: 2, gear_type: Gear::HEAD_ID, slot: 2, name: "パワードマスク")
-Gear.create(brand_id: 15, power_id: 1, gear_type: Gear::HEAD_ID, slot: 2, name: "サムライヘルメット")
-Gear.create(brand_id: 15, power_id: 7, gear_type: Gear::HEAD_ID, slot: 2, name: "イカパッチン")
-
-Gear.create(brand_id: 8, power_id: 6, gear_type: Gear::HEAD_ID, slot: 3, name: "テンタクルズメット")
-Gear.create(brand_id: 8, power_id: 16, gear_type: Gear::HEAD_ID, slot: 3, name: "タコマスク")
-Gear.create(brand_id: 8, power_id: 17, gear_type: Gear::HEAD_ID, slot: 3, name: "フェイスゴーグル")
-Gear.create(brand_id: 8, power_id: 13, gear_type: Gear::HEAD_ID, slot: 3, name: "パイロットゴーグル")
-Gear.create(brand_id: 9, power_id: 15, gear_type: Gear::HEAD_ID, slot: 3, name: "バイザーメット")
-Gear.create(brand_id: 9, power_id: 5, gear_type: Gear::HEAD_ID, slot: 3, name: "サイクルメット")
-Gear.create(brand_id: 9, power_id: 14, gear_type: Gear::HEAD_ID, slot: 3, name: "チドリキャップ")
-Gear.create(brand_id: 3, power_id: 9, gear_type: Gear::HEAD_ID, slot: 3, name: "アローバンド ホワイト")
-Gear.create(brand_id: 10, power_id: 3, gear_type: Gear::HEAD_ID, slot: 3, name: "サファリハット")
-
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 10, name: "わかばイカT")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 1, power_id: 1, name: "アイロニックレイヤード")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 1, power_id: 9, name: "アイロニックロング")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 1, power_id: 6, name: "ウーニーズBBシャツ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 1, power_id: 4, name: "バスケジャージ アウェイ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 2, power_id: 6, name: "イカノメT ブラック")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 2, power_id: 18, name: "イカノメT ライトブルー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 2, power_id: 1, name: "かくれパイレーツ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 3, power_id: 2, name: "エゾッコラグラン")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 4, power_id: 8, name: "サニーオレンジT")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 4, power_id: 3, name: "レイニーブルーT")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 5, power_id: 19, name: "ボーダーモスグリーン")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 5, power_id: 20, name: "ヤマビコT アイボリー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 5, power_id: 4, name: "ヤマビコT ブルー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 7, name: "カレッジスウェット グレー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 21, name: "カレッジラグラン")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 19, name: "さくらエビポロ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 13, name: "シャンブレーシャツ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 9, name: "パイレーツボーダー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 6, name: "マリンボーダー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 18, name: "よもぎポロ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 13, name: "イカバッテンマスタード")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 20, name: "イカバッテンロング")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 9, name: "イカブラック")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 4, name: "イカホワイト")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 8, name: "カモガサネ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 12, name: "マスタードガサネ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 3, name: "レイヤード ブラック")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 11, name: "レイヤード ホワイト")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 8, power_id: 5, name: "おどるイカアロハ")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 9, power_id: 5, name: "グレープT")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 9, power_id: 2, name: "ミントT")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 2, name: "ヤキフグ8bit ブラック")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 21, name: "ヤキフグ8bit ホワイト")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 11, power_id: 10, name: "トリコロールラガー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 11, power_id: 12, name: "ベクトルパターン グレー")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 11, power_id: 3, name: "ベクトルパターン レッド")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 12, power_id: 7, name: "ハラグロラグラン")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 12, power_id: 12, name: "ハラシロラグラン")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 12, power_id: 1, name: "ロッケンベルグT ブラック")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 14, power_id: 11, name: "ドカンT ブラック")
-Gear.create(slot: 1, gear_type: Gear::BODY_ID, brand_id: 14, power_id: 7, name: "ラインT ホワイト")
-
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 1, power_id: 11, name: "バスケジャージ ホーム")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 3, power_id: 19, name: "エゾッコパーカー アズキ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 3, power_id: 3, name: "ギンガムチェック アカ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 3, power_id: 13, name: "ギンガムチェック ミドリ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 3, power_id: 12, name: "バニーポップ ブラック")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 5, power_id: 9, name: "マウンテンベリー")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 5, name: "シロシャツ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 12, name: "ブロックストライプシャツ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 2, name: "ベイビークラゲシャツ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 1, name: "ボーダーネイビー")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 6, power_id: 10, name: "ボーダーホワイト")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 18, name: "イカリスウェット")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 21, name: "ガチブラック")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 20, name: "アーバンベスト イエロー")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 9, name: "ジップアップ グリーン")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 13, name: "ホッコリー ネイビー")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 11, power_id: 6, name: "オレンジボーダーラガー")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 11, power_id: 4, name: "チョコガサネ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 11, power_id: 11, name: "ベクトルラインガサネ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 12, power_id: 5, name: "ロッケンベルグT ホワイト")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 13, power_id: 4, name: "タコゾネスプロテクター")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 13, power_id: 7, name: "ヒーロージャケット レプリカ")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 15, power_id: 8, name: "サムライジャケット")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 15, power_id: 5, name: "スクールブレザー")
-Gear.create(slot: 2, gear_type: Gear::BODY_ID, brand_id: 15, power_id: 10, name: "パワードスーツ")
-
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 3, power_id: 1, name: "スタジャンロゴマシ")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 5, power_id: 21, name: "マウンテンオリーブ")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 5, power_id: 7, name: "マウンテンダウン")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 19, name: "ガチホワイト")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 2, name: "レトロジャッジ")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 18, name: "アーバンベスト ナイト")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 10, name: "ジップアップ カモ")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 10, power_id: 8, name: "ミスターベースボール")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 12, power_id: 20, name: "ヴィンテージチェック")
-Gear.create(slot: 3, gear_type: Gear::BODY_ID, brand_id: 7, power_id: 11, name: "フェスT")
-
-
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 11, name: "キャンバス ホワイト")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 5, name: "シーホース ホワイト")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 8, name: "シーホースHi ゾンビ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 9, name: "シーホースHi パープル")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 3, name: "シーホースHi レッド")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 2, power_id: 23, name: "ウミウシイエロー")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 2, power_id: 6, name: "ウミウシパープル")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 2, power_id: 1, name: "シアンビーンズ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 2, power_id: 13, name: "ピンクビーンズ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 2, power_id: 10, name: "ブラックビーンズ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 3, power_id: 7, name: "グリッチョ オレンジ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 3, power_id: 2, name: "グリッチョ ブルー")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 6, name: "オイスタークロッグ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 8, name: "キャンバス クマノミ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 22, name: "キャンバス バナナ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 24, name: "キャンバスHi マッシュルーム")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 5, name: "キャンバスHi モロヘイヤ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 13, name: "スリッポン ブルー")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 12, name: "スリッポン レッド")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 4, name: "ブルーベリーコンフォート")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 11, power_id: 3, name: "オレンジアローズ")
-Gear.create(slot: 1, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 7, name: "ラバーソール ホワイト")
-
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 7, name: "シーホース ブラックレザー")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 22, name: "シーホース イエロー")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 1, power_id: 6, name: "シーホースHi ゴールド")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 1, name: "アケビコンフォート")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 23, name: "キャンバスHi トマト")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 2, name: "スリッポン チドリ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 4, power_id: 10, name: "チョコクロッグ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 5, power_id: 5, name: "トレッキングライト")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 11, power_id: 9, name: "ホワイトアローズ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 13, name: "ヌバックブーツ イエロー")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 10, name: "モトクロスブーツ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 24, name: "ラバーソール チェリー")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 8, name: "ラバーソール ターコイズ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 13, power_id: 11, name: "タコゾネスブーツ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 13, power_id: 12, name: "ヒーローキックス レプリカ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 15, power_id: 9, name: "サムライシューズ")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 15, power_id: 4, name: "スクールローファー")
-Gear.create(slot: 2, gear_type: Gear::SHOES_ID, brand_id: 15, power_id: 3, name: "パワードレッグス")
-
-Gear.create(slot: 3, gear_type: Gear::SHOES_ID, brand_id: 2, power_id: 11, name: "ウミウシレッド")
-Gear.create(slot: 3, gear_type: Gear::SHOES_ID, brand_id: 3, power_id: 4, name: "グリッチョ グリーン 限定版")
-Gear.create(slot: 3, gear_type: Gear::SHOES_ID, brand_id: 5, power_id: 22, name: "トレッキングプロ")
-Gear.create(slot: 3, gear_type: Gear::SHOES_ID, brand_id: 11, power_id: 24, name: "クレイジーアローズ")
-Gear.create(slot: 3, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 12, name: "ヌバックブーツ レッド")
-Gear.create(slot: 3, gear_type: Gear::SHOES_ID, brand_id: 12, power_id: 23, name: "モトクロス ソリッドブルー")
-
-# Gear.create(gear_type: Gear::, slot: , brand_id: , power_id: , name: "")
+gears = CSV.table("db/data_seeds/gears.csv")
+gears.each do |row|
+  Gear.create(row.to_hash)
+end
