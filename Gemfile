@@ -26,6 +26,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'ransack'
 gem 'select2-rails'
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
