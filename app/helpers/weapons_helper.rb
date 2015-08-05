@@ -17,7 +17,7 @@ module WeaponsHelper
 
   def range_columns_for_select
     options_for_select(
-      MainWeapon.order(range: :desc).map do |w|
+      MainWeapon.where.not(range: nil).order(range: :desc).map do |w|
         [I18n.t("weapons.index.search.spec_column", n: w.range, name: w.name), w.range]
       end
     )
