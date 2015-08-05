@@ -3,18 +3,24 @@ class MainWeapon < ActiveRecord::Base
   BLASTER_ID = 1
   CHARGER_ID = 2
   ROLLER_ID  = 3
+  SLOSHER_ID = 4
+  SPINNER_ID = 5
 
   TYPE_KEY = [
     :shooter,
     :blaster,
     :charger,
     :roller,
+    :slosher,
+    :spinner,
   ]
   SPEC_KEY = [
     [:range, :attack, :rapid], #SHOOTER
     [:range, :damage, :rapid], #BLASTER
     [:range, :charge, :mobility], #CHARGER
-    [:range, :speed,  :weight] #ROLLER
+    [:range, :speed,  :weight], #ROLLER
+    [:range, :attack, :rapid], #SLOSHER
+    [:range, :attack, :rapid], #SPINNER
   ]
 
   validates :name, uniqueness: true

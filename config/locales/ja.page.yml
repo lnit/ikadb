@@ -12,6 +12,8 @@ ja:
       blaster: "ブラスター"
       charger: "チャージャー"
       roller:  "ローラー"
+      slosher: "スロッシャー"
+      spinner: "スピナー"
     gear_type:
       head: "アタマ"
       body: "フク"
