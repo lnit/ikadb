@@ -268,7 +268,12 @@ create_brand([15, nil, nil, "amiibo"])
 create_brand([16, nil, nil, "ファミ通"])
 create_brand([17, nil, nil, "侵略！イカ娘"])
 
-gears = CSV.table("db/data_seeds/gears.csv")
-gears.each do |row|
-  Gear.create(row.to_hash)
+csvs = [
+  CSV.table("db/data_seeds/gears.csv"),
+  CSV.table("db/data_seeds/gears_v200.csv"),
+]
+csvs.each do |gears|
+  gears.each do |row|
+    Gear.create(row.to_hash)
+  end
 end
