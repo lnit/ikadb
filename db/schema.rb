@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803173615) do
+ActiveRecord::Schema.define(version: 20150806180222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,8 +63,9 @@ ActiveRecord::Schema.define(version: 20150803173615) do
     t.integer  "slot"
     t.integer  "brand_id"
     t.integer  "power_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "released_version"
   end
 
   add_index "gears", ["brand_id"], name: "index_gears_on_brand_id", using: :btree
