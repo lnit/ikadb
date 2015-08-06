@@ -265,6 +265,8 @@ create_brand([12, 6,  7, "ロッケンベルグ"])
 create_brand([13, nil, nil, "アタリメイド"])
 create_brand([14, nil, nil, "KOG"])
 create_brand([15, nil, nil, "amiibo"])
+create_brand([16, nil, nil, "ファミ通"])
+create_brand([17, nil, nil, "侵略！イカ娘"])
 
 gears = CSV.table("db/data_seeds/gears.csv")
 gears.each do |row|
