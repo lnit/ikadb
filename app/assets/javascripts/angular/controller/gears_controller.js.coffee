@@ -15,6 +15,7 @@ App.controller "GearsController", ["$scope", "Gear", ($scope, Gear) ->
       params["q[slot_eq_any][]"] = slots unless slots == []
     params["q[power_id_eq_any][]"] = $scope.params.power if $scope.params.power
     params["q[brand_id_eq_any][]"] = $scope.params.brand if $scope.params.brand
+    params["q[released_version_eq]"] = 200 if $scope.params.released_version.v200
 
     $scope.gears = Gear.query(params)
     _gaq.push([

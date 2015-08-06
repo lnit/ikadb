@@ -35,6 +35,13 @@
             %label.control-label.col-lg-2= t(".search.brand")
             .col-lg-10
               = select_tag "params[brand]", gear_brand_columns_for_select, "ng-model" => "params.brand", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.brand"), searchable: true, multiple: true)
+          .form-group
+            %label.control-label.col-lg-2= t(".search.released_version")
+            .col-lg-10
+              .checkbox
+                %label.col-lg-6
+                  = check_box_tag "params[released_version][v200]", true, false, "ng-model" => "params.released_version.v200"
+                  = t(".search.v200_only")
         .col-lg-12
           = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
