@@ -1,1 +1,13 @@
 %h3= t(".head")
+
+- LinkBlock.all.each do |block|
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= block.name
+    .panel-body
+      %dl
+        - block.link_record.each do |record|
+          %dt
+            = link_to record.name, record.url
+          %dd
+            = record.description
