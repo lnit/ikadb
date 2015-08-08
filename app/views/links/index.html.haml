@@ -8,6 +8,6 @@
       %dl
         - block.link_record.each do |record|
           %dt
-            = link_to record.name, record.url, class: "external"
+            = link_to record.name, record.url, target: "_blank", class: "external"
           %dd
             = raw record.description
