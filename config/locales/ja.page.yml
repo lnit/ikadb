@@ -7,6 +7,7 @@ ja:
     weapon: "ブキ"
     gear: "ギア"
     report: "情報提供/バグ報告"
+    link: "リンク集"
     weapon_type:
       shooter: "シューター"
       blaster: "ブラスター"
@@ -109,3 +110,8 @@ ja:
       list:
         <<: *common
         title: "一覧"
+
+  links:
+    index:
+      title: "リンク集 - "
+      head: "リンク集"

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "weapons" => "weapons#index"
   get "gears" => "gears#index"
   get "report" => "reports#show"
+  get "links" => "links#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

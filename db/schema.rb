@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806180222) do
+ActiveRecord::Schema.define(version: 20150808163223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,23 @@ ActiveRecord::Schema.define(version: 20150806180222) do
   add_index "gears", ["name"], name: "index_gears_on_name", using: :btree
   add_index "gears", ["power_id"], name: "index_gears_on_power_id", using: :btree
   add_index "gears", ["slot"], name: "index_gears_on_slot", using: :btree
+
+  create_table "link_blocks", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "link_records", force: :cascade do |t|
+    t.string   "name"
+    t.text     "url"
+    t.text     "description"
+    t.integer  "link_block_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "link_records", ["link_block_id"], name: "index_link_records_on_link_block_id", using: :btree
 
   create_table "main_weapons", force: :cascade do |t|
     t.string   "name"
@@ -139,6 +156,7 @@ ActiveRecord::Schema.define(version: 20150806180222) do
 
   add_foreign_key "gears", "brands"
   add_foreign_key "gears", "powers"
+  add_foreign_key "link_records", "link_blocks"
   add_foreign_key "weapons", "main_weapons"
   add_foreign_key "weapons", "special_weapons"
   add_foreign_key "weapons", "sub_weapons"
