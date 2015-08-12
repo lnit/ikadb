@@ -11,3 +11,6 @@
             = link_to record.name, record.url, target: "_blank", class: "external"
           %dd
             = raw record.description
+
+- content_for(:title) do
+  = t(".title")
