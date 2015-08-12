@@ -30,7 +30,7 @@ ja:
 
   dashboards:
     index:
-      title: "トップページ - "
+      title: ""
       head: IkaDB!
       subhead: スプラトゥーン装備品検索データベース
       description:
