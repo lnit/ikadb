@@ -19,8 +19,8 @@ class MainWeapon < ActiveRecord::Base
     [:range, :damage, :rapid], #BLASTER
     [:range, :charge, :mobility], #CHARGER
     [:range, :speed,  :weight], #ROLLER
-    [:range, :attack, :rapid], #SLOSHER
-    [:range, :attack, :rapid], #SPINNER
+    [:range, :attack, :weight], #SLOSHER
+    [:range, :charge, :mobility], #SPINNER
   ]
 
   validates :name, uniqueness: true
