@@ -92,6 +92,15 @@ create_main_weapon([20, "パブロ",
 create_main_weapon([23, "ホクサイ",
                               MainWeapon::ROLLER_ID,  25,      nil, nil, nil, 80,                 nil, nil, 80])
 
+#                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
+create_main_weapon([0, "バケットスロッシャー",
+                              MainWeapon::SLOSHER_ID,  53,      90, nil, nil, nil,                 nil, nil, 50])
+
+#                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
+create_main_weapon([0, "バレルスピナー",
+                              MainWeapon::SPINNER_ID, 78,     nil, nil, 40, nil,                  nil, 50, nil])
+
+
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
 create_sub_weapon([3, "クイックボム"])
@@ -209,6 +218,12 @@ Weapon.create(name: "パブロ・ヒュー",
                     main_weapon_name: "パブロ", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ホクサイ",
                     main_weapon_name: "ホクサイ", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
+
+Weapon.create(name: "バケットスロッシャー",
+                    main_weapon_name: "バケットスロッシャー", sub_weapon_name: "クイックボム", special_weapon_name: "トルネード")
+
+Weapon.create(name: "バレルスピナー",
+                    main_weapon_name: "バレルスピナー", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
 
 #Weapon.create(name: "",
 #                    main_weapon_name: , sub_weapon_name: , special_weapon_name: )
