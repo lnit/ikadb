@@ -94,7 +94,7 @@ create_main_weapon([23, "ホクサイ",
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([0, "バケットスロッシャー",
-                              MainWeapon::SLOSHER_ID,  53,      90, nil, nil, nil,                 nil, nil, 50])
+                              MainWeapon::SLOSHER_ID,  52,      90, nil, nil, nil,                 nil, nil, 50])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([0, "バレルスピナー",
