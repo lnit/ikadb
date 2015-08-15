@@ -125,11 +125,13 @@ Weapon.create(name: "わかばシューター",
 Weapon.create(name: "もみじシューター",
                     main_weapon_name: "わかばシューター", sub_weapon_name: "ポイズンボール",special_weapon_name: "スーパーセンサー")
 Weapon.create(name: "スプラシューター",
-                    main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "トルネード")
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "スプラシューターコラボ",
                     main_weapon_name: "スプラシューター", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ヒーローシューター レプリカ",
                     main_weapon_name: "スプラシューター", sub_weapon_name: "クイックボム", special_weapon_name: "ボムラッシュ")
+Weapon.create(name: "オクタシューター レプリカ",
+                    main_weapon_name: "スプラシューター", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "プライムシューター",
                     main_weapon_name: "プライムシューター", sub_weapon_name: "スプラッシュボム", special_weapon_name: "トルネード")
 Weapon.create(name: "プライムシューターコラボ",
