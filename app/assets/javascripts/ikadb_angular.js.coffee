@@ -10,12 +10,13 @@ window.App = angular.module('Ikadb', ['ngResource', 'ui.bootstrap']).run([
         "",
         1,
         false
-      ])
+      ]) if ENV.isProduction
     )
 ])
 
 # Ajax送信時にトークンを送信する（トークンがないとRails側で認証エラーになる）
 App.config ["$httpProvider", ($httpProvider) ->
-  $httpProvider.defaults.headers.common['X-CSRF-Token'] =
-    document.getElementsByName("csrf-token")[0].content
+  if document.getElementsByName("csrf-token")[0]
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] =
+      document.getElementsByName("csrf-token")[0].content
 ]

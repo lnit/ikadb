@@ -34,6 +34,7 @@ gem 'devise'
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
 gem 'rails-assets-angular-ui-bootstrap-bower'
+gem 'rails-assets-angular-mocks'
 
 gem 'google-analytics-rails'
 
@@ -61,6 +62,7 @@ group :development, :test do
   #
   gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'jasmine-rails'
 end
 
 group :production do

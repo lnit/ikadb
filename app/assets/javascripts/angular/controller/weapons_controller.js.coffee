@@ -22,5 +22,5 @@ App.controller "WeaponsController", ["$scope", "Weapon", ($scope, Weapon) ->
       "",
       1,
       false
-    ])
+    ]) if ENV.isProduction
 ]

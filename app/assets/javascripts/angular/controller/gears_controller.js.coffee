@@ -25,5 +25,5 @@ App.controller "GearsController", ["$scope", "Gear", ($scope, Gear) ->
       "",
       1,
       false
-    ])
+    ]) if ENV.isProduction
 ]
