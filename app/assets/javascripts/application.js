@@ -18,5 +18,6 @@
 //= require angular-resource
 //= require angular-ui-bootstrap-bower
 //= require angular-mocks
+//= require env
 //= require ikadb_angular
 //= require_tree .

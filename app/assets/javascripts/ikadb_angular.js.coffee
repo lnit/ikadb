@@ -10,7 +10,7 @@ window.App = angular.module('Ikadb', ['ngResource', 'ui.bootstrap']).run([
         "",
         1,
         false
-      ])
+      ]) if ENV.isProduction
     )
 ])
 
