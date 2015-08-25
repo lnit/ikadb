@@ -104,6 +104,8 @@ ActiveRecord::Schema.define(version: 20150825164143) do
     t.integer  "weight"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.float    "real_damage"
+    t.float    "max_damage"
   end
 
   add_index "main_weapons", ["attack"], name: "index_main_weapons_on_attack", using: :btree
@@ -147,8 +149,6 @@ ActiveRecord::Schema.define(version: 20150825164143) do
     t.integer  "special_weapon_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.float    "real_damage"
-    t.float    "max_damage"
   end
 
   add_index "weapons", ["main_weapon_id"], name: "index_weapons_on_main_weapon_id", using: :btree
