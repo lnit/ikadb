@@ -9,17 +9,17 @@
             %label.control-label.col-lg-2.col-md-2.col-sm-2= t(".calculate.attack")
             .input-group.col-lg-5.col-md-5.col-sm-10
               %span.input-group-addon= t(".calculate.main")
-              = text_field_tag "params[attack_main]", "", "ng-model" => "params.attack_main", :class => "form-control"
+              %input.form-control{"type" => "number", "ng-model" => "params.attack_main", "min" => "0", "max" => "3", "required" => true}
               %span.input-group-addon= t(".calculate.sub")
-              = text_field_tag "params[attack_sub]", "", "ng-model" => "params.attack_sub", :class => "form-control"
+              %input.form-control{"type" => "number", "ng-model" => "params.attack_sub", "min" => "0", "max" => "9", "required" => true}
 
           .form-group
             %label.control-label.col-lg-2.col-md-2.col-sm-2= t(".calculate.defense")
             .input-group.col-lg-5.col-md-5.col-sm-10
               %span.input-group-addon= t(".calculate.main")
-              = text_field_tag "params[defense_main]", "", "ng-model" => "params.defense_main", :class => "form-control"
+              %input.form-control{"type" => "number", "ng-model" => "params.defense_main", "min" => "0", "max" => "3", "required" => true}
               %span.input-group-addon= t(".calculate.sub")
-              = text_field_tag "params[defense_sub]", "", "ng-model" => "params.defense_sub", :class => "form-control"
+              %input.form-control{"type" => "number", "ng-model" => "params.defense_sub", "min" => "0", "max" => "9", "required" => true}
 
   .panel{class: random_color_class("panel")}
     .panel-heading
