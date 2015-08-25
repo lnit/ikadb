@@ -100,6 +100,24 @@ create_main_weapon([0, "バケットスロッシャー",
 create_main_weapon([0, "バレルスピナー",
                               MainWeapon::SPINNER_ID, 78,     nil, nil, 40, nil,                  nil, 50, nil])
 
+# TODO: いい感じにcreate_or_updateする
+MainWeapon.find_by(name: "わかばシューター").update_attributes(real_damage: 28.0, max_damage: 33.3)
+MainWeapon.find_by(name: "スプラシューター").update_attributes(real_damage: 36.0, max_damage: nil)
+MainWeapon.find_by(name: "プライムシューター").update_attributes(real_damage: 42.0, max_damage: 49.9)
+MainWeapon.find_by(name: ".52ガロン").update_attributes(real_damage: 52.0, max_damage: nil)
+MainWeapon.find_by(name: ".96ガロン").update_attributes(real_damage: 62.0, max_damage: nil)
+MainWeapon.find_by(name: "プロモデラー").update_attributes(real_damage: 24.5, max_damage: 24.9)
+MainWeapon.find_by(name: "ジェットスイーパー").update_attributes(real_damage: 31.0, max_damage: 33.3)
+MainWeapon.find_by(name: "デュアルスイーパー").update_attributes(real_damage: 28.0, max_damage: nil)
+MainWeapon.find_by(name: "N-ZAP").update_attributes(real_damage: 28.0, max_damage: nil)
+MainWeapon.find_by(name: "シャープマーカー").update_attributes(real_damage: 26.0, max_damage: 33.3)
+MainWeapon.find_by(name: "L3リールガン").update_attributes(real_damage: 29.0, max_damage: 33.3)
+MainWeapon.find_by(name: "ボールドマーカー").update_attributes(real_damage: 38.0, max_damage: nil)
+MainWeapon.find_by(name: "ホットブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
+MainWeapon.find_by(name: "ラピッドブラスター").update_attributes(real_damage: 80.0, max_damage: 99.9)
+MainWeapon.find_by(name: "ノヴァブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
+MainWeapon.find_by(name: "ロングブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
+
 
 create_sub_weapon([1, "スプラッシュボム"])
 create_sub_weapon([2, "キューバンボム"])
