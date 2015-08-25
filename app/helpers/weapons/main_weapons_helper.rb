@@ -1,0 +1,2 @@
+module Weapons::MainWeaponsHelper
+end
