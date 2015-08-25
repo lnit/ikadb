@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "gears" => "gears#index"
 
   namespace :weapons do
+    get "damages" => "damages#index"
     get "main_weapons" => "main_weapons#index"
   end
 

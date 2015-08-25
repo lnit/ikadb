@@ -87,6 +87,26 @@ ja:
         second_spec_html: "攻撃<br/>溜速<br/>塗速"
         third_spec_html: "連射<br/>機動<br/>軽さ"
 
+    damages:
+      index:
+        title: "ブキ - ダメージ計算"
+        common: &common
+          name: "名前"
+        calculate:
+          <<: *common
+          title: "ギアパワー装備数入力"
+          attack: "攻撃力アップ"
+          defense: "防御力アップ"
+          main: "メイン"
+          sub: "サブ"
+        list:
+          <<: *common
+          title: "計算結果"
+          real_damage: "基本ダメージ"
+          max_damage: "ダメージ上限"
+          calculated_damage: "補正後ダメージ"
+          needed_shots: "キル確定ヒット数"
+
   gears:
     common:
       description: "%{name} 【◎:%{strong}】【✕:%{weak}】"

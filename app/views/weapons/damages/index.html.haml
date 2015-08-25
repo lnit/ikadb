@@ -1,0 +1,45 @@
+%div{"ng-controller" => "DamagesController"}
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".calculate.title")
+    .panel-body
+      %form.form-horizontal{"ng-submit" => ""}
+        .col-lg-8.col-md-10.col-sm-12
+          .form-group
+            %label.control-label.col-lg-2.col-md-2.col-sm-2= t(".calculate.attack")
+            .input-group.col-lg-5.col-md-5.col-sm-10
+              %span.input-group-addon= t(".calculate.main")
+              = text_field_tag "params[attack_main]", "", "ng-model" => "params.attack_main", :class => "form-control"
+              %span.input-group-addon= t(".calculate.sub")
+              = text_field_tag "params[attack_sub]", "", "ng-model" => "params.attack_sub", :class => "form-control"
+
+          .form-group
+            %label.control-label.col-lg-2.col-md-2.col-sm-2= t(".calculate.defense")
+            .input-group.col-lg-5.col-md-5.col-sm-10
+              %span.input-group-addon= t(".calculate.main")
+              = text_field_tag "params[defense_main]", "", "ng-model" => "params.defense_main", :class => "form-control"
+              %span.input-group-addon= t(".calculate.sub")
+              = text_field_tag "params[defense_sub]", "", "ng-model" => "params.defense_sub", :class => "form-control"
+
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".list.title")
+    .panel-body
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th= t(".list.name")
+            %th= t(".list.real_damage")
+            %th= t(".list.max_damage")
+            %th= t(".list.calculated_damage")
+            %th= t(".list.needed_shots")
+        %tbody
+          %tr.weapon{"ng-repeat" => "main_weapon in main_weapons"}
+            %td {{main_weapon.name}}
+            %td {{main_weapon.real_damage}}
+            %td {{main_weapon.max_damage}}
+            %td {{main_weapon.calculated_damage}}
+            %td {{main_weapon.needed_shots}}
+
+- content_for(:title) do
+  = t(".title")
