@@ -6,6 +6,7 @@ ja:
     menu: "メニュー"
     weapon: "ブキ"
     gear: "ギア"
+    damage: "ダメージ計算機"
     report: "情報提供/バグ報告"
     link: "リンク集"
     weapon_type:
