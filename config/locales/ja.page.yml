@@ -106,7 +106,8 @@ ja:
           real_damage: "基本ダメージ"
           max_damage: "ダメージ上限"
           calculated_damage: "補正後ダメージ"
-          needed_shots: "キル確定ヒット数"
+          needed_shots_1: "(確定"
+          needed_shots_2: "発)"
         errors:
           params_invalid: "メインは0〜3 サブは0〜9 のいずれかを入力してください。"
 

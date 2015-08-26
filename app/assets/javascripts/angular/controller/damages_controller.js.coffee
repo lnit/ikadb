@@ -14,6 +14,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon
       angular.forEach main_weapons, (main_weapon) ->
         main_weapon.calculated_damage = main_weapon.real_damage.toFixed(3)
         main_weapon.needed_shots = 1 + Math.floor(100 / main_weapon.real_damage)
+        main_weapon.real_needed_shots = main_weapon.needed_shots
   )
 
   $scope.calculate = ->

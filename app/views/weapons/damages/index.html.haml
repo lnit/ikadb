@@ -43,14 +43,20 @@
             %th= t(".list.real_damage")
             %th= t(".list.max_damage")
             %th= t(".list.calculated_damage")
-            %th= t(".list.needed_shots")
         %tbody
           %tr.weapon{"ng-repeat" => "main_weapon in main_weapons"}
             %td {{main_weapon.name}}
-            %td {{main_weapon.real_damage.toFixed(1)}}
+            %td
+              {{main_weapon.real_damage.toFixed(1)}}
+              = t(".list.needed_shots_1")
+              {{main_weapon.real_needed_shots}}
+              = t(".list.needed_shots_2")
             %td {{main_weapon.max_damage}}
-            %td {{main_weapon.calculated_damage}}
-            %td {{main_weapon.needed_shots}}
+            %td{"ng-class" => "{'text-warning': main_weapon.needed_shots != main_weapon.real_needed_shots}"}
+              {{main_weapon.calculated_damage}}
+              = t(".list.needed_shots_1")
+              {{main_weapon.needed_shots}}
+              = t(".list.needed_shots_2")
 
 - content_for(:title) do
   = t(".title")
