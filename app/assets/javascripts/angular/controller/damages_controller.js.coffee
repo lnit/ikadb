@@ -3,7 +3,8 @@ App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon
     attack_main: 0,
     attack_sub: 0,
     defense_main: 0,
-    defense_sub: 0
+    defense_sub: 0,
+    power: 1
   }
   $scope.main_weapons = MainWeapon.query(
     {
@@ -27,6 +28,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon
     power = attack_power - defense_power
     power = power / 1.8 if power < 0
     power = power + 1
+    $scope.params.power = power
 
     angular.forEach $scope.main_weapons, (main_weapon) ->
       # 最終ダメージの算出

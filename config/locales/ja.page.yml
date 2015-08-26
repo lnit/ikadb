@@ -99,6 +99,7 @@ ja:
           defense: "防御力アップ"
           main: "メイン"
           sub: "サブ"
+          power: "ダメージ倍率"
         list:
           <<: *common
           title: "計算結果"
