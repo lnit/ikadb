@@ -9,17 +9,17 @@
             %label.control-label.col-md-4.col-sm-2= t(".calculate.attack")
             .input-group.col-md-8.col-sm-10
               %span.input-group-addon= t(".calculate.main")
-              %input.form-control{"type" => "number", "ng-model" => "params.attack_main", "ng-change" => "calculate()", "min" => "0", "max" => "3", "required" => true}
+              %input.form-control{"type" => "number", "ng-model" => "params.attack_main", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
               %span.input-group-addon= t(".calculate.sub")
-              %input.form-control{"type" => "number", "ng-model" => "params.attack_sub", "ng-change" => "calculate()", "min" => "0", "max" => "9", "required" => true}
+              %input.form-control{"type" => "number", "ng-model" => "params.attack_sub", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
 
           .form-group
             %label.control-label.col-md-4.col-sm-2= t(".calculate.defense")
             .input-group.col-md-8.col-sm-10
               %span.input-group-addon= t(".calculate.main")
-              %input.form-control{"type" => "number", "ng-model" => "params.defense_main", "ng-change" => "calculate()", "min" => "0", "max" => "3", "required" => true}
+              %input.form-control{"type" => "number", "ng-model" => "params.defense_main", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
               %span.input-group-addon= t(".calculate.sub")
-              %input.form-control{"type" => "number", "ng-model" => "params.defense_sub", "ng-change" => "calculate()", "min" => "0", "max" => "9", "required" => true}
+              %input.form-control{"type" => "number", "ng-model" => "params.defense_sub", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
 
         .col-lg-4.col-md-5.col-sm-12
           .form-group
