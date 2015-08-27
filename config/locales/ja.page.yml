@@ -92,7 +92,7 @@ ja:
 
     damages:
       index:
-        title: "ブキ - ダメージ計算"
+        title: "ダメージ計算機 - "
         common: &common
           name: "名前"
         description:
