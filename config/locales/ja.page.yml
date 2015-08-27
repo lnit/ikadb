@@ -6,6 +6,7 @@ ja:
     menu: "メニュー"
     weapon: "ブキ"
     gear: "ギア"
+    damage: "ダメージ計算機"
     report: "情報提供/バグ報告"
     link: "リンク集"
     weapon_type:
@@ -25,6 +26,8 @@ ja:
       example: "例: %{example}"
       searchable: " ※文字入力で絞込可"
       multiple: " ※複数選択可"
+    link_text: "こちら"
+    and: "と"
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='_blank', class='external'>@lni_T</a> 2015"
 
@@ -86,6 +89,43 @@ ja:
         first_spec_html: "射程"
         second_spec_html: "攻撃<br/>溜速<br/>塗速"
         third_spec_html: "連射<br/>機動<br/>軽さ"
+
+    damages:
+      index:
+        title: "ダメージ計算機 - "
+        common: &common
+          name: "名前"
+        description:
+          title: "ダメージ計算機"
+          body_html: |-
+            このページは、「攻撃力アップ」「防御力アップ」ギアパワーによるダメージの増減を含めたブキのダメージ計算ができるページです。<br />
+            攻撃側、被弾側のギアパワーの数を入力することで、
+            各ブキのダメージおよび<span class='text-info'>「キルが確定するヒット数」</span>を計算することができます。<br />
+            <br />
+            例えば、防御力アップをメインに1つとサブに2つ装備した状態では、
+            攻撃力アップを持たないスプラシューターのキル確定ヒット数が3発から4発に増加することが、ダメージ計算により分かります。<br />
+            ギアパワー構成の検討時などにご利用ください。<br />
+            <br />
+          link: "参考情報は"
+
+        calculate:
+          <<: *common
+          title: "ギアパワー数入力"
+          attack: "攻撃力アップ"
+          defense: "防御力アップ"
+          main: "メイン"
+          sub: "サブ"
+          power: "ダメージ倍率"
+        list:
+          <<: *common
+          title: "計算結果"
+          real_damage: "基本ダメージ"
+          max_damage: "ダメージ上限"
+          calculated_damage: "補正後ダメージ"
+          needed_shots_1: "(確定"
+          needed_shots_2: "発)"
+        errors:
+          params_invalid: "メインは0〜3 サブは0〜9 のいずれかを入力してください。"
 
   gears:
     common:

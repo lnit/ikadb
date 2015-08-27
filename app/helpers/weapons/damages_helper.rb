@@ -1,0 +1,2 @@
+module Weapons::DamagesHelper
+end

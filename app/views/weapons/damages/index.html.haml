@@ -1,0 +1,72 @@
+.panel{class: random_color_class("panel")}
+  .panel-heading
+    %h3.panel-title= t(".description.title")
+  .panel-body
+    = t(".description.body_html")
+    = t(".description.link")
+    = link_to t("common.link_text"), "http://wikiwiki.jp/splatoon2ch/?%A5%AE%A5%A2%A5%D1%A5%EF%A1%BC%B8%A1%BE%DA#k96e9830", target: "_blank", class: "external"
+    = t("common.and")
+    = link_to t("common.link_text"), "https://docs.google.com/spreadsheets/d/1mRSuoAv6lSGevze6XnN-hUprPrK-gXtCYNmmEMv6uSU/edit?usp=sharing", target: "_blank", class: "external"
+
+%div{"ng-controller" => "DamagesController"}
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".calculate.title")
+    .panel-body
+      %form.form-horizontal{"ng-submit" => "", "name" => "params_form"}
+        .col-lg-4.col-md-5.col-sm-12
+          .form-group
+            %label.control-label.col-md-4.col-sm-2= t(".calculate.attack")
+            .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': params_form.attack_main.$invalid || params_form.attack_sub.$invalid}"}
+              %span.input-group-addon= t(".calculate.main")
+              %input.form-control{"type" => "number", "name" => "attack_main", "ng-model" => "params.attack_main", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+              %span.input-group-addon= t(".calculate.sub")
+              %input.form-control{"type" => "number", "name" => "attack_sub", "ng-model" => "params.attack_sub", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+
+          .form-group
+            %label.control-label.col-md-4.col-sm-2= t(".calculate.defense")
+            .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': params_form.defense_main.$invalid || params_form.defense_sub.$invalid}"}
+              %span.input-group-addon= t(".calculate.main")
+              %input.form-control{"type" => "number", "name" => "defense_main", "ng-model" => "params.defense_main", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+              %span.input-group-addon= t(".calculate.sub")
+              %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+
+        .col-lg-4.col-md-5.col-sm-12
+          .form-group
+            %label.control-label.col-md-4.col-sm-2= t(".calculate.power")
+            .col-md-8.col-sm-10
+              %label.control-label
+                {{params.power.toFixed(3)}}
+
+        .col-md-12
+          %p.text-danger{"ng-show" => "params_form.$invalid"}
+            = t(".errors.params_invalid")
+
+  .panel{class: random_color_class("panel")}
+    .panel-heading
+      %h3.panel-title= t(".list.title")
+    .panel-body
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th= t(".list.name")
+            %th= t(".list.real_damage")
+            %th= t(".list.max_damage")
+            %th= t(".list.calculated_damage")
+        %tbody
+          %tr.weapon{"ng-repeat" => "main_weapon in main_weapons"}
+            %td {{main_weapon.name}}
+            %td
+              {{main_weapon.real_damage.toFixed(1)}}
+              = t(".list.needed_shots_1")
+              {{main_weapon.real_needed_shots}}
+              = t(".list.needed_shots_2")
+            %td {{main_weapon.max_damage}}
+            %td{"ng-class" => "{'text-warning': main_weapon.needed_shots != main_weapon.real_needed_shots}"}
+              {{main_weapon.calculated_damage}}
+              = t(".list.needed_shots_1")
+              {{main_weapon.needed_shots}}
+              = t(".list.needed_shots_2")
+
+- content_for(:title) do
+  = t(".title")

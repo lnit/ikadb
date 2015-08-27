@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get "weapons" => "weapons#index"
   get "gears" => "gears#index"
+
+  namespace :weapons do
+    get "damages" => "damages#index"
+    get "main_weapons" => "main_weapons#index"
+  end
+
   get "report" => "reports#show"
   get "links" => "links#index"
 
