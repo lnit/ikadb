@@ -79,6 +79,8 @@ create_main_weapon([17, "リッター3K",
                               MainWeapon::CHARGER_ID, 97,     nil, nil, 20, nil,                  nil, 15, nil])
 create_main_weapon([25, "3Kスコープ",
                               MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
+create_main_weapon([0, "14式竹筒銃",
+                              MainWeapon::CHARGER_ID, 72,     nil, nil, 90, nil,                  nil, 80, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([18, "スプラローラー",
@@ -184,6 +186,8 @@ Weapon.create(name: "シャープマーカーネオ",
                     main_weapon_name: "シャープマーカー", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "L3リールガン",
                     main_weapon_name: "L3リールガン", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
+Weapon.create(name: "L3リールガンD",
+                    main_weapon_name: "L3リールガン", sub_weapon_name: "クイックボム", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "ボールドマーカー",
                     main_weapon_name: "ボールドマーカー", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ホットブラスター",
@@ -219,6 +223,8 @@ Weapon.create(name: "リッター3Kカスタム",
                     main_weapon_name: "リッター3K", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "3Kスコープ",
                     main_weapon_name: "3Kスコープ", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーセンサー")
+Weapon.create(name: "14式竹筒銃・甲",
+                    main_weapon_name: "14式竹筒銃", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "メガホンレーザー")
 
 Weapon.create(name: "スプラローラー",
                     main_weapon_name: "スプラローラー", sub_weapon_name: "キューバンボム", special_weapon_name: "メガホンレーザー")
