@@ -101,6 +101,8 @@ create_main_weapon([0, "バケットスロッシャー",
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([0, "バレルスピナー",
                               MainWeapon::SPINNER_ID, 78,     nil, nil, 40, nil,                  nil, 50, nil])
+create_main_weapon([0, "スプラスピナー",
+                              MainWeapon::SPINNER_ID, 58,     nil, nil, 80, nil,                  nil, 90, nil])
 
 # TODO: いい感じにcreate_or_updateする
 MainWeapon.find_by(name: "わかばシューター").update_attributes(real_damage: 28.0, max_damage: 33.3)
@@ -119,6 +121,8 @@ MainWeapon.find_by(name: "ホットブラスター").update_attributes(real_dama
 MainWeapon.find_by(name: "ラピッドブラスター").update_attributes(real_damage: 80.0, max_damage: 99.9)
 MainWeapon.find_by(name: "ノヴァブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
 MainWeapon.find_by(name: "ロングブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
+MainWeapon.find_by(name: "バレルスピナー").update_attributes(real_damage: 28.0, max_damage: 33.3)
+MainWeapon.find_by(name: "スプラスピナー").update_attributes(real_damage: 28.0, max_damage: 33.3)
 
 
 create_sub_weapon([1, "スプラッシュボム"])
@@ -250,6 +254,8 @@ Weapon.create(name: "バケットスロッシャー",
 
 Weapon.create(name: "バレルスピナー",
                     main_weapon_name: "バレルスピナー", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
+Weapon.create(name: "スプラスピナー",
+                    main_weapon_name: "スプラスピナー", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーショット")
 
 #Weapon.create(name: "",
 #                    main_weapon_name: , sub_weapon_name: , special_weapon_name: )
