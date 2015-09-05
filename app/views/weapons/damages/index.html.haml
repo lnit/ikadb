@@ -68,5 +68,27 @@
               {{main_weapon.needed_shots}}
               = t(".list.needed_shots_2")
 
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th= t(".list.name")
+            %th= t(".list.real_damage")
+            %th= t(".list.max_damage")
+            %th= t(".list.calculated_damage")
+        %tbody
+          %tr.weapon{"ng-repeat" => "sub_weapon in sub_weapons"}
+            %td {{sub_weapon.name}}
+            %td
+              {{sub_weapon.real_damage.toFixed(1)}}
+              = t(".list.needed_shots_1")
+              {{sub_weapon.real_needed_shots}}
+              = t(".list.needed_shots_2")
+            %td {{sub_weapon.max_damage}}
+            %td{"ng-class" => "{'text-warning': sub_weapon.needed_shots != sub_weapon.real_needed_shots}"}
+              {{sub_weapon.calculated_damage}}
+              = t(".list.needed_shots_1")
+              {{sub_weapon.needed_shots}}
+              = t(".list.needed_shots_2")
+
 - content_for(:title) do
   = t(".title")
