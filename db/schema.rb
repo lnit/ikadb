@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825164143) do
+ActiveRecord::Schema.define(version: 20150905184357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,8 +135,10 @@ ActiveRecord::Schema.define(version: 20150825164143) do
 
   create_table "sub_weapons", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.float    "real_damage"
+    t.float    "max_damage"
   end
 
   add_index "sub_weapons", ["id"], name: "index_sub_weapons_on_id", using: :btree

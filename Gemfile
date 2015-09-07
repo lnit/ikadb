@@ -30,6 +30,7 @@ gem 'ransack'
 gem 'select2-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'pry'
 
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :weapons do
     get "damages" => "damages#index"
     get "main_weapons" => "main_weapons#index"
+    get "sub_weapons" => "sub_weapons#index"
   end
 
   get "report" => "reports#show"

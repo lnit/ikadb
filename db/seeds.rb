@@ -136,6 +136,14 @@ create_sub_weapon([8, "ジャンプビーコン"])
 create_sub_weapon([9, "スプラッシュシールド"])
 create_sub_weapon([10,"ポイズンボール"])
 
+create_sub_weapon([11, "クイックボム(直撃)"])
+create_sub_weapon([12, "クイックボム(爆風中央)"])
+create_sub_weapon([13, "クイックボム(直撃＋爆風)"])
+
+SubWeapon.find_by(name: "クイックボム(直撃)").update_attributes(real_damage: 60.0, max_damage: nil)
+SubWeapon.find_by(name: "クイックボム(爆風中央)").update_attributes(real_damage: 35.0, max_damage: nil)
+SubWeapon.find_by(name: "クイックボム(直撃＋爆風)").update_attributes(real_damage: 95.0, max_damage: nil)
+
 create_special_weapon([1, "スーパーショット"])
 create_special_weapon([2, "メガホンレーザー"])
 create_special_weapon([3, "トルネード"])

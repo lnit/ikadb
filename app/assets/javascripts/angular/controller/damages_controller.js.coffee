@@ -1,4 +1,4 @@
-App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon) ->
+App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scope, MainWeapon, SubWeapon) ->
   $scope.params = {
     attack_main: 0,
     attack_sub: 0,
@@ -8,7 +8,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon
   }
   $scope.main_weapons = MainWeapon.query(
     {
-      "q[weapon_type_eq_any][]" : ["0", "1"] # シューターとブラスターだけ取得
+      "q[weapon_type_eq_any][]" : ["0", "5"] # シューター・スピナー
     },
     (main_weapons) ->
       angular.forEach main_weapons, (main_weapon) ->
@@ -16,6 +16,18 @@ App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon
         main_weapon.needed_shots = 1 + Math.floor(100 / main_weapon.real_damage)
         main_weapon.real_needed_shots = main_weapon.needed_shots
   )
+
+  $scope.sub_weapons = SubWeapon.query(
+    {
+      "q[real_damage_gt]" : "0"
+    },
+    (sub_weapons) ->
+      angular.forEach sub_weapons, (sub_weapon) ->
+        sub_weapon.calculated_damage = sub_weapon.real_damage.toFixed(3)
+        sub_weapon.needed_shots = 1 + Math.floor(100 / sub_weapon.real_damage)
+        sub_weapon.real_needed_shots = sub_weapon.needed_shots
+  )
+
 
   $scope.calculate = ->
     p = $scope.params
@@ -29,17 +41,18 @@ App.controller "DamagesController", ["$scope", "MainWeapon", ($scope, MainWeapon
     power = attack_power - defense_power
     power = power / 1.8 if power < 0
     power = power + 1
+    power = 1.300 if power > 1.300 # 最大ダメージ倍率は1.300らしいので
     $scope.params.power = power
 
-    angular.forEach $scope.main_weapons, (main_weapon) ->
-      # 最終ダメージの算出
-      calculated_damage = (main_weapon.real_damage * power).toFixed(3)
-      if main_weapon.max_damage?
-        main_weapon.calculated_damage = if calculated_damage < main_weapon.max_damage then calculated_damage else main_weapon.max_damage.toFixed(3)
-      else
-        main_weapon.calculated_damage = calculated_damage
+    angular.forEach [$scope.main_weapons, $scope.sub_weapons], (weapons) ->
+      angular.forEach weapons, (weapon) ->
+        # 最終ダメージの算出
+        calculated_damage = (weapon.real_damage * power).toFixed(3)
+        if weapon.max_damage?
+          weapon.calculated_damage = if calculated_damage < weapon.max_damage then calculated_damage else weapon.max_damage.toFixed(3)
+        else
+          weapon.calculated_damage = calculated_damage
 
-
-      # 確殺数の算出
-      main_weapon.needed_shots = 1 + Math.floor(100 / main_weapon.calculated_damage)
+        # 確殺数の算出
+        weapon.needed_shots = 1 + Math.floor(100 / weapon.calculated_damage)
 ]
