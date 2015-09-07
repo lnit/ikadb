@@ -67,15 +67,6 @@
               = t(".list.needed_shots_1")
               {{main_weapon.needed_shots}}
               = t(".list.needed_shots_2")
-
-      %table.table.table-striped.table-hover
-        %thead
-          %tr
-            %th= t(".list.name")
-            %th= t(".list.real_damage")
-            %th= t(".list.max_damage")
-            %th= t(".list.calculated_damage")
-        %tbody
           %tr.weapon{"ng-repeat" => "sub_weapon in sub_weapons"}
             %td {{sub_weapon.name}}
             %td
