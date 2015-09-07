@@ -41,6 +41,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     power = attack_power - defense_power
     power = power / 1.8 if power < 0
     power = power + 1
+    power = 1.300 if power > 1.300 # 最大ダメージ倍率は1.300らしいので
     $scope.params.power = power
 
     angular.forEach [$scope.main_weapons, $scope.sub_weapons], (weapons) ->
