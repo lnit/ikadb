@@ -62,11 +62,7 @@
         - if content_for?(:sidebar)
           .col-lg-9
             .text-right
-              %a(href="https://twitter.com/share" class="twitter-share-button" data-related="lni_T" data-hashtags="Splatoon")
-                Tweet
-              %a(href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加")
-                %img(src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;")
-
+              = render partial: "shared/sns"
             = bootstrap_flash
             = yield
           .col-lg-3
@@ -75,10 +71,7 @@
         - else
           .col-lg-12
             .text-right
-              %a(href="https://twitter.com/share" class="twitter-share-button" data-related="lni_T" data-hashtags="Splatoon")
-                Tweet
-              %a(href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加")
-                %img(src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;")
+              = render partial: "shared/sns"
             = bootstrap_flash
             = yield
 
