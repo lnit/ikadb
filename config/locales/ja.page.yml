@@ -107,15 +107,6 @@ ja:
             ギアパワー構成の検討時などにご利用ください。<br />
             <br />
           link: "参考情報は"
-
-        calculate:
-          <<: *common
-          title: "ギアパワー数入力"
-          attack: "攻撃力アップ"
-          defense: "防御力アップ"
-          main: "メイン"
-          sub: "サブ"
-          power: "ダメージ倍率"
         list:
           <<: *common
           title: "計算結果"
@@ -124,6 +115,14 @@ ja:
           calculated_damage: "補正後ダメージ"
           needed_shots_1: "(確定"
           needed_shots_2: "発)"
+      calculate_form:
+        calculate:
+          title: "ギアパワー数入力"
+          attack: "攻撃力アップ"
+          defense: "防御力アップ"
+          main: "メイン"
+          sub: "サブ"
+          power: "ダメージ倍率"
         errors:
           params_invalid: "メインは0〜3 サブは0〜9 のいずれかを入力してください。"
 
