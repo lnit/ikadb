@@ -1,0 +1,32 @@
+.panel{class: random_color_class("panel")}
+  .panel-heading
+    %h3.panel-title= t(".calculate.title")
+  .panel-body
+    %form.form-horizontal{"ng-submit" => "", "name" => "params_form"}
+      .col-lg-4.col-md-5.col-sm-12
+        .form-group
+          %label.control-label.col-md-4.col-sm-2= t(".calculate.attack")
+          .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': params_form.attack_main.$invalid || params_form.attack_sub.$invalid}"}
+            %span.input-group-addon= t(".calculate.main")
+            %input.form-control{"type" => "number", "name" => "attack_main", "ng-model" => "params.attack_main", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+            %span.input-group-addon= t(".calculate.sub")
+            %input.form-control{"type" => "number", "name" => "attack_sub", "ng-model" => "params.attack_sub", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+
+        .form-group
+          %label.control-label.col-md-4.col-sm-2= t(".calculate.defense")
+          .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': params_form.defense_main.$invalid || params_form.defense_sub.$invalid}"}
+            %span.input-group-addon= t(".calculate.main")
+            %input.form-control{"type" => "number", "name" => "defense_main", "ng-model" => "params.defense_main", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+            %span.input-group-addon= t(".calculate.sub")
+            %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "params_form.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+
+      .col-lg-4.col-md-5.col-sm-12
+        .form-group
+          %label.control-label.col-md-4.col-sm-2= t(".calculate.power")
+          .col-md-8.col-sm-10
+            %label.control-label
+              {{params.power.toFixed(3)}}
+
+      .col-md-12
+        %p.text-danger{"ng-show" => "params_form.$invalid"}
+          = t(".errors.params_invalid")
