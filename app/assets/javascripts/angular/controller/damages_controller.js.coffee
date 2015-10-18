@@ -13,7 +13,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     (main_weapons) ->
       angular.forEach main_weapons, (main_weapon) ->
         main_weapon.calculated_damage = main_weapon.real_damage.toFixed(3)
-        main_weapon.needed_shots = 1 + Math.floor(100 / main_weapon.real_damage)
+        main_weapon.needed_shots = Math.ceil(100 / main_weapon.real_damage)
         main_weapon.real_needed_shots = main_weapon.needed_shots
   )
 
@@ -24,7 +24,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     (sub_weapons) ->
       angular.forEach sub_weapons, (sub_weapon) ->
         sub_weapon.calculated_damage = sub_weapon.real_damage.toFixed(3)
-        sub_weapon.needed_shots = 1 + Math.floor(100 / sub_weapon.real_damage)
+        sub_weapon.needed_shots = Math.ceil(100 / sub_weapon.real_damage)
         sub_weapon.real_needed_shots = sub_weapon.needed_shots
   )
 
@@ -54,5 +54,5 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
           weapon.calculated_damage = calculated_damage
 
         # 確殺数の算出
-        weapon.needed_shots = 1 + Math.floor(100 / weapon.calculated_damage)
+        weapon.needed_shots = Math.ceil(100 / weapon.calculated_damage)
 ]
