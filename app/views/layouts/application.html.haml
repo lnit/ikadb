@@ -39,6 +39,7 @@
     = favicon_link_tag '/android-chrome-192x192.png', :rel => 'icon', :type => 'image/png', :sizes => '192x192'
     %link{:href => '/manifest.json', :rel => 'manifest'}
     = javascript_include_tag "application"
+    = javascript_include_tag "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     = analytics_init if Rails.env.production?
 
   %body
@@ -74,6 +75,8 @@
               = render partial: "shared/sns"
             = bootstrap_flash
             = yield
+        .col-md-8.col-md-offset-2.col-sm-12
+          %ins(class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9326052382075030" data-ad-slot="1741848902" data-ad-format="auto")
 
     %footer.footer
       .container
