@@ -47,11 +47,12 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     angular.forEach [$scope.main_weapons, $scope.sub_weapons], (weapons) ->
       angular.forEach weapons, (weapon) ->
         # 最終ダメージの算出
-        calculated_damage = (weapon.real_damage * power).toFixed(3)
+        calculated_damage = (weapon.real_damage * power)
         if weapon.max_damage?
-          weapon.calculated_damage = if calculated_damage < weapon.max_damage then calculated_damage else weapon.max_damage.toFixed(3)
+          weapon.calculated_damage = if calculated_damage < weapon.max_damage then calculated_damage else weapon.max_damage
         else
           weapon.calculated_damage = calculated_damage
+        weapon.calculated_damage = (Math.floor(weapon.calculated_damage * 1000) / 1000).toFixed(3)
 
         # 確殺数の算出
         weapon.needed_shots = Math.ceil(100 / weapon.calculated_damage)
