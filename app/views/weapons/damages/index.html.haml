@@ -9,7 +9,7 @@
     = link_to t("common.link_text"), "https://docs.google.com/spreadsheets/d/1mRSuoAv6lSGevze6XnN-hUprPrK-gXtCYNmmEMv6uSU/edit?usp=sharing", target: "_blank", class: "external"
 
 %div{"ng-controller" => "DamagesController"}
-  = render partial: "calculate_form"
+  = render partial: "calculate_form", locals: {form_name: "params_form_top"}
 
   .panel{class: random_color_class("panel")}
     .panel-heading
@@ -50,7 +50,7 @@
               {{sub_weapon.needed_shots}}
               = t(".list.needed_shots_2")
 
-  =# render partial: "calculate_form"
+  = render partial: "calculate_form", locals: {form_name: "params_form_bottom"}
 
 .spacer-40
 
