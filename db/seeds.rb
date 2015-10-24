@@ -65,6 +65,8 @@ create_main_weapon([12, "ホットブラスター",
                               MainWeapon::BLASTER_ID, 25,      nil, 70, nil, nil,                  20, nil, nil])
 create_main_weapon([13, "ラピッドブラスター",
                               MainWeapon::BLASTER_ID, 45,      nil, 35, nil, nil,                  40, nil, nil])
+create_main_weapon([0,  "Rブラスターエリート",
+                              MainWeapon::BLASTER_ID, 65,      nil, 35, nil, nil,                  30, nil, nil])
 create_main_weapon([21, "ノヴァブラスター",
                               MainWeapon::BLASTER_ID,  10,      nil, 80, nil, nil,                 30, nil, nil])
 create_main_weapon([26, "ロングブラスター",
@@ -219,6 +221,8 @@ Weapon.create(name: "ラピッドブラスター",
                     main_weapon_name: "ラピッドブラスター", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ラピッドブラスターデコ",
                     main_weapon_name: "ラピッドブラスター", sub_weapon_name: "キューバンボム", special_weapon_name: "ボムラッシュ")
+Weapon.create(name: "Rブラスターエリート",
+                    main_weapon_name: "Rブラスターエリート", sub_weapon_name: "チェイスボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ノヴァブラスター",
                     main_weapon_name: "ノヴァブラスター", sub_weapon_name: "トラップ", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ロングブラスター",
