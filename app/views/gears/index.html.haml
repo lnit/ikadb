@@ -4,45 +4,45 @@
       %h3.panel-title= t(".search.title")
     .panel-body
       %form.form-horizontal{"ng-submit" => "search()"}
-        .col-lg-4
+        .col-md-4
           .form-group
-            %label.control-label.col-lg-2= t(".search.name")
-            .col-lg-10
+            %label.control-label.col-md-3.col-lg-2= t(".search.name")
+            .col-md-9.col-lg-10
               = text_field_tag "params[name]", "", "ng-model" => "params.name", :class => "form-control"
           .form-group
-            %label.control-label.col-lg-2= t(".search.type")
-            .col-lg-10
+            %label.control-label.col-md-3.col-lg-2= t(".search.type")
+            .col-md-9.col-lg-10
               = select_tag "params[type]", gear_type_columns_for_select, "ng-model" => "params.type", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.type"), multiple: true)
           .form-group
-            %label.control-label.col-lg-2= t(".search.slot")
-            .col-lg-10
+            %label.control-label.col-md-3.col-lg-2= t(".search.slot")
+            .col-md-9.col-lg-10
               .checkbox
-                %label.col-lg-1
+                %label.col-md-1
                   = check_box_tag "params[slot][1]", true, false, "ng-model" => "params.slot.s1"
                   1
-                %label.col-lg-1
+                %label.col-md-1
                   = check_box_tag "params[slot][2]", true, false, "ng-model" => "params.slot.s2"
                   2
-                %label.col-lg-1
+                %label.col-md-1
                   = check_box_tag "params[slot][3]", true, false, "ng-model" => "params.slot.s3"
                   3
-        .col-lg-8
+        .col-md-8
           .form-group
-            %label.control-label.col-lg-2= t(".search.power")
-            .col-lg-10
+            %label.control-label.col-md-2= t(".search.power")
+            .col-md-10
               = select_tag "params[power]", gear_power_columns_for_select, "ng-model" => "params.power", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.power"), searchable: true, multiple: true)
           .form-group
-            %label.control-label.col-lg-2= t(".search.brand")
-            .col-lg-10
+            %label.control-label.col-md-2= t(".search.brand")
+            .col-md-10
               = select_tag "params[brand]", gear_brand_columns_for_select, "ng-model" => "params.brand", :include_blank => true, :multiple => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.brand"), searchable: true, multiple: true)
           .form-group
-            %label.control-label.col-lg-2= t(".search.released_version")
-            .col-lg-10
+            %label.control-label.col-md-2= t(".search.released_version")
+            .col-md-10
               .checkbox
-                %label.col-lg-6
+                %label.col-md-6
                   = check_box_tag "params[released_version][v200]", true, false, "ng-model" => "params.released_version.v200"
                   = t(".search.v200_only")
-        .col-lg-12
+        .col-md-12
           = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
   .panel{class: random_color_class("panel")}
