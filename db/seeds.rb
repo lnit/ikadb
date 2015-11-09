@@ -58,7 +58,7 @@ create_main_weapon([11, "L3リールガン",
 create_main_weapon([24, "ボールドマーカー",
                               MainWeapon::SHOOTER_ID, 15,      55, nil, nil, nil,                  75, nil, nil])
 create_main_weapon([0, "H3リールガン",
-                              MainWeapon::SHOOTER_ID, 60,     40, nil, nil, nil,                  30, nil, nil])
+                              MainWeapon::SHOOTER_ID, 68,     40, nil, nil, nil,                  30, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([12, "ホットブラスター",
