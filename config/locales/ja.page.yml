@@ -30,6 +30,8 @@ ja:
     and: "と"
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='_blank', class='external'>@lni_T</a> 2015"
+  flash:
+    gear: "Ver 2.3.0追加ギアについては現在情報収集中です。ご不便をおかけしますが、ご了承ください。"
 
   dashboards:
     index:
