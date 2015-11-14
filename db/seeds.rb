@@ -355,6 +355,7 @@ create_brand([17, nil, nil, "侵略！イカ娘"])
 csvs = [
   CSV.table("db/data_seeds/gears.csv"),
   CSV.table("db/data_seeds/gears_v200.csv"),
+  CSV.table("db/data_seeds/gears_v230.csv"),
 ]
 csvs.each do |gears|
   gears.each do |row|
