@@ -60,19 +60,20 @@
 
     .main-content.container
       .row
-        .col-md-8.col-md-offset-2.col-sm-12
-          %ins(class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9326052382075030" data-ad-slot="5750658907" data-ad-format="auto")
+        - if ["weapons","gears","damages"].include?(controller.controller_name)
+          .col-md-8.col-md-offset-2.col-sm-12.spacer-bottom-30
+            %ins(class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9326052382075030" data-ad-slot="5750658907" data-ad-format="auto")
         - if content_for?(:sidebar)
-          .col-lg-9
+          .col-md-9
             .text-right
               = render partial: "shared/sns"
             = bootstrap_flash
             = yield
-          .col-lg-3
+          .col-md-3
             .well.sidebar-nav
               = yield :sidebar
         - else
-          .col-lg-12
+          .col-md-12
             .text-right
               = render partial: "shared/sns"
             = bootstrap_flash
