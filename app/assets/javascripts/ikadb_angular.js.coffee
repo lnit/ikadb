@@ -14,7 +14,9 @@ window.App = angular.module('Ikadb', ['ngResource', 'ui.bootstrap']).run([
     )
 
     # GoogleAdsenseを有効化
-    (adsbygoogle = window.adsbygoogle || []).push({}) if ENV.isProduction
+    if ENV.isProduction
+      (adsbygoogle = window.adsbygoogle || []).push({})
+      (adsbygoogle = window.adsbygoogle || []).push({})
 ])
 
 # Ajax送信時にトークンを送信する（トークンがないとRails側で認証エラーになる）

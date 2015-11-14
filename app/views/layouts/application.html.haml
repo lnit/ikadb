@@ -60,6 +60,8 @@
 
     .main-content.container
       .row
+        .col-md-8.col-md-offset-2.col-sm-12
+          %ins(class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9326052382075030" data-ad-slot="5750658907" data-ad-format="auto")
         - if content_for?(:sidebar)
           .col-lg-9
             .text-right
@@ -76,7 +78,7 @@
             = bootstrap_flash
             = yield
         .col-md-8.col-md-offset-2.col-sm-12
-          %ins(class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9326052382075030" data-ad-slot="1741848902" data-ad-format="horizontal")
+          %ins(class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9326052382075030" data-ad-slot="1741848902" data-ad-format="auto")
 
     %footer.footer
       .container
