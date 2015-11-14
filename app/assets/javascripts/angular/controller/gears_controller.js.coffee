@@ -19,6 +19,7 @@ App.controller "GearsController", ["$scope", "Gear", ($scope, Gear) ->
     if version_params = $scope.params.released_version
       versions = []
       versions.push 200 if version_params.v200
+      versions.push 230 if version_params.v230
       params["q[released_version_eq_any][]"] = versions unless versions.length == 0
 
     $scope.gears = Gear.query(params)

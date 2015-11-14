@@ -147,7 +147,8 @@ ja:
           type: "アタマ"
           power: "攻撃力アップ"
           brand: "アイロニック"
-        v200_only: "Ver2.0.0追加ギアのみ"
+        v200_only: "Ver2.0.0追加ギア"
+        v230_only: "Ver2.3.0追加ギア"
       list:
         <<: *common
         title: "一覧"
