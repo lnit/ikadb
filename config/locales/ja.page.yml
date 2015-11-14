@@ -9,6 +9,8 @@ ja:
     damage: "ダメージ計算機"
     report: "情報提供/バグ報告"
     link: "リンク集"
+    badge:
+      new: "new!"
     weapon_type:
       shooter: "シューター"
       blaster: "ブラスター"
