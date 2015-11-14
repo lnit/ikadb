@@ -15,7 +15,12 @@ App.controller "GearsController", ["$scope", "Gear", ($scope, Gear) ->
       params["q[slot_eq_any][]"] = slots unless slots.length == 0 || slots.length == 3
     params["q[power_id_eq_any][]"] = $scope.params.power if ($scope.params.power || []).length > 0
     params["q[brand_id_eq_any][]"] = $scope.params.brand if ($scope.params.brand || []).length > 0
-    params["q[released_version_eq]"] = 200 if ($scope.params.released_version || {}).v200
+
+    if version_params = $scope.params.released_version
+      versions = []
+      versions.push 200 if version_params.v200
+      versions.push 230 if version_params.v230
+      params["q[released_version_eq_any][]"] = versions unless versions.length == 0
 
     $scope.gears = Gear.query(params)
     _gaq.push([

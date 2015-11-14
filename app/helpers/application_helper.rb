@@ -11,4 +11,11 @@ module ApplicationHelper
     str += I18n.t("common.placeholder.searchable") if opt[:searchable]
     str
   end
+
+  def link_to_with_badge(body, url, badge_text)
+    link_to url do
+      haml_concat body
+      haml_tag :span, badge_text, class: "badge"
+    end
+  end
 end

@@ -9,6 +9,8 @@ ja:
     damage: "ダメージ計算機"
     report: "情報提供/バグ報告"
     link: "リンク集"
+    badge:
+      new: "new!"
     weapon_type:
       shooter: "シューター"
       blaster: "ブラスター"
@@ -31,7 +33,7 @@ ja:
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='_blank', class='external'>@lni_T</a> 2015"
   flash:
-    gear: "Ver 2.3.0追加ギアについては現在情報収集中です。ご不便をおかけしますが、ご了承ください。"
+    gear: "Ver 2.3.0追加ギアに対応しました。検索パネルの「Ver2.3.0追加ギア」をONにすることで検索が可能です。"
 
   dashboards:
     index:
@@ -147,7 +149,8 @@ ja:
           type: "アタマ"
           power: "攻撃力アップ"
           brand: "アイロニック"
-        v200_only: "Ver2.0.0追加ギアのみ"
+        v200_only: "Ver2.0.0追加ギア"
+        v230_only: "Ver2.3.0追加ギア"
       list:
         <<: *common
         title: "一覧"

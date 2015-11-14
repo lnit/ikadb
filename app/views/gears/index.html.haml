@@ -1,7 +1,9 @@
 %div{"ng-controller" => "GearsController"}
   .panel{class: random_color_class("panel")}
     .panel-heading
-      %h3.panel-title= t(".search.title")
+      %h3.panel-title
+        = t(".search.title")
+        %span.badge= t("common.badge.new")
     .panel-body
       %form.form-horizontal{"ng-submit" => "search()"}
         .col-md-4
@@ -39,9 +41,12 @@
             %label.control-label.col-md-2= t(".search.released_version")
             .col-md-10
               .checkbox
-                %label.col-md-6
+                %label.spacer-right-5
                   = check_box_tag "params[released_version][v200]", true, false, "ng-model" => "params.released_version.v200"
                   = t(".search.v200_only")
+                %label.spacer-right-5
+                  = check_box_tag "params[released_version][v230]", true, false, "ng-model" => "params.released_version.v230"
+                  = t(".search.v230_only")
         .col-md-12
           = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
