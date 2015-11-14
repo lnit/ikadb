@@ -1,7 +1,9 @@
 %div{"ng-controller" => "GearsController"}
   .panel{class: random_color_class("panel")}
     .panel-heading
-      %h3.panel-title= t(".search.title")
+      %h3.panel-title
+        = t(".search.title")
+        %span.badge= t("common.badge.new")
     .panel-body
       %form.form-horizontal{"ng-submit" => "search()"}
         .col-md-4
