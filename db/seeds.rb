@@ -130,6 +130,8 @@ MainWeapon.find_by(name: "ノヴァブラスター").update_attributes(real_dama
 MainWeapon.find_by(name: "ロングブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
 MainWeapon.find_by(name: "バレルスピナー").update_attributes(real_damage: 28.0, max_damage: 33.3)
 MainWeapon.find_by(name: "スプラスピナー").update_attributes(real_damage: 28.0, max_damage: 33.3)
+MainWeapon.find_by(name: "バケットスロッシャー").update_attributes(real_damage: 70.0, max_damage: nil)
+MainWeapon.find_by(name: "ヒッセン").update_attributes(real_damage: 62.0, max_damage: nil)
 
 
 create_sub_weapon([1, "スプラッシュボム"])
