@@ -82,7 +82,7 @@
                                                   "ng-model" => "free_weapon.max_damage",
                                                   "ng-change" => "calculate()",
                                                   "min" => "1", "max" => "99.9"}
-              %td
+              %td{"ng-class" => "{'text-warning': free_weapon.needed_shots != free_weapon.real_needed_shots}"}
                 %span{"ng-show" => "!!free_weapon.calculated_damage"}
                   {{free_weapon.calculated_damage}}
                   = t(".list.needed_shots_1")

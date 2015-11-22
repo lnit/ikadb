@@ -60,4 +60,5 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
 
         # 確殺数の算出
         weapon.needed_shots = Math.ceil(100 / weapon.calculated_damage)
+        weapon.real_needed_shots = Math.ceil(100 / weapon.real_damage)
 ]
