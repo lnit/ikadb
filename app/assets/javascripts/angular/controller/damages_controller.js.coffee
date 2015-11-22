@@ -47,7 +47,9 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
 
     angular.forEach [$scope.main_weapons, $scope.sub_weapons, $scope.free_weapons], (weapons) ->
       angular.forEach weapons, (weapon) ->
-        return unless !!weapon.real_damage
+        unless !!weapon.real_damage
+          weapon.calculated_damage = null
+          return
         # 最終ダメージの算出
         calculated_damage = (weapon.real_damage * power)
         if weapon.max_damage?
