@@ -50,10 +50,8 @@
               {{sub_weapon.needed_shots}}
               = t(".list.needed_shots_2")
 
-  .panel{class: random_color_class("panel")}
-    .panel-heading
-      %h3.panel-title= t(".list.title")
-    .panel-body
+      %hr
+      %h5#manual= t(".list.manually")
       %form.form-horizontal{"ng-submit" => "", "name" => "free_weapons_form"}
         %table.table.table-striped.table-hover
           %thead

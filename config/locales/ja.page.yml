@@ -119,6 +119,7 @@ ja:
           calculated_damage: "補正後ダメージ"
           needed_shots_1: "(確定"
           needed_shots_2: "発)"
+          manually: "自由入力"
       calculate_form:
         calculate:
           title: "ギアパワー数入力"
