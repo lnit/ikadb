@@ -63,10 +63,10 @@
           %tbody
             %tr.weapon{"ng-repeat" => "free_weapon in free_weapons"}
               %td
-                %input.input-sm.form-control
+                %input.input-sm.form-control{"ng-model" => "free_weapon.name"}
               %td
                 %ng-form{"name" => "real_damage_form"}
-                  .input-group.col-md-12{"ng-class" => "{'has-error': real_damage_form.$invalid}"}
+                  .input-group.col-md-12.col-xs-12{"ng-class" => "{'has-error': real_damage_form.$invalid}"}
                     %input.input-sm.form-control{ "type" => "number",
                                                   "name" => "real_damage",
                                                   "ng-model" => "free_weapon.real_damage",
@@ -74,7 +74,7 @@
                                                   "min" => "0", "max" => "999.9"}
               %td
                 %ng-form{"name" => "max_damage_form"}
-                  .input-group.col-md-12{"ng-class" => "{'has-error': max_damage_form.$invalid}"}
+                  .input-group.col-md-12.col-xs-12{"ng-class" => "{'has-error': max_damage_form.$invalid}"}
                     %input.input-sm.form-control{ "type" => "number",
                                                   "name" => "max_damage",
                                                   "ng-model" => "free_weapon.max_damage",
