@@ -27,7 +27,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
           sub_weapon.needed_shots = Math.ceil(100 / sub_weapon.real_damage)
           sub_weapon.real_needed_shots = sub_weapon.needed_shots
     )
-    $scope.free_weapons = [{}, {}, {}, {}, {}]
+    $scope.free_weapons = [{}, {}, {}, {}]
   $scope.initialize()
 
 
