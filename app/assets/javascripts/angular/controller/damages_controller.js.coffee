@@ -1,34 +1,35 @@
 App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scope, MainWeapon, SubWeapon) ->
-  $scope.params = {
-    attack_main: 0,
-    attack_sub: 0,
-    defense_main: 0,
-    defense_sub: 0,
-    power: 1
-  }
-  $scope.main_weapons = MainWeapon.query(
-    {
-      "q[weapon_type_eq_any][]" : ["0", "4", "5"] # シューター・スロッシャー・スピナー
-    },
-    (main_weapons) ->
-      angular.forEach main_weapons, (main_weapon) ->
-        main_weapon.calculated_damage = main_weapon.real_damage.toFixed(3)
-        main_weapon.needed_shots = Math.ceil(100 / main_weapon.real_damage)
-        main_weapon.real_needed_shots = main_weapon.needed_shots
-  )
+  $scope.initialize = ->
+    $scope.params = {
+      attack_main: 0,
+      attack_sub: 0,
+      defense_main: 0,
+      defense_sub: 0,
+      power: 1
+    }
+    $scope.main_weapons = MainWeapon.query(
+      {
+        "q[weapon_type_eq_any][]" : ["0", "4", "5"] # シューター・スロッシャー・スピナー
+      },
+      (main_weapons) ->
+        angular.forEach main_weapons, (main_weapon) ->
+          main_weapon.calculated_damage = main_weapon.real_damage.toFixed(3)
+          main_weapon.needed_shots = Math.ceil(100 / main_weapon.real_damage)
+          main_weapon.real_needed_shots = main_weapon.needed_shots
+    )
+    $scope.sub_weapons = SubWeapon.query(
+      {
+        "q[real_damage_gt]" : "0"
+      },
+      (sub_weapons) ->
+        angular.forEach sub_weapons, (sub_weapon) ->
+          sub_weapon.calculated_damage = sub_weapon.real_damage.toFixed(3)
+          sub_weapon.needed_shots = Math.ceil(100 / sub_weapon.real_damage)
+          sub_weapon.real_needed_shots = sub_weapon.needed_shots
+    )
+    $scope.free_weapons = [{}, {}, {}, {}, {}]
+  $scope.initialize()
 
-  $scope.sub_weapons = SubWeapon.query(
-    {
-      "q[real_damage_gt]" : "0"
-    },
-    (sub_weapons) ->
-      angular.forEach sub_weapons, (sub_weapon) ->
-        sub_weapon.calculated_damage = sub_weapon.real_damage.toFixed(3)
-        sub_weapon.needed_shots = Math.ceil(100 / sub_weapon.real_damage)
-        sub_weapon.real_needed_shots = sub_weapon.needed_shots
-  )
-
-  $scope.free_weapons = [{}, {}, {}, {}, {}]
 
   $scope.calculate = ->
     p = $scope.params
