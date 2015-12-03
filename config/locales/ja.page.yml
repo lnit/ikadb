@@ -100,7 +100,7 @@ ja:
         common: &common
           name: "名前"
         description:
-          title: "ダメージ計算機 (Ver2.2.0対応)"
+          title: "ダメージ計算機 (Ver2.3.0対応)"
           body_html: |-
             このページは、「攻撃力アップ」「防御力アップ」ギアパワーによるダメージの増減を含めたブキのダメージ計算ができるページです。<br />
             攻撃側、被弾側のギアパワーの数を入力することで、
@@ -110,6 +110,13 @@ ja:
             攻撃力アップを持たない.52ガロンのキル確定ヒット数が2発から3発に増加することが、ダメージ計算により算出できます。<br />
             ギアパワー構成の検討時などにご利用ください。<br />
             <br />
+            <a href='#manual'>
+            <span class='badge'>new!</span>
+            基本ダメージの自由入力機能
+            </a>
+            のβ版を公開しました。メイン+サブの合計ダメージを計算したい場合などにご利用ください。<br />
+            <br />
+
           link: "参考情報は"
         list:
           <<: *common
@@ -119,7 +126,7 @@ ja:
           calculated_damage: "補正後ダメージ"
           needed_shots_1: "(確定"
           needed_shots_2: "発)"
-          manually: "自由入力"
+          manually: "自由入力 (β版)"
       calculate_form:
         calculate:
           title: "ギアパワー数入力"
