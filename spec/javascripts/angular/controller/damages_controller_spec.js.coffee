@@ -21,6 +21,7 @@ describe "DamagesController", ->
     describe "damage", ->
       beforeEach ->
         @scope.params.defense_main = 3
+        @scope.manually_weapons[0].real_damage = 90.0
         @scope.calculate()
 
       describe "MainWeapon", ->
@@ -38,6 +39,16 @@ describe "DamagesController", ->
           this.subject = @scope.sub_weapons[0]
         it "calculated_damage", ->
           expect(this.subject.calculated_damage).toEqual("52.529")
+        it "needed_shots", ->
+          expect(this.subject.needed_shots).toEqual(2)
+        it "real_needed_shots", ->
+          expect(this.subject.real_needed_shots).toEqual(2)
+
+      describe "ManuallyWeapon", ->
+        beforeEach ->
+          this.subject = @scope.manually_weapons[0]
+        it "calculated_damage", ->
+          expect(this.subject.calculated_damage).toEqual("78.795")
         it "needed_shots", ->
           expect(this.subject.needed_shots).toEqual(2)
         it "real_needed_shots", ->
