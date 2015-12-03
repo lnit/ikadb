@@ -52,7 +52,7 @@
 
       %hr
       %h5#manual= t(".list.manually")
-      %form.form-horizontal{"ng-submit" => "", "name" => "free_weapons_form"}
+      %form.form-horizontal{"ng-submit" => "", "name" => "manually_weapons_form"}
         %table.table.table-striped.table-hover
           %thead
             %tr
@@ -61,15 +61,15 @@
               %th.col-md-2.col-xs-2= t(".list.max_damage")
               %th.col-md-4.col-xs-4= t(".list.calculated_damage")
           %tbody
-            %tr.weapon{"ng-repeat" => "free_weapon in free_weapons"}
+            %tr.weapon{"ng-repeat" => "manually_weapon in manually_weapons"}
               %td
-                %input.input-sm.form-control{"ng-model" => "free_weapon.name"}
+                %input.input-sm.form-control{"ng-model" => "manually_weapon.name"}
               %td
                 %ng-form{"name" => "real_damage_form"}
                   .input-group.col-md-12.col-xs-12{"ng-class" => "{'has-error': real_damage_form.$invalid}"}
                     %input.input-sm.form-control{ "type" => "number",
                                                   "name" => "real_damage",
-                                                  "ng-model" => "free_weapon.real_damage",
+                                                  "ng-model" => "manually_weapon.real_damage",
                                                   "ng-change" => "calculate()",
                                                   "min" => "0", "max" => "999.9"}
               %td
@@ -77,14 +77,14 @@
                   .input-group.col-md-12.col-xs-12{"ng-class" => "{'has-error': max_damage_form.$invalid}"}
                     %input.input-sm.form-control{ "type" => "number",
                                                   "name" => "max_damage",
-                                                  "ng-model" => "free_weapon.max_damage",
+                                                  "ng-model" => "manually_weapon.max_damage",
                                                   "ng-change" => "calculate()",
                                                   "min" => "1", "max" => "99.9"}
-              %td{"ng-class" => "{'text-warning': free_weapon.needed_shots != free_weapon.real_needed_shots}"}
-                %span{"ng-show" => "!!free_weapon.calculated_damage"}
-                  {{free_weapon.calculated_damage}}
+              %td{"ng-class" => "{'text-warning': manually_weapon.needed_shots != manually_weapon.real_needed_shots}"}
+                %span{"ng-show" => "!!manually_weapon.calculated_damage"}
+                  {{manually_weapon.calculated_damage}}
                   = t(".list.needed_shots_1")
-                  {{free_weapon.needed_shots}}
+                  {{manually_weapon.needed_shots}}
                   = t(".list.needed_shots_2")
 
   = render partial: "calculate_form", locals: {form_name: "params_form_bottom"}

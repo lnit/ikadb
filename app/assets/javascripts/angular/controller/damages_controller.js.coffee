@@ -27,7 +27,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
           sub_weapon.needed_shots = Math.ceil(100 / sub_weapon.real_damage)
           sub_weapon.real_needed_shots = sub_weapon.needed_shots
     )
-    $scope.free_weapons = [{}, {}, {}, {}]
+    $scope.manually_weapons = [{}, {}, {}, {}]
   $scope.initialize()
 
 
@@ -46,7 +46,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     power = 1.300 if power > 1.300 # 最大ダメージ倍率は1.300らしいので
     $scope.params.power = power
 
-    angular.forEach [$scope.main_weapons, $scope.sub_weapons, $scope.free_weapons], (weapons) ->
+    angular.forEach [$scope.main_weapons, $scope.sub_weapons, $scope.manually_weapons], (weapons) ->
       angular.forEach weapons, (weapon) ->
         unless !!weapon.real_damage
           weapon.calculated_damage = null
