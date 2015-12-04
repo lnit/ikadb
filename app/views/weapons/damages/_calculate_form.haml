@@ -4,21 +4,73 @@
   .panel-body
     %form.form-horizontal{"ng-submit" => "", "name" => "#{form_name}"}
       .col-lg-4.col-md-5.col-sm-12
-        .form-group
-          %label.control-label.col-md-4.col-sm-2= t(".calculate.attack")
-          .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': #{form_name}.attack_main.$invalid || #{form_name}.attack_sub.$invalid}"}
-            %span.input-group-addon= t(".calculate.main")
-            %input.form-control{"type" => "number", "name" => "attack_main", "ng-model" => "params.attack_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
-            %span.input-group-addon= t(".calculate.sub")
-            %input.form-control{"type" => "number", "name" => "attack_sub", "ng-model" => "params.attack_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+        .row
+          .col-md-2
+            .form-group
+              .input-group.col-md-12
+                %input.form-control{"type" => "number", "name" => "attack_main", "ng-model" => "params.attack_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+          .col-md-10
+            %span.glyphicon.attack-main-off{"ng-click" => "params.attack_main = 0 ; calculate()"}
+            %rating{"ng-model" => "params.attack_main",
+                    "max" => "3",
+                    "state-on" => "'attack-main-on'",
+                    "state-off" => "'attack-main-off'",
+                    "ng-change" => "#{form_name}.$valid && calculate()"}
+        .row
+          .col-md-2
+            .form-group
+              .input-group.col-md-12
+                %input.form-control{"type" => "number", "name" => "attack_sub", "ng-model" => "params.attack_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+          .col-md-10
+            %span.glyphicon.attack-main-off{ "ng-click" => "params.attack_sub = 0 ; calculate()"}
+            %rating{"ng-model" => "params.attack_sub",
+                    "max" => "9",
+                    "state-on" => "'attack-sub-on'",
+                    "state-off" => "'attack-sub-off'",
+                    "ng-change" => "#{form_name}.$valid && calculate()",
+                    "class" => "rating-sub-gear"}
+        .row
+          .col-md-2
+            .form-group
+              .input-group.col-md-12
+                %input.form-control{"type" => "number", "name" => "defense_main", "ng-model" => "params.defense_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+          .col-md-10
+            %span.glyphicon.defense-main-off{ "ng-click" => "params.defense_main = 0 ; calculate()"}
+            %rating{"ng-model" => "params.defense_main",
+                    "max" => "3",
+                    "state-on" => "'defense-main-on'",
+                    "state-off" => "'defense-main-off'",
+                    "ng-change" => "#{form_name}.$valid && calculate()"}
+        .row
+          .col-md-2
+            .form-group
+              .input-group.col-md-12
+                %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+          .col-md-10
+            %span.glyphicon.defense-main-off{ "ng-click" => "params.defense_sub = 0 ; calculate()"}
+            %rating{"ng-model" => "params.defense_sub",
+                    "max" => "9",
+                    "state-on" => "'defense-sub-on'",
+                    "state-off" => "'defense-sub-off'",
+                    "ng-change" => "#{form_name}.$valid && calculate()",
+                    "class" => "rating-sub-gear"}
+      - if false
+        .col-lg-4.col-md-5.col-sm-12
+          .form-group
+            %label.control-label.col-md-4.col-sm-2= t(".calculate.attack")
+            .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': #{form_name}.attack_main.$invalid || #{form_name}.attack_sub.$invalid}"}
+              %span.input-group-addon= t(".calculate.main")
+              %input.form-control{"type" => "number", "name" => "attack_main", "ng-model" => "params.attack_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+              %span.input-group-addon= t(".calculate.sub")
+              %input.form-control{"type" => "number", "name" => "attack_sub", "ng-model" => "params.attack_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
 
-        .form-group
-          %label.control-label.col-md-4.col-sm-2= t(".calculate.defense")
-          .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': #{form_name}.defense_main.$invalid || #{form_name}.defense_sub.$invalid}"}
-            %span.input-group-addon= t(".calculate.main")
-            %input.form-control{"type" => "number", "name" => "defense_main", "ng-model" => "params.defense_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
-            %span.input-group-addon= t(".calculate.sub")
-            %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
+          .form-group
+            %label.control-label.col-md-4.col-sm-2= t(".calculate.defense")
+            .input-group.col-md-8.col-sm-10{"ng-class" => "{'has-error': #{form_name}.defense_main.$invalid || #{form_name}.defense_sub.$invalid}"}
+              %span.input-group-addon= t(".calculate.main")
+              %input.form-control{"type" => "number", "name" => "defense_main", "ng-model" => "params.defense_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
+              %span.input-group-addon= t(".calculate.sub")
+              %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
 
       .col-lg-4.col-md-5.col-sm-12
         .form-group
