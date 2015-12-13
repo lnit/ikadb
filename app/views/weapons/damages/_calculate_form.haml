@@ -5,24 +5,24 @@
     %form.form-horizontal{"ng-submit" => "", "name" => "#{form_name}"}
       .col-lg-4.col-md-5.col-sm-12
         .row
-          .col-md-2
+          .col-md-2.col-sm-1
             .form-group
-              .input-group.col-md-12
+              .input-group.col-md-12.col-sm-12
                 %input.form-control{"type" => "number", "name" => "attack_main", "ng-model" => "params.attack_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
-          .col-md-10
-            %span.glyphicon.attack-main-off{"ng-click" => "params.attack_main = 0 ; calculate()"}
+          .col-md-10.col-sm-11
+            %span.glyphicon.zero-icon{"ng-click" => "params.attack_main = 0 ; calculate()"}
             %rating{"ng-model" => "params.attack_main",
                     "max" => "3",
                     "state-on" => "'attack-main-on'",
                     "state-off" => "'attack-main-off'",
                     "ng-change" => "#{form_name}.$valid && calculate()"}
         .row
-          .col-md-2
+          .col-md-2.col-sm-1
             .form-group
-              .input-group.col-md-12
+              .input-group.col-md-12.col-sm-12
                 %input.form-control{"type" => "number", "name" => "attack_sub", "ng-model" => "params.attack_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
-          .col-md-10
-            %span.glyphicon.attack-main-off{ "ng-click" => "params.attack_sub = 0 ; calculate()"}
+          .col-md-10.col-sm-11
+            %span.glyphicon.zero-icon{ "ng-click" => "params.attack_sub = 0 ; calculate()"}
             %rating{"ng-model" => "params.attack_sub",
                     "max" => "9",
                     "state-on" => "'attack-sub-on'",
@@ -30,24 +30,24 @@
                     "ng-change" => "#{form_name}.$valid && calculate()",
                     "class" => "rating-sub-gear"}
         .row
-          .col-md-2
+          .col-md-2.col-sm-1
             .form-group
-              .input-group.col-md-12
+              .input-group.col-md-12.col-sm-12
                 %input.form-control{"type" => "number", "name" => "defense_main", "ng-model" => "params.defense_main", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "3", "required" => true}
-          .col-md-10
-            %span.glyphicon.defense-main-off{ "ng-click" => "params.defense_main = 0 ; calculate()"}
+          .col-md-10.col-sm-11
+            %span.glyphicon.zero-icon{ "ng-click" => "params.defense_main = 0 ; calculate()"}
             %rating{"ng-model" => "params.defense_main",
                     "max" => "3",
                     "state-on" => "'defense-main-on'",
                     "state-off" => "'defense-main-off'",
                     "ng-change" => "#{form_name}.$valid && calculate()"}
         .row
-          .col-md-2
+          .col-md-2.col-sm-1
             .form-group
-              .input-group.col-md-12
+              .input-group.col-md-12.col-sm-12
                 %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
-          .col-md-10
-            %span.glyphicon.defense-main-off{ "ng-click" => "params.defense_sub = 0 ; calculate()"}
+          .col-md-10.col-sm-11
+            %span.glyphicon.zero-icon{ "ng-click" => "params.defense_sub = 0 ; calculate()"}
             %rating{"ng-model" => "params.defense_sub",
                     "max" => "9",
                     "state-on" => "'defense-sub-on'",
