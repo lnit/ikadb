@@ -1,6 +1,6 @@
 .row
   .hidden-xs
-    .col-md-2.col-sm-1
+    .col-md-2.col-sm-2
       .form-group
         .input-group.col-md-12.col-sm-12
           %input.form-control{"type" => "number",
@@ -8,7 +8,7 @@
                               "ng-model" => "params.#{attr_name.underscore}",
                               "ng-change" => "#{form_name}.$valid && calculate()",
                               "min" => "0", "max" => max, "required" => true}
-    .col-md-10.col-sm-11
+    .col-md-10.col-sm-10
       %span.glyphicon.zero-icon{"ng-click" => "params.#{attr_name.underscore} = 0 ; calculate()"}
       %rating{"ng-model" => "params.#{attr_name.underscore}",
               "max" => max,

@@ -3,7 +3,7 @@
     %h3.panel-title= t(".calculate.title")
   .panel-body
     %form.form-horizontal{"ng-submit" => "", "name" => "#{form_name}"}
-      .col-lg-4.col-md-5.col-sm-12
+      .col-lg-4.col-md-5.col-sm-6
         = render partial: "gear_input", locals: {form_name: "#{form_name}", attr_name: "attack-main",  max: "3", class_names: {}}
         = render partial: "gear_input", locals: {form_name: "#{form_name}", attr_name: "attack-sub",   max: "9", class_names: {rating: "rating-sub-gear"}}
         = render partial: "gear_input", locals: {form_name: "#{form_name}", attr_name: "defense-main", max: "3", class_names: {}}
@@ -27,10 +27,10 @@
               %span.input-group-addon= t(".calculate.sub")
               %input.form-control{"type" => "number", "name" => "defense_sub", "ng-model" => "params.defense_sub", "ng-change" => "#{form_name}.$valid && calculate()", "min" => "0", "max" => "9", "required" => true}
 
-      .col-lg-4.col-md-5.col-sm-12
+      .col-lg-4.col-md-5.col-sm-6
         .form-group
-          %label.control-label.col-md-4.col-sm-2= t(".calculate.power")
-          .col-md-8.col-sm-10
+          %label.control-label.col-md-4.col-sm-5= t(".calculate.power")
+          .col-md-8.col-sm-7
             %label.control-label
               {{params.power.toFixed(3)}}
 
