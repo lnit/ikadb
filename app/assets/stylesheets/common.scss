@@ -6,6 +6,66 @@ dd {
   width:60px !important;
 }
 
+.zero-icon {
+  height:36px;
+  width: 36px;
+  background-size: contain;
+  background-image: image-url("zero.png");
+}
+.attack-main-on {
+  height: 36px;
+  width: 36px;
+  background-size: contain;
+  background-image: image-url("attack_on.png");
+}
+.attack-main-off {
+  height:36px;
+  width: 36px;
+  background-size: contain;
+  background-image: image-url("attack_off.png");
+}
+.attack-sub-on {
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-image: image-url("attack_on.png");
+}
+.attack-sub-off {
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-image: image-url("attack_off.png");
+}
+
+.defense-main-on {
+  height: 36px;
+  width: 36px;
+  background-size: contain;
+  background-image: image-url("defense_on.png");
+}
+.defense-main-off {
+  height:36px;
+  width: 36px;
+  background-size: contain;
+  background-image: image-url("defense_off.png");
+}
+.defense-sub-on {
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-image: image-url("defense_on.png");
+}
+.defense-sub-off {
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-image: image-url("defense_off.png");
+}
+
+.rating-sub-gear {
+  vertical-align: super;
+}
+
 .spacer-40 {
   margin-top: 40px
 }
