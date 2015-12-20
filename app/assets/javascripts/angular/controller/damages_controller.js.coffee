@@ -30,9 +30,17 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     $scope.manually_weapons = [{}, {}, {}, {}]
   $scope.initialize()
 
+  $scope.validate = (p) ->
+    return false unless (p.attack_main? && p.attack_sub? && p.defense_main? && p.defense_sub?)
+    return false unless (0 <= p.attack_main <= 3)
+    return false unless (0 <= p.attack_sub <= 9)
+    return false unless (0 <= p.defense_main <= 3)
+    return false unless (0 <= p.defense_sub <= 9)
+    return true
 
   $scope.calculate = ->
     p = $scope.params
+    return unless $scope.validate(p)
 
     attack_point  = p.attack_main  * 10 + p.attack_sub  * 3
     defense_point = p.defense_main * 10 + p.defense_sub * 3
