@@ -14,7 +14,7 @@
               "max" => max,
               "state-on" => "'#{attr_name}-on'",
               "state-off" => "'#{attr_name}-off'",
-              "ng-change" => "#{form_name}.$valid && calculate()",
+              "ng-change" => "calculate()",
               "class" => "#{class_names[:rating]}"}
   .visible-xs
     %span.glyphicon.zero-icon{"ng-click" => "params.#{attr_name.underscore} = 0 ; (#{form_name}.$valid && calculate())"}
@@ -22,5 +22,5 @@
             "max" => max,
             "state-on" => "'#{attr_name}-on'",
             "state-off" => "'#{attr_name}-off'",
-            "ng-change" => "#{form_name}.$valid && calculate()",
+            "ng-change" => "calculate()",
             "class" => "#{class_names[:rating]}"}
