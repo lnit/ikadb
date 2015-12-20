@@ -16,6 +16,6 @@
             %label.control-label
               {{params.power.toFixed(3)}}
 
-      .col-md-12
+      .col-md-12.col-sm-12
         %p.text-danger{"ng-show" => "#{form_name}.$invalid"}
           = t(".errors.params_invalid")
