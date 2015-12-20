@@ -9,7 +9,7 @@
                               "ng-change" => "#{form_name}.$valid && calculate()",
                               "min" => "0", "max" => max, "required" => true}
     .col-md-10.col-sm-10
-      %span.glyphicon.zero-icon{"ng-click" => "params.#{attr_name.underscore} = 0 ; (#{form_name}.$valid && calculate())"}
+      %span.glyphicon.zero-icon{"ng-click" => "params.#{attr_name.underscore} = 0 ; calculate()"}
       %rating{"ng-model" => "params.#{attr_name.underscore}",
               "max" => max,
               "state-on" => "'#{attr_name}-on'",
@@ -17,7 +17,7 @@
               "ng-change" => "calculate()",
               "class" => "#{class_names[:rating]}"}
   .visible-xs
-    %span.glyphicon.zero-icon{"ng-click" => "params.#{attr_name.underscore} = 0 ; (#{form_name}.$valid && calculate())"}
+    %span.glyphicon.zero-icon{"ng-click" => "params.#{attr_name.underscore} = 0 ; calculate()"}
     %rating{"ng-model" => "params.#{attr_name.underscore}",
             "max" => max,
             "state-on" => "'#{attr_name}-on'",
