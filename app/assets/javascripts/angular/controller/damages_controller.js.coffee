@@ -9,7 +9,8 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     }
     $scope.main_weapons = MainWeapon.query(
       {
-        "q[weapon_type_eq_any][]" : ["0", "4", "5"] # シューター・スロッシャー・スピナー
+        "q[weapon_type_eq_any][]" : ["0", "2", "4", "5"],
+        "q[real_damage_gt]" : "0"
       },
       (main_weapons) ->
         angular.forEach main_weapons, (main_weapon) ->
