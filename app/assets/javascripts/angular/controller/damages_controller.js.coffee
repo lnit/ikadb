@@ -27,6 +27,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
           sub_weapon.calculated_damage = sub_weapon.real_damage.toFixed(3)
           sub_weapon.needed_shots = Math.ceil(100 / sub_weapon.real_damage)
           sub_weapon.real_needed_shots = sub_weapon.needed_shots
+          sub_weapon.is_sub_weapon = true
     )
     $scope.manually_weapons = [{}, {}, {}, {}]
   $scope.initialize()
@@ -62,6 +63,7 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
           return
         # 最終ダメージの算出
         calculated_damage = (weapon.real_damage * power)
+        calculated_damage = calculated_damage * 0.8 if weapon.is_sub_weapon && p.bomb_search
         if weapon.max_damage?
           weapon.calculated_damage = if calculated_damage < weapon.max_damage then calculated_damage else weapon.max_damage
         else
