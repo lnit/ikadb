@@ -9,7 +9,7 @@ describe "DamagesController", ->
       spyOn(MainWeapon, "query").and.callFake ->
         return [{"id":1,"name":"わかばシューター","weapon_type":0,"real_damage":28.0,"max_damage":33.3}]
       spyOn(SubWeapon, "query").and.callFake ->
-        return [{"id":11,"name":"クイックボム(直撃)","real_damage":60.0}]
+        return [{"id":11,"name":"クイックボム(直撃)","real_damage":60.0, "is_sub_weapon": true}]
       @scope.initialize()
 
   describe "validate(p)", ->
@@ -93,6 +93,18 @@ describe "DamagesController", ->
           expect(this.subject.needed_shots).toEqual(2)
         it "real_needed_shots", ->
           expect(this.subject.real_needed_shots).toEqual(2)
+
+        describe "ボムサーチ", ->
+          beforeEach ->
+            @scope.params.defense_main = 0
+            @scope.params.bomb_search = true
+            @scope.calculate()
+          it "calculated_damage", ->
+            expect(this.subject.calculated_damage).toEqual("48.000")
+          it "needed_shots", ->
+            expect(this.subject.needed_shots).toEqual(3)
+          it "real_needed_shots", ->
+            expect(this.subject.real_needed_shots).toEqual(2)
 
       describe "ManuallyWeapon", ->
         beforeEach ->

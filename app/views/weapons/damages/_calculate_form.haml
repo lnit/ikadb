@@ -11,6 +11,14 @@
 
       .col-lg-4.col-md-5.col-sm-6
         .form-group
+          %label.control-label.col-md-4.col-sm-5= t(".calculate.bomb_search")
+          .col-md-8.col-sm-7
+            %label.control-label
+              = check_box_tag "params[bomb_search]", true, false, "ng-model" => "params.bomb_search",
+                                                                  "ng-change" => "#{form_name}.$valid && calculate()"
+              = t(".calculate.on")
+
+        .form-group
           %label.control-label.col-md-4.col-sm-5= t(".calculate.power")
           .col-md-8.col-sm-7
             %label.control-label
