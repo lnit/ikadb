@@ -1,6 +1,6 @@
 class GearsController < ApplicationController
   def index
-    flash.now[:notice] = I18n.t("flash.gear")
+    #flash.now[:notice] = I18n.t("flash.gear")
     respond_to do |format|
       format.html
       format.json { get_gears }
