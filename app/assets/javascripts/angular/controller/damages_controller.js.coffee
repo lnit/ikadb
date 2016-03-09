@@ -44,6 +44,8 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     p = $scope.params
     return unless $scope.validate(p)
 
+    $scope.params.defense_main = 2 if p.defense_main > 2 && p.bomb_search
+
     attack_point  = p.attack_main  * 10 + p.attack_sub  * 3
     defense_point = p.defense_main * 10 + p.defense_sub * 3
 
