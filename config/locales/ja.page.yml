@@ -135,6 +135,9 @@ ja:
           power: "ダメージ倍率"
           bomb_search: "ボムサーチ"
           "on": "あり"
+          haunt: "うらみ"
+          haunt_attack: "攻撃"
+          haunt_defense: "防御"
         errors:
           params_invalid: "メインは0〜3 サブは0〜9 のいずれかを入力してください。"
 

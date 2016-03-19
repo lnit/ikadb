@@ -40,11 +40,23 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
     return false unless (0 <= p.defense_sub <= 9)
     return true
 
+  $scope.limit = ->
+    max_attack_main = 3
+    max_defense_main = 3
+
+    max_attack_main-- if $scope.params.haunt_attack
+    max_defense_main-- if $scope.params.haunt_defense
+    max_defense_main-- if $scope.params.bomb_search
+
+    $scope.params.attack_main = max_attack_main if $scope.params.attack_main > max_attack_main
+    $scope.params.defense_main = max_defense_main if $scope.params.defense_main > max_defense_main
+
+
   $scope.calculate = ->
     p = $scope.params
     return unless $scope.validate(p)
 
-    $scope.params.defense_main = 2 if p.defense_main > 2 && p.bomb_search
+    $scope.limit()
 
     attack_point  = p.attack_main  * 10 + p.attack_sub  * 3
     defense_point = p.defense_main * 10 + p.defense_sub * 3

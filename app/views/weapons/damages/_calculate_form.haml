@@ -17,6 +17,16 @@
               = check_box_tag "params[bomb_search]", true, false, "ng-model" => "params.bomb_search",
                                                                   "ng-change" => "#{form_name}.$valid && calculate()"
               = t(".calculate.on")
+          %label.control-label.col-md-4.col-sm-5= t(".calculate.haunt")
+          .col-md-8.col-sm-7
+            %label.control-label
+              = check_box_tag "params[haunt_attack]", true, false, "ng-model" => "params.haunt_attack",
+                                                                   "ng-change" => "#{form_name}.$valid && calculate()"
+              = t(".calculate.haunt_attack")
+            %label.control-label
+              = check_box_tag "params[haunt_defense]", true, false, "ng-model" => "params.haunt_defense",
+                                                                    "ng-change" => "#{form_name}.$valid && calculate()"
+              = t(".calculate.haunt_defense")
 
         .form-group
           %label.control-label.col-md-4.col-sm-5= t(".calculate.power")
