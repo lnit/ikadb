@@ -60,6 +60,13 @@ App.controller "DamagesController", ["$scope", "MainWeapon", "SubWeapon", ($scop
 
     attack_point  = p.attack_main  * 10 + p.attack_sub  * 3
     defense_point = p.defense_main * 10 + p.defense_sub * 3
+    attack_point += 20 if p.haunt_attack
+    defense_point += 20 if p.haunt_defense
+
+    # 57でキャップをかけておく
+    MAX_POINT = 57
+    attack_point = MAX_POINT if attack_point > MAX_POINT
+    defense_point = MAX_POINT if defense_point > MAX_POINT
 
     attack_power = ((0.99 * attack_point) - (0.09 * attack_point) ** 2) / 100.0
     defense_power = ((0.99 * defense_point) - (0.09 * defense_point) ** 2) / 100.0
