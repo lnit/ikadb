@@ -112,7 +112,8 @@ ja:
             <br />
             <span class= "badge">new!</span>
             ボムサーチ装備によるクイックボムのダメージ軽減に対応しました。<br />
-            ※ボムサーチを「あり」に設定した場合は防御力アップ(メイン)は2までしか入力できません。<br />
+            <span class= "badge">new!</span>
+            うらみ装備によるダメージ計算に対応しました。<br />
             <br />
 
           link: "参考情報は"
@@ -135,6 +136,9 @@ ja:
           power: "ダメージ倍率"
           bomb_search: "ボムサーチ"
           "on": "あり"
+          haunt: "うらみ"
+          haunt_attack: "攻撃"
+          haunt_defense: "防御"
         errors:
           params_invalid: "メインは0〜3 サブは0〜9 のいずれかを入力してください。"
 
