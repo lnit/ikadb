@@ -1,4 +1,6 @@
 class MainWeapon < ActiveRecord::Base
+  include ::AfConverter
+
   SHOOTER_ID = 0
   BLASTER_ID = 1
   CHARGER_ID = 2
@@ -32,7 +34,7 @@ class MainWeapon < ActiveRecord::Base
 
   def type_name
     return unless self.weapon_type
-    I18n.t(type_key, scope: "common.weapon_type")
+    I18n.t(type_key, scope: "common.weapon_type").to_af_str
   end
 
   def spec(ordinal)

@@ -1,4 +1,6 @@
 class Brand < ActiveRecord::Base
+  include ::AfConverter
+
   belongs_to :strong_power, class_name: "Power"
   belongs_to :weak_power, class_name: "Power"
 

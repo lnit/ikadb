@@ -1,4 +1,6 @@
 class Gear < ActiveRecord::Base
+  include ::AfConverter
+
   HEAD_ID = 0
   BODY_ID = 1
   SHOES_ID = 2
@@ -46,6 +48,6 @@ class Gear < ActiveRecord::Base
 
   def type_name
     return unless self.gear_type
-    I18n.t(type_key, scope: "common.gear_type")
+    I18n.t(type_key, scope: "common.gear_type").to_af_str
   end
 end
