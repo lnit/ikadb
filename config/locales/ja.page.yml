@@ -1,27 +1,27 @@
 ja:
   common:
     application_name: "IkaDB!"
-    application_subtitle: " - スプラトゥーン 装備品検索データベース"
-    ogdesc: "このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。ブキ/ギアの性能検索にご利用ください。"
-    menu: "メニュー"
-    weapon: "ブキ"
-    gear: "ギア"
-    damage: "ダメージ計算機"
-    report: "情報提供/バグ報告"
-    link: "リンク集"
+    application_subtitle: " - すぷらとぅーん 装備品検索でーたべーす"
+    ogdesc: "このさいとは、Wii U用そふと「すぷらとぅーん(Splatoon)」の装備品情報の一覧/検索に特化したさいとです。ぶき/ぎあの性能検索にご利用ください。"
+    menu: "めにゅー"
+    weapon: "ぶき"
+    gear: "ぎあ"
+    damage: "だめーじ計算機"
+    report: "情報提供/ばぐ報告"
+    link: "りんく集"
     badge:
       new: "new!"
     weapon_type:
-      shooter: "シューター"
-      blaster: "ブラスター"
-      charger: "チャージャー"
-      roller:  "ローラー"
-      slosher: "スロッシャー"
-      spinner: "スピナー"
+      shooter: "しゅーたー"
+      blaster: "ぶらすたー"
+      charger: "ちゃーじゃー"
+      roller:  "ろーらー"
+      slosher: "すろっしゃー"
+      spinner: "すぴなー"
     gear_type:
-      head: "アタマ"
-      body: "フク"
-      shoes: "クツ"
+      head: "あたま"
+      body: "ふく"
+      shoes: "くつ"
     none: "なし"
     search: "検索"
     placeholder:
@@ -33,31 +33,31 @@ ja:
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='_blank', class='external'>@lni_T</a> 2015"
   flash:
-    gear: "Ver 2.3.0追加ギアに対応しました。検索パネルの「Ver2.3.0追加ギア」をONにすることで検索が可能です。"
+    gear: "Ver 2.3.0追加ぎあに対応しました。検索ぱねるの「Ver2.3.0追加ぎあ」をONにすることで検索が可能です。"
 
   dashboards:
     index:
       title: ""
       head: IkaDB!
-      subhead: スプラトゥーン装備品検索データベース
+      subhead: すぷらとぅーん装備品検索でーたべーす
       description:
         title: "IkaDB! について"
         body_html: |-
-          このサイトは、Wii U用ソフト「スプラトゥーン(Splatoon)」の装備品情報の一覧/検索に特化したサイトです。<br/ >
-          ブキの性能検索(「.52ガロンより射程の長い武器は？」「バリアかダイオウイカを使える武器は？」など)や、<br/ >
-          ギアの特性検索(「スペシャル増加量アップのついたギアは？」など)にご利用ください。<br /><br />
-          ※スプラトゥーン(splatoon)は任天堂株式会社の登録商標です。また、このサイトは任天堂株式会社とは無関係のサイトです。
+          このさいとは、Wii U用そふと「すぷらとぅーん(Splatoon)」の装備品情報の一覧/検索に特化したさいとです。<br/ >
+          ぶきの性能検索(「.52がろんより射程の長い武器は？」「ばりあかだいおういかを使える武器は？」など)や、<br/ >
+          ぎあの特性検索(「すぺしゃる増加量あっぷのついたぎあは？」など)にご利用ください。<br /><br />
+          ※すぷらとぅーん(splatoon)は任天堂株式会社の登録商標です。また、このさいとは任天堂株式会社とは無関係のさいとです。
       menu:
-        title: "メニュー"
+        title: "めにゅー"
 
   reports:
     show:
-      title: "情報提供/バグ報告 - "
+      title: "情報提供/ばぐ報告 - "
       description:
-        title: "情報提供/バグ報告について"
+        title: "情報提供/ばぐ報告について"
         body_html: |-
           日々IkaDB!をご利用いただきありがとうございます。<br /><br />
-          このサイトは管理人ルニ個人により運営されており、情報の抜けや誤り・システムのバグが存在する可能性があります。<br />
+          このさいとは管理人るに個人により運営されており、情報の抜けや誤り・しすてむのばぐが存在する可能性があります。<br />
           もし発見された方は<a href='https://ikadb-report.herokuapp.com/projects/bbs/boards/2', target='_blank', class='external'>IkaDB! 掲示板</a>
           または<a href='https://twitter.com/lni_T', target='_blank', class='external'>管理人Twitter</a>
           までご報告頂けると管理人が喜びます。<br />
@@ -65,12 +65,12 @@ ja:
           今後ともIkaDB!をよろしくお願いします。
   weapons:
     index:
-      title: "ブキ - "
+      title: "ぶき - "
       common: &common
         name: "名前"
         type: "種別"
-        sub_weapon: "サブウェポン"
-        special_weapon: "スペシャルウェポン"
+        sub_weapon: "さぶうぇぽん"
+        special_weapon: "すぺしゃるうぇぽん"
       search:
         <<: *common
         title: "検索"
@@ -83,10 +83,10 @@ ja:
           lteq: "以下"
           le: "より小さい"
         example:
-          type: "ローラー"
-          sub_weapon: "スプラッシュボム"
-          special_weapon: "バリア・ダイオウイカ"
-          range: "スプラローラー"
+          type: "ろーらー"
+          sub_weapon: "すぷらっしゅぼむ"
+          special_weapon: "ばりあ・だいおういか"
+          range: "すぷらろーらー"
       list:
         <<: *common
         title: "一覧"
@@ -96,78 +96,78 @@ ja:
 
     damages:
       index:
-        title: "ダメージ計算機 - "
+        title: "だめーじ計算機 - "
         common: &common
           name: "名前"
         description:
-          title: "ダメージ計算機 (Ver2.6.0対応)"
+          title: "だめーじ計算機 (Ver二.六.〇対応)"
           body_html: |-
-            このページは、「攻撃力アップ」「防御力アップ」ギアパワーによるダメージの増減を含めたブキのダメージ計算ができるページです。<br />
-            攻撃側、被弾側のギアパワーの数を入力することで、
-            各ブキのダメージおよび<span class='text-info'>「キルが確定するヒット数」</span>を計算することができます。<br />
+            このぺーじは、「攻撃力あっぷ」「防御力あっぷ」ぎあぱわーによるだめーじの増減を含めたぶきのだめーじ計算ができるぺーじです。<br />
+            攻撃側、被弾側のぎあぱわーの数を入力することで、
+            各ぶきのだめーじおよび<span class='text-info'>「きるが確定するひっと数」</span>を計算することができます。<br />
             <br />
-            例えば、防御力アップをサブに3つ装備した状態では、
-            攻撃力アップを持たない.52ガロンのキル確定ヒット数が2発から3発に増加することが、ダメージ計算により算出できます。<br />
-            ギアパワー構成の検討時などにご利用ください。<br />
+            例えば、防御力あっぷをさぶに三つ装備した状態では、
+            攻撃力あっぷを持たない.五二がろんのきる確定ひっと数が二発から三発に増加することが、だめーじ計算により算出できます。<br />
+            ぎあぱわー構成の検討時などにご利用ください。<br />
             <br />
             <span class= "badge">new!</span>
-            ボムサーチ装備によるクイックボムのダメージ軽減に対応しました。<br />
+            ぼむさーち装備によるくいっくぼむのだめーじ軽減に対応しました。<br />
             <span class= "badge">new!</span>
-            うらみ装備によるダメージ計算に対応しました。<br />
+            うらみ装備によるだめーじ計算に対応しました。<br />
             <br />
 
           link: "参考情報は"
         list:
           <<: *common
           title: "計算結果"
-          real_damage: "基本ダメージ"
-          max_damage: "ダメージ上限"
-          calculated_damage: "補正後ダメージ"
+          real_damage: "基本だめーじ"
+          max_damage: "だめーじ上限"
+          calculated_damage: "補正後だめーじ"
           needed_shots_1: "("
           needed_shots_2: "発)"
           manually: "自由入力 (β版)"
       calculate_form:
         calculate:
-          title: "ギアパワー数入力"
-          attack: "攻撃力アップ"
-          defense: "防御力アップ"
-          main: "メイン"
-          sub: "サブ"
-          power: "ダメージ倍率"
-          bomb_search: "ボムサーチ"
+          title: "ぎあぱわー数入力"
+          attack: "攻撃力あっぷ"
+          defense: "防御力あっぷ"
+          main: "めいん"
+          sub: "さぶ"
+          power: "だめーじ倍率"
+          bomb_search: "ぼむさーち"
           "on": "あり"
           haunt: "うらみ"
           haunt_attack: "攻撃"
           haunt_defense: "防御"
         errors:
-          params_invalid: "メインは0〜3 サブは0〜9 のいずれかを入力してください。"
+          params_invalid: "めいんは〇〜三 さぶは〇〜九 のいずれかを入力してください。"
 
   gears:
     common:
       description: "%{name} 【◎:%{strong}】【✕:%{weak}】"
     index:
-      title: "ギア - "
+      title: "ぎあ - "
       common: &common
         name: "名前"
         type: "部位"
         slot: "★"
-        brand: "ブランド"
-        power: "ギアパワー"
+        brand: "ぶらんど"
+        power: "ぎあぱわー"
         released_version: "実装Ver"
       search:
         <<: *common
         title: "検索"
         example:
-          type: "アタマ"
-          power: "攻撃力アップ"
-          brand: "アイロニック"
-        v200_only: "Ver2.0.0追加ギア"
-        v230_only: "Ver2.3.0追加ギア"
+          type: "あたま"
+          power: "攻撃力あっぷ"
+          brand: "あいろにっく"
+        v200_only: "Ver二.〇.〇追加ぎあ"
+        v230_only: "Ver二.三.〇追加ぎあ"
       list:
         <<: *common
         title: "一覧"
 
   links:
     index:
-      title: "リンク集 - "
-      head: "リンク集"
+      title: "りんく集 - "
+      head: "りんく集"
