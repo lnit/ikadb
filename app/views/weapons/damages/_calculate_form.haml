@@ -32,7 +32,7 @@
           %label.control-label.col-md-4.col-sm-5= t(".calculate.power")
           .col-md-8.col-sm-7
             %label.control-label
-              {{params.power.toFixed(3)}}
+              {{params.power.toFixed(3) | afconv }}
 
       .col-md-12.col-sm-12
         %p.text-danger{"ng-show" => "#{form_name}.$invalid"}

@@ -28,28 +28,28 @@
           %tr.weapon{"ng-repeat" => "main_weapon in main_weapons"}
             %td {{main_weapon.name}}
             %td
-              {{main_weapon.real_damage.toFixed(1)}}
+              {{main_weapon.real_damage.toFixed(1) | afconv}}
               = t(".list.needed_shots_1")
-              {{main_weapon.real_needed_shots}}
+              {{main_weapon.real_needed_shots | afconv }}
               = t(".list.needed_shots_2")
-            %td {{main_weapon.max_damage}}
+            %td {{main_weapon.max_damage | afconv }}
             %td{"ng-class" => "{'text-warning': main_weapon.needed_shots != main_weapon.real_needed_shots}"}
-              {{main_weapon.calculated_damage}}
+              {{main_weapon.calculated_damage | afconv }}
               = t(".list.needed_shots_1")
-              {{main_weapon.needed_shots}}
+              {{main_weapon.needed_shots | afconv }}
               = t(".list.needed_shots_2")
           %tr.weapon{"ng-repeat" => "sub_weapon in sub_weapons"}
             %td {{sub_weapon.name}}
             %td
-              {{sub_weapon.real_damage.toFixed(1)}}
+              {{sub_weapon.real_damage.toFixed(1) | afconv }}
               = t(".list.needed_shots_1")
-              {{sub_weapon.real_needed_shots}}
+              {{sub_weapon.real_needed_shots | afconv }}
               = t(".list.needed_shots_2")
-            %td {{sub_weapon.max_damage}}
+            %td {{sub_weapon.max_damage | afconv }}
             %td{"ng-class" => "{'text-warning': sub_weapon.needed_shots != sub_weapon.real_needed_shots}"}
-              {{sub_weapon.calculated_damage}}
+              {{sub_weapon.calculated_damage | afconv }}
               = t(".list.needed_shots_1")
-              {{sub_weapon.needed_shots}}
+              {{sub_weapon.needed_shots | afconv }}
               = t(".list.needed_shots_2")
 
       %hr
@@ -84,9 +84,9 @@
                                                   "min" => "1", "max" => "99.9"}
               %td{"ng-class" => "{'text-warning': manually_weapon.needed_shots != manually_weapon.real_needed_shots}"}
                 %span{"ng-show" => "!!manually_weapon.calculated_damage"}
-                  {{manually_weapon.calculated_damage}}
+                  {{manually_weapon.calculated_damage | afconv }}
                   = t(".list.needed_shots_1")
-                  {{manually_weapon.needed_shots}}
+                  {{manually_weapon.needed_shots | afconv }}
                   = t(".list.needed_shots_2")
 
   = render partial: "calculate_form", locals: {form_name: "params_form_bottom"}

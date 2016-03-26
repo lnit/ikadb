@@ -21,13 +21,13 @@
               .checkbox
                 %label.col-md-1
                   = check_box_tag "params[slot][1]", true, false, "ng-model" => "params.slot.s1"
-                  1
+                  一
                 %label.col-md-1
                   = check_box_tag "params[slot][2]", true, false, "ng-model" => "params.slot.s2"
-                  2
+                  二
                 %label.col-md-1
                   = check_box_tag "params[slot][3]", true, false, "ng-model" => "params.slot.s3"
-                  3
+                  三
         .col-md-8
           .form-group
             %label.control-label.col-md-2= t(".search.power")
@@ -66,7 +66,7 @@
           %tr.gear{"ng-repeat" => "gear in gears"}
             %td {{gear.name}}
             %td {{gear.type_name}}
-            %td {{gear.slot}}
+            %td {{gear.slot | afconv}}
             %td {{gear.power.name}}
             %td {{gear.brand.description}}
 

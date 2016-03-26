@@ -49,9 +49,9 @@
           %tr.weapon{"ng-repeat" => "weapon in weapons"}
             %td {{weapon.name}}
             %td {{weapon.main_weapon.type_name}}
-            %td {{weapon.main_weapon.spec1}}
-            %td {{weapon.main_weapon.spec2}}
-            %td {{weapon.main_weapon.spec3}}
+            %td {{weapon.main_weapon.spec1 | afconv}}
+            %td {{weapon.main_weapon.spec2 | afconv}}
+            %td {{weapon.main_weapon.spec3 | afconv}}
             %td {{weapon.sub_weapon.name}}
             %td {{weapon.special_weapon.name}}
 
