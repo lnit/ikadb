@@ -8,7 +8,7 @@ module GearsHelper
   end
 
   def gear_power_columns_for_select
-    options_for_select(Power.pluck(:name, :id))
+    options_for_select(Power.all.map{|b| [b.name, b.id]})
   end
 
   def gear_brand_columns_for_select

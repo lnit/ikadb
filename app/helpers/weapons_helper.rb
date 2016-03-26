@@ -8,17 +8,17 @@ module WeaponsHelper
   end
 
   def sub_weapon_columns_for_select
-    options_for_select(SubWeapon.pluck(:name, :id))
+    options_for_select(SubWeapon.all.map{|b| [b.name, b.id]})
   end
 
   def special_weapon_columns_for_select
-    options_for_select(SpecialWeapon.pluck(:name, :id))
+    options_for_select(SpecialWeapon.all.map{|b| [b.name, b.id]})
   end
 
   def range_columns_for_select
     options_for_select(
       MainWeapon.where.not(range: nil).order(range: :desc).map do |w|
-        [I18n.t("weapons.index.search.spec_column", n: w.range, name: w.name), w.range]
+        [I18n.t("weapons.index.search.spec_column", n: w.range.to_s.to_af_str, name: w.name), w.range]
       end
     )
   end
