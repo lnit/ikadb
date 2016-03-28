@@ -12,16 +12,16 @@ ja:
     badge:
       new: "new!"
     weapon_type:
-      shooter: "しゅーたー"
-      blaster: "ぶらすたー"
-      charger: "ちゃーじゃー"
-      roller:  "ろーらー"
-      slosher: "すろっしゃー"
-      spinner: "すぴなー"
+      shooter: "シューター"
+      blaster: "ブラスター"
+      charger: "チャージャー"
+      roller:  "ローラー"
+      slosher: "スロッシャー"
+      spinner: "スピナー"
     gear_type:
-      head: "あたま"
-      body: "ふく"
-      shoes: "くつ"
+      head: "アタマ"
+      body: "フク"
+      shoes: "クツ"
     none: "なし"
     search: "検索"
     placeholder:

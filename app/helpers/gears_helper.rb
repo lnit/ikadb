@@ -2,7 +2,7 @@ module GearsHelper
   def gear_type_columns_for_select
     options_for_select(
       Gear::TYPE_KEY.map.with_index do |key, index|
-        [I18n.t(key, scope: "common.gear_type"), index]
+        [I18n.t(key, scope: "common.gear_type").to_af_str, index]
       end
     )
   end
