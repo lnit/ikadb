@@ -7,6 +7,7 @@ App.filter "afconv", [ ->
       char
 
   return (input) ->
+    return input if window.afDisable
     return unless input
     ary = input.toString().split("").map(Convert)
     ary.join("")

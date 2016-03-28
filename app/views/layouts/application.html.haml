@@ -41,6 +41,8 @@
     = javascript_include_tag "application"
     = javascript_include_tag "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     = analytics_init if Rails.env.production?
+    = javascript_tag do
+      window.afDisable = #{!!session[:af_disable]}
 
   %body
     .navbar.navbar-default.navbar-static-top

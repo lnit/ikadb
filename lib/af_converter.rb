@@ -5,6 +5,7 @@ module AfConverter
 
   class ::String
     def to_af_str
+      return self if Thread.current[:session][:af_disable]
       ret = self
       ret = ret.tr("ァ-ン","ぁ-ん")
       ret = ret.tr("ヴ","ゔ")
