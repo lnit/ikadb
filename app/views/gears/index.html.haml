@@ -54,6 +54,10 @@
     .panel-heading
       %h3.panel-title= t(".list.title")
     .panel-body
+      - if session[:af_disable]
+        = link_to t("common.af.enable"), "?af2016=true"
+      - else
+        = link_to t("common.af.disable"), "?af2016=false"
       %table.table.table-striped.table-hover
         %thead
           %tr

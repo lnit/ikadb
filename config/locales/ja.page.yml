@@ -30,6 +30,9 @@ ja:
       multiple: " ※複数選択可"
     link_text: "こちら"
     and: "と"
+    af:
+      enable:  "4月イカモードON"
+      disable: "四月いかもーどちょっとおふ"
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='_blank', class='external'>@lni_T</a> 2015"
   flash:
