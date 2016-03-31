@@ -10,7 +10,7 @@ ja:
     report: "情報提供/ばぐ報告"
     link: "りんく集"
     badge:
-      new: "new!"
+      new: "新！"
     weapon_type:
       shooter: "シューター"
       blaster: "ブラスター"
@@ -113,9 +113,9 @@ ja:
             攻撃力あっぷを持たない.五二がろんのきる確定ひっと数が二発から三発に増加することが、だめーじ計算により算出できます。<br />
             ぎあぱわー構成の検討時などにご利用ください。<br />
             <br />
-            <span class= "badge">new!</span>
+            <span class= "badge">新！</span>
             ぼむさーち装備によるくいっくぼむのだめーじ軽減に対応しました。<br />
-            <span class= "badge">new!</span>
+            <span class= "badge">新！</span>
             うらみ装備によるだめーじ計算に対応しました。<br />
             <br />
 
