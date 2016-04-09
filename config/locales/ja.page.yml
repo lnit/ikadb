@@ -73,7 +73,7 @@ ja:
         special_weapon: "スペシャルウェポン"
       search:
         <<: *common
-        title: "検索"
+        title: "検索 (Ver.2.7.0仮対応)"
         range: "射程"
         spec_column: "%{name}系(%{n})"
         compare_columns:
@@ -100,7 +100,7 @@ ja:
         common: &common
           name: "名前"
         description:
-          title: "ダメージ計算機 (Ver2.6.0対応)"
+          title: "ダメージ計算機 (Ver.2.7.0仮対応)"
           body_html: |-
             このページは、「攻撃力アップ」「防御力アップ」ギアパワーによるダメージの増減を含めたブキのダメージ計算ができるページです。<br />
             攻撃側、被弾側のギアパワーの数を入力することで、
@@ -110,9 +110,7 @@ ja:
             攻撃力アップを持たない.52ガロンのキル確定ヒット数が2発から3発に増加することが、ダメージ計算により算出できます。<br />
             ギアパワー構成の検討時などにご利用ください。<br />
             <br />
-            <span class= "badge">new!</span>
             ボムサーチ装備によるクイックボムのダメージ軽減に対応しました。<br />
-            <span class= "badge">new!</span>
             うらみ装備によるダメージ計算に対応しました。<br />
             <br />
 
