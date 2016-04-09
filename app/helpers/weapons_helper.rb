@@ -8,7 +8,7 @@ module WeaponsHelper
   end
 
   def sub_weapon_columns_for_select
-    options_for_select(SubWeapon.pluck(:name, :id))
+    options_for_select(SubWeapon.where("real_damage IS NULL").pluck(:name, :id))
   end
 
   def special_weapon_columns_for_select
