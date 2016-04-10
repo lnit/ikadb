@@ -11,5 +11,21 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe WeaponsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "sub_weapon_columns_for_select" do
+    subject { helper.sub_weapon_columns_for_select.gsub(/<.*?>/,"").split }
+    it do
+      is_expected.to eq [
+        "スプラッシュボム",
+        "キューバンボム",
+        "クイックボム",
+        "チェイスボム",
+        "ポイントセンサー",
+        "トラップ",
+        "スプリンクラー",
+        "ジャンプビーコン",
+        "スプラッシュシールド",
+        "ポイズンボール",
+      ]
+    end
+  end
 end
