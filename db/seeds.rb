@@ -85,6 +85,10 @@ create_main_weapon([25, "3Kスコープ",
                               MainWeapon::CHARGER_ID, 100,     nil, nil, 20, nil,                  nil, 10, nil])
 create_main_weapon([0, "14式竹筒銃",
                               MainWeapon::CHARGER_ID, 72,     nil, nil, 90, nil,                  nil, 80, nil])
+create_main_weapon([0, "14式竹筒銃(溜無し)",
+                              MainWeapon::CHARGER_ID, nil,    nil, nil, nil, nil,                 nil, nil, nil])
+create_main_weapon([0, "14式竹筒銃(フル溜)",
+                              MainWeapon::CHARGER_ID, nil,    nil, nil, nil, nil,                 nil, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([18, "スプラローラー",
@@ -103,12 +107,18 @@ create_main_weapon([0, "バケットスロッシャー",
                               MainWeapon::SLOSHER_ID,  52,      90, nil, nil, nil,                 nil, nil, 50])
 create_main_weapon([0, "ヒッセン",
                               MainWeapon::SLOSHER_ID,  33,      80, nil, nil, nil,                 nil, nil, 70])
+create_main_weapon([0, "スクリュースロッシャー",
+                              MainWeapon::SLOSHER_ID,  55,      95, nil, nil, nil,                 nil, nil, 45])
+create_main_weapon([0, "スクリュースロッシャー(渦)",
+                              MainWeapon::SLOSHER_ID,  nil,    nil, nil, nil, nil,                 nil, nil, nil])
 
 #                     :name, :weapon_type,            :range, :attack, :damage, :charge, :speed, :rapid, :mobility, :weight
 create_main_weapon([0, "バレルスピナー",
                               MainWeapon::SPINNER_ID, 78,     nil, nil, 40, nil,                  nil, 50, nil])
 create_main_weapon([0, "スプラスピナー",
                               MainWeapon::SPINNER_ID, 58,     nil, nil, 80, nil,                  nil, 90, nil])
+create_main_weapon([0, "ハイドラント",
+                              MainWeapon::SPINNER_ID, 87,     nil, nil, 10, nil,                  nil, 20, nil])
 
 # TODO: いい感じにcreate_or_updateする
 MainWeapon.find_by(name: "わかばシューター").update_attributes(real_damage: 28.0, max_damage: 33.3)
@@ -128,10 +138,15 @@ MainWeapon.find_by(name: "ホットブラスター").update_attributes(real_dama
 MainWeapon.find_by(name: "ラピッドブラスター").update_attributes(real_damage: 80.0, max_damage: 99.9)
 MainWeapon.find_by(name: "ノヴァブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
 MainWeapon.find_by(name: "ロングブラスター").update_attributes(real_damage: 125.0, max_damage: nil)
+MainWeapon.find_by(name: "14式竹筒銃(溜無し)").update_attributes(real_damage: 30.0, max_damage: nil)
+MainWeapon.find_by(name: "14式竹筒銃(フル溜)").update_attributes(real_damage: 80.0, max_damage: 99.9)
 MainWeapon.find_by(name: "バレルスピナー").update_attributes(real_damage: 28.0, max_damage: 33.3)
 MainWeapon.find_by(name: "スプラスピナー").update_attributes(real_damage: 28.0, max_damage: 33.3)
+MainWeapon.find_by(name: "ハイドラント").update_attributes(real_damage: 28.0, max_damage: 33.3)
 MainWeapon.find_by(name: "バケットスロッシャー").update_attributes(real_damage: 70.0, max_damage: nil)
 MainWeapon.find_by(name: "ヒッセン").update_attributes(real_damage: 62.0, max_damage: nil)
+MainWeapon.find_by(name: "スクリュースロッシャー").update_attributes(real_damage: 76.0, max_damage: nil)
+MainWeapon.find_by(name: "スクリュースロッシャー(渦)").update_attributes(real_damage: 38.0, max_damage: nil)
 
 
 create_sub_weapon([1, "スプラッシュボム"])
