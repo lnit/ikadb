@@ -33,5 +33,8 @@ module Ikadb
 
     # Add assets paths.
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
+    # Add lib paths.
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
