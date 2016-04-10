@@ -244,6 +244,8 @@ Weapon.create(name: "ラピッドブラスターデコ",
                     main_weapon_name: "ラピッドブラスター", sub_weapon_name: "キューバンボム", special_weapon_name: "ボムラッシュ")
 Weapon.create(name: "Rブラスターエリート",
                     main_weapon_name: "Rブラスターエリート", sub_weapon_name: "チェイスボム", special_weapon_name: "スーパーショット")
+Weapon.create(name: "Rブラスターエリートデコ",
+                    main_weapon_name: "Rブラスターエリート", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
 Weapon.create(name: "ノヴァブラスター",
                     main_weapon_name: "ノヴァブラスター", sub_weapon_name: "トラップ", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ノヴァブラスターネオ",
@@ -277,6 +279,8 @@ Weapon.create(name: "3Kスコープカスタム",
                     main_weapon_name: "3Kスコープ", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "14式竹筒銃・甲",
                     main_weapon_name: "14式竹筒銃", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "メガホンレーザー")
+Weapon.create(name: "14式竹筒銃・乙",
+                    main_weapon_name: "14式竹筒銃", sub_weapon_name: "ポイズンボール", special_weapon_name: "スーパーセンサー")
 
 Weapon.create(name: "スプラローラー",
                     main_weapon_name: "スプラローラー", sub_weapon_name: "キューバンボム", special_weapon_name: "メガホンレーザー")
@@ -298,11 +302,21 @@ Weapon.create(name: "パブロ・ヒュー",
                     main_weapon_name: "パブロ", sub_weapon_name: "トラップ", special_weapon_name: "バリア")
 Weapon.create(name: "ホクサイ",
                     main_weapon_name: "ホクサイ", sub_weapon_name: "ジャンプビーコン", special_weapon_name: "ダイオウイカ")
+Weapon.create(name: "ホクサイ・ヒュー",
+                    main_weapon_name: "ホクサイ", sub_weapon_name: "スプラッシュボム", special_weapon_name: "スーパーショット")
 
 Weapon.create(name: "バケットスロッシャー",
                     main_weapon_name: "バケットスロッシャー", sub_weapon_name: "クイックボム", special_weapon_name: "トルネード")
+Weapon.create(name: "バケットスロッシャーデコ",
+                    main_weapon_name: "バケットスロッシャー", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "ヒッセン",
                     main_weapon_name: "ヒッセン", sub_weapon_name: "ポイズンボール", special_weapon_name: "バリア")
+Weapon.create(name: "ヒッセン・ヒュー",
+                    main_weapon_name: "ヒッセン", sub_weapon_name: "チェイスボム", special_weapon_name: "スーパーセンサー")
+Weapon.create(name: "スクリュースロッシャー",
+                    main_weapon_name: "スクリュースロッシャー", sub_weapon_name: "スプラッシュボム", special_weapon_name: "ボムラッシュ")
+Weapon.create(name: "スクリュースロッシャーネオ",
+                    main_weapon_name: "スクリュースロッシャー", sub_weapon_name: "ポイントセンサー", special_weapon_name: "スーパーショット")
 
 Weapon.create(name: "バレルスピナー",
                     main_weapon_name: "バレルスピナー", sub_weapon_name: "スプラッシュシールド", special_weapon_name: "トルネード")
@@ -310,6 +324,12 @@ Weapon.create(name: "バレルスピナーデコ",
                     main_weapon_name: "バレルスピナー", sub_weapon_name: "ポイントセンサー", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "スプラスピナー",
                     main_weapon_name: "スプラスピナー", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーショット")
+Weapon.create(name: "スプラスピナーコラボ",
+                    main_weapon_name: "スプラスピナー", sub_weapon_name: "ポイズンボール", special_weapon_name: "バリア")
+Weapon.create(name: "ハイドラント",
+                    main_weapon_name: "ハイドラント", sub_weapon_name: "スプラッシュボム", special_weapon_name: "スーパーセンサー")
+Weapon.create(name: "ハイドラントカスタム",
+                    main_weapon_name: "ハイドラント", sub_weapon_name: "スプリンクラー", special_weapon_name: "バリア")
 
 #Weapon.create(name: "",
 #                    main_weapon_name: , sub_weapon_name: , special_weapon_name: )
