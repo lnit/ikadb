@@ -62,6 +62,7 @@ group :development, :test do
 
   #
   gem 'rspec-rails'
+  gem 'rspec-its'
   gem 'database_cleaner'
   gem 'jasmine-rails'
 end
