@@ -224,10 +224,10 @@ Weapon.create(name: "シャープマーカーネオ",
                     main_weapon_name: "シャープマーカー", sub_weapon_name: "クイックボム", special_weapon_name: "スーパーショット")
 Weapon.create(name: "L3リールガン",
                     main_weapon_name: "L3リールガン", sub_weapon_name: "ポイズンボール", special_weapon_name: "メガホンレーザー")
-Weapon.create(name: "L3リールガンD",
-                    main_weapon_name: "L3リールガン", sub_weapon_name: "クイックボム", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "H3リールガン",
                     main_weapon_name: "H3リールガン", sub_weapon_name: "キューバンボム", special_weapon_name: "スーパーセンサー")
+Weapon.create(name: "L3リールガンD",
+                    main_weapon_name: "L3リールガン", sub_weapon_name: "クイックボム", special_weapon_name: "ダイオウイカ")
 Weapon.create(name: "H3リールガンD",
                     main_weapon_name: "H3リールガン", sub_weapon_name: "ポイントセンサー", special_weapon_name: "スーパーショット")
 Weapon.create(name: "ボールドマーカー",
