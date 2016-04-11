@@ -8,6 +8,6 @@ class WeaponsController < ApplicationController
 
   private
   def get_weapons
-    @weapons = Weapon.ransack(params[:q]).result
+    @weapons = Weapon.ransack(params[:q]).result.order("main_weapons.weapon_type").order("main_weapons.id").order(:id)
   end
 end

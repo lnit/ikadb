@@ -3,7 +3,7 @@ class Weapon < ActiveRecord::Base
   belongs_to :sub_weapon
   belongs_to :special_weapon
 
-  default_scope { includes(:main_weapon, :sub_weapon, :special_weapon).order("main_weapons.weapon_type").order("main_weapons.id").order(:id) }
+  default_scope { includes(:main_weapon, :sub_weapon, :special_weapon) }
 
   validates :name, uniqueness: true
   validates :main_weapon, presence: true
