@@ -14,6 +14,13 @@ App.controller "WeaponsController", ["$scope", "Weapon", ($scope, Weapon) ->
       key = "q[main_weapon_range_" + $scope.params.range_compare + "]"
       params[key] = $scope.params.range
 
+    if sp_rate_params = $scope.params.loss_special_rate
+      rates = []
+      rates.push 40 if sp_rate_params.s40
+      rates.push 60 if sp_rate_params.s60
+      rates.push 75 if sp_rate_params.s75
+      params["q[loss_special_rate_eq_any][]"] = rates unless rates.length == 0
+
     $scope.weapons = Weapon.query(params)
     _gaq.push([
       "_trackEvent",

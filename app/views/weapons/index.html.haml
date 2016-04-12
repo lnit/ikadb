@@ -28,6 +28,21 @@
               = select_tag "params[range]", range_columns_for_select, "ng-model" => "params.range", :include_blank => true, :class => "form-control searchable", :placeholder => search_placeholder_text(t(".search.example.range"))
             .col-md-3
               = select_tag "params[range_compare]", compare_columns_for_select, :class => "form-control", "ng-model" => "params.range_compare"
+          .form-group
+            %label.control-label.col-md-3= t(".search.loss_special_rate")
+            .col-md-9
+              .checkbox
+                %label.spacer-right-5
+                  = check_box_tag "params[loss_special_rate][40]", true, false, "ng-model" => "params.loss_special_rate.s40"
+                  = t(".search.rate40")
+                %label.spacer-right-5
+                  = check_box_tag "params[loss_special_rate][60]", true, false, "ng-model" => "params.loss_special_rate.s60"
+                  = t(".search.rate60")
+                %label.spacer-right-5
+                  = check_box_tag "params[loss_special_rate][75]", true, false, "ng-model" => "params.loss_special_rate.s75"
+                  = t(".search.rate75")
+
+
         .col-md-12
           = submit_tag t("common.search"), class: "btn #{random_color_class('btn')}"
 
@@ -43,6 +58,7 @@
             %th= t(".list.first_spec_html")
             %th= t(".list.second_spec_html")
             %th= t(".list.third_spec_html")
+            %th= t(".list.loss_special_rate")
             %th= t(".list.sub_weapon")
             %th= t(".list.special_weapon")
         %tbody
@@ -52,6 +68,7 @@
             %td {{weapon.main_weapon.spec1}}
             %td {{weapon.main_weapon.spec2}}
             %td {{weapon.main_weapon.spec3}}
+            %td {{weapon.loss_special_rate}}%
             %td {{weapon.sub_weapon.name}}
             %td {{weapon.special_weapon.name}}
 
