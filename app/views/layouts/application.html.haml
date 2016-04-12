@@ -52,9 +52,9 @@
         %a.navbar-brand(href="/")= t("common.application_name")
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
-            %li= link_to t("common.weapon"), weapons_path
+            %li= link_to_with_badge t("common.weapon"), weapons_path, t("common.badge.new")
             %li= link_to t("common.gear"), gears_path
-            %li= link_to t("common.damage"), weapons_damages_path
+            %li= link_to_with_badge t("common.damage"), weapons_damages_path, t("common.badge.new")
             %li= link_to t("common.report"), report_path
             %li= link_to t("common.link"), links_path
 
