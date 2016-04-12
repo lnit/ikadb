@@ -93,6 +93,7 @@ ja:
         first_spec_html: "射程"
         second_spec_html: "攻撃<br/>溜速<br/>塗速"
         third_spec_html: "連射<br/>機動<br/>軽さ"
+        loss_special_rate: "スペ減"
 
     damages:
       index:

@@ -43,6 +43,7 @@
             %th= t(".list.first_spec_html")
             %th= t(".list.second_spec_html")
             %th= t(".list.third_spec_html")
+            %th= t(".list.loss_special_rate")
             %th= t(".list.sub_weapon")
             %th= t(".list.special_weapon")
         %tbody
@@ -52,6 +53,7 @@
             %td {{weapon.main_weapon.spec1}}
             %td {{weapon.main_weapon.spec2}}
             %td {{weapon.main_weapon.spec3}}
+            %td {{weapon.loss_special_rate}}%
             %td {{weapon.sub_weapon.name}}
             %td {{weapon.special_weapon.name}}
 
