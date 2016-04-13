@@ -125,7 +125,7 @@ MainWeapon.find_by(name: "わかばシューター").update_attributes(real_dama
 MainWeapon.find_by(name: "スプラシューター").update_attributes(real_damage: 35.0, max_damage: nil)
 MainWeapon.find_by(name: "プライムシューター").update_attributes(real_damage: 42.0, max_damage: 49.9)
 MainWeapon.find_by(name: ".52ガロン").update_attributes(real_damage: 52.0, max_damage: nil)
-MainWeapon.find_by(name: ".96ガロン").update_attributes(real_damage: 62.0, max_damage: nil)
+MainWeapon.find_by(name: ".96ガロン").update_attributes(real_damage: 52.0, max_damage: nil)
 MainWeapon.find_by(name: "プロモデラー").update_attributes(real_damage: 24.5, max_damage: 24.9)
 MainWeapon.find_by(name: "ジェットスイーパー").update_attributes(real_damage: 31.0, max_damage: 33.3)
 MainWeapon.find_by(name: "デュアルスイーパー").update_attributes(real_damage: 28.0, max_damage: 33.3)
@@ -167,7 +167,7 @@ create_sub_weapon([13, "クイックボム(直撃＋爆風)"])
 
 SubWeapon.find_by(name: "クイックボム(直撃)").update_attributes(real_damage: 60.0, max_damage: nil)
 SubWeapon.find_by(name: "クイックボム(爆風中央)").update_attributes(real_damage: 35.0, max_damage: nil)
-SubWeapon.find_by(name: "クイックボム(爆風外周)").update_attributes(real_damage: 20.0, max_damage: nil)
+SubWeapon.find_by(name: "クイックボム(爆風外周)").update_attributes(real_damage: 25.0, max_damage: nil)
 SubWeapon.find_by(name: "クイックボム(直撃＋爆風)").update_attributes(real_damage: 95.0, max_damage: nil)
 
 create_special_weapon([1, "スーパーショット"])
