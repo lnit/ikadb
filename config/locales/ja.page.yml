@@ -73,7 +73,7 @@ ja:
         special_weapon: "スペシャルウェポン"
       search:
         <<: *common
-        title: "検索 (Ver.2.7.0仮対応)"
+        title: "検索 (Ver.2.7.0対応)"
         range: "射程"
         spec_column: "%{name}系(%{n})"
         compare_columns:
@@ -105,7 +105,7 @@ ja:
         common: &common
           name: "名前"
         description:
-          title: "ダメージ計算機 (Ver.2.7.0仮対応)"
+          title: "ダメージ計算機 (Ver.2.7.0対応)"
           body_html: |-
             このページは、「攻撃力アップ」「防御力アップ」ギアパワーによるダメージの増減を含めたブキのダメージ計算ができるページです。<br />
             攻撃側、被弾側のギアパワーの数を入力することで、
