@@ -30,6 +30,7 @@ ja:
       multiple: " ※複数選択可"
     link_text: "こちら"
     and: "と"
+    version_info: "(Ver.%{num}対応)"
   footer:
     text_html: "&copy; <a href='https://github.com/lnit', target='_blank', class='external'>@lni_T</a> 2015-2016"
   flash:

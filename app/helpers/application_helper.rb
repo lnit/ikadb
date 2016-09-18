@@ -18,4 +18,9 @@ module ApplicationHelper
       haml_tag :span, badge_text, class: "badge"
     end
   end
+
+  def version_info
+    return "" unless ver = VersionInfo.find_by(controller_name: params[:controller])
+    I18n.t("common.version_info", num: ver.version_str)
+  end
 end
