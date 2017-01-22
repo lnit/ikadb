@@ -2,7 +2,7 @@
   .panel{class: random_color_class("panel")}
     .panel-heading
       %h3.panel-title
-        = t(".search.title")
+        = t(".search.title") + version_info
         -# %span.badge= t("common.badge.new")
     .panel-body
       %form.form-horizontal{"ng-submit" => "search()"}
