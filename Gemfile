@@ -31,7 +31,7 @@ gem 'twitter-bootstrap-rails'
 gem 'ransack'
 gem 'select2-rails'
 gem 'activeadmin', github: 'activeadmin'
-gem 'devise'
+gem 'devise', '~> 3.2'
 gem 'pry'
 
 gem 'rails-assets-angular'
