@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby "2.3.3"
+ruby "2.5.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.8'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -19,16 +19,18 @@ gem 'therubyracer', platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'json', github: 'flori/json', branch: 'v1.8'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'sprockets-rails', '2.3.3'
 gem 'haml-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'ransack'
 gem 'select2-rails'
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', '~> 1.0'
 gem 'devise'
 gem 'pry'
 
@@ -39,7 +41,7 @@ gem 'rails-assets-angular-mocks'
 
 gem 'google-analytics-rails'
 
-gem 'puma'
+gem 'puma', '~> 3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
