@@ -41,7 +41,7 @@ gem 'rails-assets-angular-mocks'
 
 gem 'google-analytics-rails'
 
-gem 'puma', '~> 3'
+gem 'puma', '~> 4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
