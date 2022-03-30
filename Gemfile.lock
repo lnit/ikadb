@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/flori/json.git
+  remote: https://github.com/flori/json.git
   revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
   branch: v1.8
   specs:
@@ -160,6 +160,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.14.0)
     multi_json (1.11.1)
+    nio4r (2.5.8)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
@@ -169,7 +170,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.12.4)
+    puma (4.3.12)
+      nio4r (~> 2.0)
     rack (1.6.13)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -313,7 +315,7 @@ DEPENDENCIES
   less-rails
   pg
   pry
-  puma (~> 3)
+  puma (~> 4)
   rails (= 4.2.8)
   rails-assets-angular
   rails-assets-angular-mocks
