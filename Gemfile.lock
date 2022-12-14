@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/flori/json.git
+  remote: https://github.com/flori/json.git
   revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
   branch: v1.8
   specs:
@@ -150,7 +150,7 @@ GEM
       sprockets (> 2, < 4)
       tilt
     libv8 (3.16.14.19)
-    loofah (2.5.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
