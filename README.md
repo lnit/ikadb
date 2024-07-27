@@ -1,5 +1,21 @@
 # IkaDB!
 
+**Splatoon 1 service was shutdowned!**
+
+**And this project is over.**  
+**Splatoon Forever!**
+
+----
+
+Splatoon 1 の対戦サービスは提供終了しました！
+
+それに伴いこのプロジェクトも開発終了・稼働停止となります。
+
+----
+
+![ogimage](https://github.com/user-attachments/assets/d24cafe2-753c-4fe4-a367-843395a027ec)
+
+
 * Wii U用ゲームソフト「Splatoon」のブキ/ギア検索データベースWebアプリ
 * こちらで稼働中( https://ikadb.herokuapp.com/ )
 
